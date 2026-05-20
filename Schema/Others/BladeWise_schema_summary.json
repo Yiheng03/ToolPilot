@@ -1,0 +1,165 @@
+{
+  "tables": [
+    "quote_sections",
+    "quote_field_groups",
+    "quote_impact_tags",
+    "quote_field_definitions",
+    "quote_field_definition_tags",
+    "quote_index_definitions",
+    "quote_index_definition_tags",
+    "quote_index_source_fields",
+    "quote_requests",
+    "raw_quote_files",
+    "tool_master",
+    "quote_items",
+    "tool_specs_normalized",
+    "quote_field_values",
+    "quote_index_values",
+    "quote_price_outputs"
+  ],
+  "views": [
+    "v_field_catalog",
+    "v_quote_filter_values",
+    "v_quote_item_summary"
+  ],
+  "foreign_keys": [
+    {
+      "parent": "quote_sections",
+      "child": "quote_field_groups",
+      "column": "section_id → quote_sections.section_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_field_groups",
+      "child": "quote_field_definitions",
+      "column": "group_id → quote_field_groups.group_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_field_definitions",
+      "child": "quote_field_definition_tags",
+      "column": "field_id → quote_field_definitions.field_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_impact_tags",
+      "child": "quote_field_definition_tags",
+      "column": "tag_code → quote_impact_tags.tag_code",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_index_definitions",
+      "child": "quote_index_definition_tags",
+      "column": "index_id → quote_index_definitions.index_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_impact_tags",
+      "child": "quote_index_definition_tags",
+      "column": "tag_code → quote_impact_tags.tag_code",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_index_definitions",
+      "child": "quote_index_source_fields",
+      "column": "index_id → quote_index_definitions.index_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_field_definitions",
+      "child": "quote_index_source_fields",
+      "column": "field_id → quote_field_definitions.field_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_requests",
+      "child": "raw_quote_files",
+      "column": "quote_id → quote_requests.quote_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_requests",
+      "child": "quote_items",
+      "column": "quote_id → quote_requests.quote_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "tool_master",
+      "child": "quote_items",
+      "column": "tool_id → tool_master.tool_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "raw_quote_files",
+      "child": "quote_items",
+      "column": "source_file_id → raw_quote_files.file_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_items",
+      "child": "tool_specs_normalized",
+      "column": "quote_item_id → quote_items.quote_item_id",
+      "cardinality": "1 : 0..1"
+    },
+    {
+      "parent": "tool_master",
+      "child": "tool_specs_normalized",
+      "column": "tool_id → tool_master.tool_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_items",
+      "child": "quote_field_values",
+      "column": "quote_item_id → quote_items.quote_item_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_field_definitions",
+      "child": "quote_field_values",
+      "column": "field_id → quote_field_definitions.field_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "raw_quote_files",
+      "child": "quote_field_values",
+      "column": "source_file_id → raw_quote_files.file_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_items",
+      "child": "quote_index_values",
+      "column": "quote_item_id → quote_items.quote_item_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_index_definitions",
+      "child": "quote_index_values",
+      "column": "index_id → quote_index_definitions.index_id",
+      "cardinality": "1 : N"
+    },
+    {
+      "parent": "quote_items",
+      "child": "quote_price_outputs",
+      "column": "quote_item_id → quote_items.quote_item_id",
+      "cardinality": "1 : 0..1"
+    }
+  ],
+  "column_counts": {
+    "quote_sections": 6,
+    "quote_field_groups": 8,
+    "quote_impact_tags": 4,
+    "quote_field_definitions": 15,
+    "quote_field_definition_tags": 2,
+    "quote_index_definitions": 13,
+    "quote_index_definition_tags": 2,
+    "quote_index_source_fields": 4,
+    "quote_requests": 8,
+    "raw_quote_files": 12,
+    "tool_master": 12,
+    "quote_items": 24,
+    "tool_specs_normalized": 24,
+    "quote_field_values": 20,
+    "quote_index_values": 13,
+    "quote_price_outputs": 27
+  }
+}

@@ -1,0 +1,67 @@
+digraph G {
+  graph [rankdir=LR, splines=ortho, nodesep=0.55, ranksep=0.9, bgcolor="white", fontname="Noto Sans CJK SC", label=<<B>BladeWise刀具报价｜Schema 逻辑图</B><BR/><FONT POINT-SIZE="14">从报价文件采集 → 规格标准化 → 字段目录赋值 → 指数计算 → 成本拆解与采购建议</FONT>>, labelloc=t, fontsize=26];
+  node [shape=box, style="rounded,filled", color="#9EADCC", fillcolor="#F8FAFF", fontname="Noto Sans CJK SC", fontsize=14, margin="0.16,0.10"];
+  edge [fontname="Noto Sans CJK SC", fontsize=11, color="#667085", arrowsize=0.75];
+
+  subgraph cluster_input {
+    label="1. 报价输入层"; style="rounded"; color="#D9E2F3"; fontsize=17;
+    req [label="报价请求\nquote_requests\n- quote_no / customer / status"];
+    file [label="原始报价文件\nraw_quote_files\n- PDF/Excel/OCR\n- parse_status / confidence"];
+  }
+
+  subgraph cluster_item {
+    label="2. 报价明细与刀具主数据层"; style="rounded"; color="#D9EAD3"; fontsize=17;
+    item [label="报价行项目\nquote_items\n- supplier/product/qty\n- quoted price / lead time / MOQ"];
+    master [label="刀具主数据\ntool_master\n- normalized_model\n- category / ISO / material group"];
+    spec [label="标准化规格\ntool_specs_normalized\n- D/OAL/LOC/Z/helix\n- substrate/coating/coolant"];
+  }
+
+  subgraph cluster_catalog {
+    label="3. 字段目录与影响标签层"; style="rounded"; color="#FFF2CC"; fontsize=17;
+    section [label="字段分层\nquote_sections\n物理制造 / 市场非物理"];
+    group [label="字段组\nquote_field_groups\n材料与基体、几何结构、涂层等"];
+    field [label="字段定义\nquote_field_definitions\nfield_code / value_kind / impact_level"];
+    tag [label="影响标签\nquote_impact_tags\n材料成本、加工难度、供应风险等"];
+    fieldtag [label="字段-标签映射\nquote_field_definition_tags"];
+  }
+
+  subgraph cluster_value {
+    label="4. 抽取值与高级指数层"; style="rounded"; color="#EADCF8"; fontsize=17;
+    value [label="字段取值实例\nquote_field_values\n- raw/normalized/value\n- source_page/cell/bbox\n- confidence"];
+    idxdef [label="指数定义\nquote_index_definitions\n- formula_text\n- source_field_codes"];
+    idxsrc [label="指数-字段权重\nquote_index_source_fields\n- weight / role"];
+    idxval [label="指数计算结果\nquote_index_values\n- score / multiplier\n- risk_level / explanation"];
+  }
+
+  subgraph cluster_output {
+    label="5. 报价输出与分析视图层"; style="rounded"; color="#FCE4D6"; fontsize=17;
+    price [label="价格拆解与建议\nquote_price_outputs\n- material/manufacturing/coating\n- risk/commercial/margin\n- final_unit_price"];
+    views [label="分析视图\nv_field_catalog\nv_quote_filter_values\nv_quote_item_summary"];
+  }
+
+  req -> file [label="上传/关联"];
+  req -> item [label="一份报价包含多行"];
+  file -> item [label="解析出报价行"];
+  item -> master [label="匹配或新建刀具主数据"];
+  item -> spec [label="规格标准化（1:0..1）"];
+  master -> spec [label="补全标准属性"];
+
+  section -> group -> field;
+  field -> fieldtag -> tag;
+  field -> value [label="定义取值口径"];
+  item -> value [label="每个报价行生成多个字段值"];
+  file -> value [label="保留来源证据"];
+
+  field -> idxsrc [label="作为指数输入"];
+  idxdef -> idxsrc;
+  idxdef -> idxval [label="定义算法"];
+  item -> idxval [label="按报价行计算"];
+  value -> idxval [label="输入快照/驱动字段"];
+
+  item -> price [label="成本与报价基础"];
+  spec -> price [label="规格成本因子"];
+  idxval -> price [label="复杂度/风险/倍率"];
+  price -> views [label="汇总展示"];
+  value -> views [label="筛选/明细分析"];
+  item -> views [label="报价行总览"];
+}

@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>字段设计方法讲解</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --surface-alt: #eef3f4;
+      --ink: #152028;
+      --muted: #63707a;
+      --line: #d8e0e5;
+      --blue: #226b8f;
+      --teal: #27756b;
+      --green: #44733f;
+      --amber: #9a681e;
+      --red: #9b493d;
+      --violet: #675ca8;
+      --shadow: 0 18px 48px rgba(21, 32, 40, 0.11);
+      --soft-shadow: 0 8px 22px rgba(21, 32, 40, 0.07);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    button { font: inherit; }
+
+    .shell {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 246, 248, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 170px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      background: #e7ecef;
+    }
+
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 34px 24px 56px;
+    }
+
+    .hero {
+      min-height: calc(100vh - 92px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      gap: 28px;
+      align-items: center;
+      padding-bottom: 42px;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(38px, 5.2vw, 76px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero-copy p {
+      margin: 22px 0 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.78;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0 14px;
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .system-map {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .map-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .layer-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .layer-row {
+      border: 1px solid var(--line);
+      background: #fbfcfd;
+      border-radius: 8px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 94px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .layer-row strong {
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .layer-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .layer-row:nth-child(1) { border-left: 5px solid var(--blue); }
+    .layer-row:nth-child(2) { border-left: 5px solid var(--teal); }
+    .layer-row:nth-child(3) { border-left: 5px solid var(--amber); }
+    .layer-row:nth-child(4) { border-left: 5px solid var(--red); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      background: var(--surface-alt);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 82px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    section {
+      scroll-margin-top: 84px;
+      margin-top: 34px;
+      padding-top: 12px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--soft-shadow);
+      padding: 18px;
+    }
+
+    .panel h3 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .panel p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .category-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .category-tabs {
+      position: sticky;
+      top: 76px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .tab-button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--muted);
+      min-height: 44px;
+      padding: 0 12px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .tab-button.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .category-content {
+      min-height: 470px;
+    }
+
+    .group-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .group-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfd;
+    }
+
+    .group-card h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .group-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .flow-step {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 150px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      z-index: 2;
+    }
+
+    .flow-step b {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .flow-step h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .flow-step p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .index-board {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .index-list {
+      display: grid;
+      gap: 8px;
+      max-height: 620px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .index-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 12px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .index-item.active {
+      border-color: var(--blue);
+      box-shadow: inset 4px 0 0 var(--blue), var(--soft-shadow);
+    }
+
+    .index-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .index-item span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .formula {
+      background: #111b22;
+      color: #eaf2f4;
+      border-radius: 8px;
+      padding: 18px;
+      line-height: 1.75;
+      overflow-x: auto;
+      margin-top: 14px;
+    }
+
+    .sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .source-chip {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fbfcfd;
+      padding: 9px 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .matrix div {
+      padding: 13px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      min-height: 62px;
+      line-height: 1.55;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .matrix div:nth-child(4n) { border-right: none; }
+    .matrix div:nth-last-child(-n+4) { border-bottom: none; }
+
+    .matrix .head {
+      background: #e9eef1;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .callout {
+      border-left: 5px solid var(--teal);
+      background: #eef6f4;
+      border-radius: 8px;
+      padding: 18px;
+      color: #27433f;
+      line-height: 1.75;
+    }
+
+    footer {
+      margin-top: 38px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .grid-2,
+      .grid-3,
+      .category-layout,
+      .index-board {
+        grid-template-columns: 1fr;
+      }
+
+      .category-tabs {
+        position: static;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-step:not(:last-child)::after {
+        content: "v";
+        right: 18px;
+        top: auto;
+        bottom: -10px;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main {
+        padding: 24px 16px 42px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 8px;
+      }
+
+      .stats,
+      .group-grid,
+      .category-tabs {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix div,
+      .matrix div:nth-child(4n),
+      .matrix div:nth-last-child(-n+4) {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand"><span class="brand-mark">F</span><span>字段设计讲解</span></div>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#method">设计方法</a>
+          <a href="#classification">字段分类</a>
+          <a href="#layers">分层建模</a>
+          <a href="#indexes">高级指数</a>
+          <a href="#usage">落地方式</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="字段设计总览">
+        <div class="hero-copy">
+          <h1>刀具报价字段不是清单，而是一套成本解释模型</h1>
+          <p>
+            这套字段把刀具报价拆成可解释、可校验、可聚合的结构：先用底层字段描述材料、几何、工艺、质量、供应链和商务条件，再把同一类成本驱动因素整合为高级指数，最终服务于报价、比价、风险解释和供应商沟通。
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#classification">查看分类逻辑</a>
+            <a class="btn" href="#indexes">查看指数聚合</a>
+          </div>
+        </div>
+
+        <aside class="system-map" aria-label="字段体系地图">
+          <div class="map-title">
+            <span>Field Architecture</span>
+            <span>Bottom-up Model</span>
+          </div>
+          <div class="layer-stack">
+            <div class="layer-row">
+              <strong>底层字段</strong>
+              <span>用 174 个可观察字段描述价格的真实驱动因素，包括材料牌号、尺寸结构、精度、公差、涂层、交期、账期、包装和合规。</span>
+            </div>
+            <div class="layer-row">
+              <strong>主题分组</strong>
+              <span>按物理制造和市场商务两条主线组织为 14 个字段组，保证每个字段都有业务归属。</span>
+            </div>
+            <div class="layer-row">
+              <strong>高级指数</strong>
+              <span>把多个相关底层字段标准化、加权、耦合，形成 10 个可用于报价解释的高级指数字段。</span>
+            </div>
+            <div class="layer-row">
+              <strong>报价输出</strong>
+              <span>将成本、风险、良率、批量分摊、交付服务和商业摩擦转化为可比较的价格结构。</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>2</b><span>顶层领域</span></div>
+            <div class="stat"><b>14</b><span>主题字段组</span></div>
+            <div class="stat"><b>174</b><span>底层字段</span></div>
+            <div class="stat"><b>10</b><span>高级指数</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="method">
+        <div class="section-head">
+          <h2>设计方法</h2>
+          <p>字段设计遵循一个原则：先解释成本产生的原因，再决定字段如何进入报价。字段不是为了堆数量，而是为了把隐性的制造难度和交易风险显性化。</p>
+        </div>
+        <div class="grid-3">
+          <article class="panel">
+            <span class="tag">从原因出发</span>
+            <h3>先找价格驱动因素</h3>
+            <p>刀具价格不只由尺寸决定，还受材料配方、磨削难度、涂层批量、良率、检测、供应链和商务条款影响。因此字段从成本驱动因素反推，而不是从传统规格表复制。</p>
+          </article>
+          <article class="panel">
+            <span class="tag">区分可测与可算</span>
+            <h3>底层字段尽量可观察</h3>
+            <p>底层字段用于描述事实，例如 WC 含量、刃数、槽深、涂层厚度、全检比例、MOQ、账期。它们可以来自图纸、工艺、供应商报价或订单条件。</p>
+          </article>
+          <article class="panel">
+            <span class="tag">向上聚合</span>
+            <h3>高级指数负责解释复杂度</h3>
+            <p>高级指数不是凭空新增字段，而是把多个底层字段合成一个更适合决策的变量，例如几何复杂度指数、涂层批处理成本指数、商业摩擦成本指数。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="classification">
+        <div class="section-head">
+          <h2>字段分类</h2>
+          <p>分类逻辑采用两条主线：一条解释刀具本身为什么难做，另一条解释交易环境为什么会改变价格。这样可以把技术成本和商务溢价分开讨论。</p>
+        </div>
+        <div class="category-layout">
+          <div class="category-tabs" role="tablist" aria-label="字段分类切换">
+            <button class="tab-button active" type="button" data-category="physical">物理与制造层面</button>
+            <button class="tab-button" type="button" data-category="market">市场与非物理层面</button>
+          </div>
+          <div class="category-content panel" id="categoryContent"></div>
+        </div>
+      </section>
+
+      <section id="layers">
+        <div class="section-head">
+          <h2>分层建模</h2>
+          <p>分层的价值在于让字段既能保留工程细节，又能向业务输出清晰结论。底层字段负责准确，高层字段负责解释。</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <b>Layer 1</b>
+            <h3>原始事实字段</h3>
+            <p>来自图纸、工艺、订单、供应商资料和检验要求，例如直径、刃长、涂层类型、交期、账期。</p>
+          </div>
+          <div class="flow-step">
+            <b>Layer 2</b>
+            <h3>工程语义字段</h3>
+            <p>把事实转成工程含义，例如长径比、排屑空间比、槽磨去除体积、内冷路径复杂度。</p>
+          </div>
+          <div class="flow-step">
+            <b>Layer 3</b>
+            <h3>成本驱动字段</h3>
+            <p>识别会影响材料、节拍、砂轮损耗、良率、检测和批量分摊的关键变量。</p>
+          </div>
+          <div class="flow-step">
+            <b>Layer 4</b>
+            <h3>高级指数</h3>
+            <p>将多字段标准化并加权，形成可比较的难度、风险、残值、批处理和商务摩擦指标。</p>
+          </div>
+          <div class="flow-step">
+            <b>Output</b>
+            <h3>报价解释</h3>
+            <p>输出价格差异原因、风险溢价来源、供应商报价合理性和降本方向。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="indexes">
+        <div class="section-head">
+          <h2>高级指数字段</h2>
+          <p>高级指数用于把分散的底层字段压缩为可比较的决策变量。点击左侧指数，可以看到它聚合了哪些字段组，以及为什么能解释报价差异。</p>
+        </div>
+        <div class="index-board">
+          <div class="index-list" id="indexList" aria-label="高级指数列表"></div>
+          <article class="panel" id="indexDetail"></article>
+        </div>
+      </section>
+
+      <section id="usage">
+        <div class="section-head">
+          <h2>落地方式</h2>
+          <p>这套字段可以同时用于内部报价、供应商比价、客户解释和数据建模。关键是保持底层字段可追溯，高级指数可解释。</p>
+        </div>
+        <div class="matrix" aria-label="落地应用矩阵">
+          <div class="head">使用场景</div>
+          <div class="head">输入字段</div>
+          <div class="head">输出结果</div>
+          <div class="head">业务价值</div>
+
+          <div>新刀具报价</div>
+          <div>材料、几何、涂层、检测、批量、交期</div>
+          <div>制造成本、批处理成本、风险溢价</div>
+          <div>减少凭经验报价，提高报价解释力</div>
+
+          <div>供应商比价</div>
+          <div>品牌渠道、良率、涂层、交付、商务条款</div>
+          <div>同规格不同报价的差异来源</div>
+          <div>判断贵在哪里，避免只看表面单价</div>
+
+          <div>降本分析</div>
+          <div>高级指数和对应底层字段</div>
+          <div>可调整的设计、批量、包装或交付条件</div>
+          <div>把降价谈判变成结构化优化</div>
+
+          <div>数据模型训练</div>
+          <div>底层字段、指数、历史成交价、供应商信息</div>
+          <div>可解释的价格预测与异常识别</div>
+          <div>让模型不只是拟合价格，还能说明原因</div>
+        </div>
+        <div class="callout" style="margin-top:16px;">
+          最终结构可以理解为：底层字段负责描述事实，分类体系负责组织知识，高级指数负责压缩复杂度，报价模型负责把技术难度和商业风险转成价格语言。
+        </div>
+      </section>
+
+      <footer>
+        本页基于当前工作区的 <strong>Datafield.txt</strong> 字段体系整理，适合用于内部汇报、客户说明、供应商沟通或后续报价模型文档。
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const categories = {
+      physical: {
+        title: "物理与制造层面",
+        subtitle: "解释刀具本身为什么难做、为什么成本高，重点覆盖材料、几何、内冷、刃口、涂层、稳定性、良率和检测。",
+        groups: [
+          ["材料与基体", ["基体材料类别", "WC/Co 含量", "晶粒尺寸", "硬度 HRA/HV", "剩余基体寿命"]],
+          ["几何与结构复杂度", ["直径 D", "刃长 LOC", "长径比 L/D", "槽深", "成形轮廓复杂度"]],
+          ["内冷结构", ["是否内冷", "内冷孔数量", "通道长度", "出水角度", "封孔工艺"]],
+          ["微观刃口质量", ["刃口半径", "K-factor", "倒棱宽度", "齿间负载均衡", "微崩口数量"]],
+          ["涂层与批处理成本", ["涂层类型", "PVD/CVD", "炉次成本", "装炉密度", "混炉兼容性"]],
+          ["热处理、应力与稳定性", ["应力消除", "深冷处理", "磨削残余应力", "热循环稳定性"]],
+          ["制造良率与小批量非线性", ["换线时间", "首件确认", "试磨数量", "编程成本", "小批量倍数"]],
+          ["精度、检测与质量控制", ["直径公差", "圆跳动", "表面粗糙度", "全检比例", "检测报告要求"]]
+        ]
+      },
+      market: {
+        title: "市场与非物理层面",
+        subtitle: "解释相同刀具为什么会因品牌、供应链、合规、交付、包装和商务条款产生价格差异。",
+        groups: [
+          ["品牌、渠道与技术溢价", ["品牌等级", "授权代理状态", "渠道层级", "专利技术", "客户验证状态"]],
+          ["供应链与宏观风险", ["钨价敏感度", "钴价敏感度", "单一来源依赖", "出口管制", "汇率风险"]],
+          ["ESG、碳足迹与合规", ["产品碳足迹", "CBAM 暴露度", "回收料证明", "RoHS / REACH", "原产地证书"]],
+          ["交付、库存与服务", ["现货状态", "交期", "MOQ", "VMI", "修磨服务成本"]],
+          ["包装、运输与无损交付", ["包装保护等级", "真空包装", "氮气保护", "运输震动风险", "客户标签"]],
+          ["商务条款与需求波动", ["采购数量", "预测准确率", "账期", "Incoterms", "NRE 工程费"]]
+        ]
+      }
+    };
+
+    const indexes = [
+      {
+        en: "Material Grindability Index",
+        zh: "材料磨削难度指数",
+        layer: "物理制造指数",
+        desc: "汇总材料配方、硬度、微量元素和砂轮磨耗对制造成本的影响。",
+        fields: ["WC 含量", "Co 粘结相含量", "晶粒尺寸", "硬度 HRA/HV", "砂轮磨耗系数", "磨削热敏感性"],
+        formula: "材料磨削难度 = 材料硬度 + 配方难磨性 + 砂轮磨耗 + 热敏感风险"
+      },
+      {
+        en: "Geometry Complexity Index",
+        zh: "几何复杂度指数",
+        layer: "物理制造指数",
+        desc: "汇总直径、刃长、刃数、槽深、螺旋角、芯厚和成形轮廓的非线性难度。",
+        fields: ["D", "LOC", "L/D", "刃数 Z", "螺旋角", "槽深", "成形轮廓复杂度"],
+        formula: "几何复杂度 = 尺寸比例 + 刃形数量 + 槽型难度 + 轮廓非标程度"
+      },
+      {
+        en: "Coolant Channel Complexity Index",
+        zh: "内冷通道复杂度指数",
+        layer: "物理制造指数",
+        desc: "汇总内冷孔数量、路径、长度、出水角度和封孔工艺难度。",
+        fields: ["内冷孔数量", "内冷孔直径", "通道长度", "路径复杂度", "出水角度", "封孔工艺"],
+        formula: "内冷复杂度 = 孔数量 + 小孔制造难度 + 路径复杂度 + 检测封孔风险"
+      },
+      {
+        en: "Edge Quality Index",
+        zh: "刃口质量指数",
+        layer: "物理制造指数",
+        desc: "汇总刃口半径、K-factor、倒棱、钝化一致性和微观对称度。",
+        fields: ["平均刃口半径", "刃口半径离散度", "K-factor", "倒棱宽度", "齿间负载均衡", "微崩口数量"],
+        formula: "刃口质量 = 锋利性 + 一致性 + 抗崩刃能力 - 缺陷风险"
+      },
+      {
+        en: "Reconditioning Value Index",
+        zh: "可再制造残值指数",
+        layer: "生命周期指数",
+        desc: "汇总修磨、退涂、重涂、钴流失和基体剩余寿命。",
+        fields: ["基体可重涂寿命", "剥涂层次数限制", "钴流失风险", "退涂后残余强度", "剩余基体寿命"],
+        formula: "再制造残值 = 剩余强度 + 可重涂次数 - 退涂损伤 - 钴流失风险"
+      },
+      {
+        en: "Coating Batch Cost Index",
+        zh: "涂层批处理成本指数",
+        layer: "物理制造指数",
+        desc: "汇总炉次成本、腔体占用率、装炉密度、混炉兼容性和夹具适配性。",
+        fields: ["涂层炉次成本", "腔体占用率", "有效装炉密度", "夹具兼容性", "混炉兼容性", "遮蔽风险"],
+        formula: "涂层批处理成本 = 炉次固定成本 / 有效装炉数量 + 夹具与混炉损失"
+      },
+      {
+        en: "Setup Loss Index",
+        zh: "换线损失指数",
+        layer: "制造组织指数",
+        desc: "汇总调机、首件确认、试磨报废、编程和小批量分摊成本。",
+        fields: ["换线时间", "换线损失费", "首件确认成本", "试磨数量", "编程成本", "小批量成本倍数"],
+        formula: "换线损失 = 固定准备成本 + 首件检测 + 试磨报废 + 小批量分摊"
+      },
+      {
+        en: "Supply Risk Premium Index",
+        zh: "供应链风险溢价指数",
+        layer: "市场商务指数",
+        desc: "汇总地理冗余度、单一来源依赖、出口管制和关键材料供应风险。",
+        fields: ["钨价敏感度", "钴价敏感度", "供应链地理冗余度", "单一来源依赖度", "出口管制风险", "关税暴露度"],
+        formula: "供应风险溢价 = 材料波动 + 来源集中度 + 政策风险 + 到岸成本不确定性"
+      },
+      {
+        en: "Packaging Risk Index",
+        zh: "包装无损风险指数",
+        layer: "交付服务指数",
+        desc: "汇总微径刀、重型刀具、真空氮气包装和运输震动风险。",
+        fields: ["包装保护等级", "微径刀具防护包装", "重型刀具包装", "真空包装", "氮气保护包装", "运输震动风险"],
+        formula: "包装风险 = 刀具脆弱性 + 运输损伤概率 + 特殊包装要求 + 客户标签复杂度"
+      },
+      {
+        en: "Commercial Friction Index",
+        zh: "商业摩擦成本指数",
+        layer: "市场商务指数",
+        desc: "汇总 VMI、账期、需求碎片化、预测偏差、MOQ 和交付服务成本。",
+        fields: ["VMI 资金占用", "付款周期", "需求碎片化", "预测准确率", "MOQ", "交期", "返利政策"],
+        formula: "商业摩擦成本 = 资金占用 + 需求波动 + 交付压力 + 合同条款让利"
+      }
+    ];
+
+    function renderCategory(key) {
+      const data = categories[key];
+      const content = document.getElementById("categoryContent");
+      content.innerHTML = `
+        <span class="tag">${data.groups.length} 个主题字段组</span>
+        <h3>${data.title}</h3>
+        <p>${data.subtitle}</p>
+        <div class="group-grid">
+          ${data.groups.map(group => `
+            <div class="group-card">
+              <h4>${group[0]}</h4>
+              <ul>${group[1].map(item => `<li>${item}</li>`).join("")}</ul>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderIndexList(active = 0) {
+      const list = document.getElementById("indexList");
+      list.innerHTML = indexes.map((item, index) => `
+        <button class="index-item ${index === active ? "active" : ""}" type="button" data-index="${index}">
+          <strong>${item.zh}</strong>
+          <span>${item.en} · ${item.layer}</span>
+        </button>
+      `).join("");
+      renderIndexDetail(active);
+    }
+
+    function renderIndexDetail(index) {
+      const item = indexes[index];
+      const detail = document.getElementById("indexDetail");
+      detail.innerHTML = `
+        <span class="tag">${item.layer}</span>
+        <h3>${item.zh}</h3>
+        <p><strong>${item.en}</strong></p>
+        <p>${item.desc}</p>
+        <div class="formula">${item.formula}</div>
+        <div class="sources">
+          ${item.fields.map(field => `<span class="source-chip">${field}</span>`).join("")}
+        </div>
+      `;
+    }
+
+    document.querySelectorAll(".tab-button").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab-button").forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        renderCategory(button.dataset.category);
+      });
+    });
+
+    document.getElementById("indexList").addEventListener("click", event => {
+      const button = event.target.closest(".index-item");
+      if (!button) return;
+      const index = Number(button.dataset.index);
+      document.querySelectorAll(".index-item").forEach(item => item.classList.remove("active"));
+      button.classList.add("active");
+      renderIndexDetail(index);
+    });
+
+    renderCategory("physical");
+    renderIndexList(0);
+  </script>
+</body>
+</html>

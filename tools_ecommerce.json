@@ -1,0 +1,4000 @@
+﻿[
+    {
+        "product_id":  "EC-TURN-2026-05-09-27CBA5",
+        "name":  "韩国特固克陶瓷车刀片",
+        "category":  "turning_tools",
+        "spec":  "TNMG160404L-FS CT3000",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  13.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TURN-2026-05-09-3B8603",
+        "name":  "NASKA纳斯卡数控刀片",
+        "category":  "turning_tools",
+        "spec":  "DNMG110404EX MU7025",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  24.6,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TURN-2026-05-09-EC2FFF",
+        "name":  "双双三角单面镗孔刀片",
+        "category":  "turning_tools",
+        "spec":  "TCMT16/TCMT11",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  7.5,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-57BC86",
+        "name":  "废角刀片再利用75度数控铣刀盘",
+        "category":  "milling_tools",
+        "spec":  "RCC12-80-27-5T/CCMT120408",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  390.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-2EEA39",
+        "name":  "海纳多功能倒角铣刀杆",
+        "category":  "milling_tools",
+        "spec":  "MC900020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-HOLE-2026-05-09-484295",
+        "name":  "日本住友喷水钻刀片/U钻刀片",
+        "category":  "hole_making_tools",
+        "spec":  "WCMT080412FN ACZ330",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  14.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-HOLE-2026-05-09-6EC396",
+        "name":  "Seco内冷圆柱形右旋整体硬质合金钻头",
+        "category":  "hole_making_tools",
+        "spec":  "直径16mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2310.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-8BFFAF",
+        "name":  "wiha德国威汉直柄星型梅花扳手",
+        "category":  "machine_tool_accessories",
+        "spec":  "362/T6-T20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  56.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-60DFD2",
+        "name":  "海纳数控刀具拉钉扳手",
+        "category":  "machine_tool_accessories",
+        "spec":  "HW-MAS-BT30",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  78.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-A4C3E6",
+        "name":  "海纳铝合金快夹式修边器",
+        "category":  "machine_tool_accessories",
+        "spec":  "RB1000/BS2012",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  30.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-BDA536",
+        "name":  "HSK-BT30锁刀座",
+        "category":  "machine_tool_accessories",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  220.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-09-30DCEC",
+        "name":  "德国TILUNR无色金属防锈油",
+        "category":  "metalworking_fluids",
+        "spec":  "LP-1809",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  36.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-09-4801E4",
+        "name":  "哈斯太机床导轨油",
+        "category":  "metalworking_fluids",
+        "spec":  "32#/46#/68#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  178.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-09-E0D382",
+        "name":  "巴索Blasocut水溶性植物油基切削液",
+        "category":  "metalworking_fluids",
+        "spec":  "Vasco7000",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9650.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-09-7B7D5B",
+        "name":  "润滑油气动工具用",
+        "category":  "metalworking_fluids",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-B161B5",
+        "name":  "株洲硬质合金长条/切削用钨钢条",
+        "category":  "tool_raw_materials",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  380.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-B161B5",
+        "name":  "硬质合金模具材料/钨钢板材",
+        "category":  "tool_raw_materials",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-1BF2BE",
+        "name":  "高速钢M35圆钢/M35高速钢刀片",
+        "category":  "tool_raw_materials",
+        "spec":  "M35",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  135.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-5C5813",
+        "name":  "6063挤压棒/硬质铝条/航空用铝合金铝棒",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  22.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-E2B28B",
+        "name":  "YG20硬质合金板块/碳化钨板料",
+        "category":  "tool_raw_materials",
+        "spec":  "抗震合金板材",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-5C5813",
+        "name":  "YG8/YF10硬质合金长条/株洲钨钢长条",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-704B5D",
+        "name":  "不锈钢棒材316/321/430/431不锈圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "316/321/430/431",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  25.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-5E0C02",
+        "name":  "海纳偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-420",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-B9FBFA",
+        "name":  "海纳偏心式寻边器不锈钢无磁机械式回转分中棒",
+        "category":  "measuring_tools",
+        "spec":  "SME-420ST",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  98.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-DCF483",
+        "name":  "海纳光电寻边器/电子分中棒CNC对刀仪",
+        "category":  "measuring_tools",
+        "spec":  "VPS-20B",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-584A21",
+        "name":  "海纳机械寻边器分中棒",
+        "category":  "measuring_tools",
+        "spec":  "PM10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  24.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-07DFBD",
+        "name":  "温州盛测电子标尺/数显卡尺",
+        "category":  "measuring_tools",
+        "spec":  "0-150mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  140.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-FEA067",
+        "name":  "SYNTEK高精度电子数字数显百分表/千分表",
+        "category":  "measuring_tools",
+        "spec":  "0.001mm/0-12.7/25.4",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-07DFBD",
+        "name":  "游标卡尺",
+        "category":  "measuring_tools",
+        "spec":  "0-150mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  45.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-09-169837",
+        "name":  "白刚玉磨料/白刚玉细粉",
+        "category":  "abrasives",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-09-CD044C",
+        "name":  "打磨抛光带/砂带机砂布带",
+        "category":  "abrasives",
+        "spec":  "砂布带",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  20.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-09-B5D2F5",
+        "name":  "尼龙抛光轮/不锈钢木材平面打磨抛光轮",
+        "category":  "abrasives",
+        "spec":  "尼龙抛光轮",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  240.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-09-5F4FF7",
+        "name":  "金属打磨抛光轮/尼龙抛光轮",
+        "category":  "abrasives",
+        "spec":  "精密抛光",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  240.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-09-7D28AF",
+        "name":  "砂布水磨抚平浸泡打磨抛光砂纸",
+        "category":  "abrasives",
+        "spec":  "MTE",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  0.8,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-09-8D5488",
+        "name":  "立方氮化硼刀片/PCD刀具/CBN刀片",
+        "category":  "superhard_tools",
+        "spec":  "高硬材料加工",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  150.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-09-C4AC72",
+        "name":  "PCD倒角刀/PCD斜边刀片/金刚石切断雕刻刀",
+        "category":  "superhard_tools",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  280.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-09-104719",
+        "name":  "CBN焊接刀片",
+        "category":  "superhard_tools",
+        "spec":  "CNGA120402/富耐克",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-38B995",
+        "name":  "油路刀柄",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-OMS25/32/40 BT30/BT50-OSL",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  680.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-F68DCF",
+        "name":  "台湾主轴拉力计/BT40主轴维修测力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30/50德国进口",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  4600.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-73B439",
+        "name":  "BT30外转内冷快速钻头刀柄",
+        "category":  "cnc_tool_holders",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  580.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-76B918",
+        "name":  "BT50-LBK镗刀柄/定制中心数控刀具",
+        "category":  "cnc_tool_holders",
+        "spec":  "高碳钢镗孔刀柄",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-174581",
+        "name":  "手动三档数控车床",
+        "category":  "machine_equipment",
+        "spec":  "CAK6150D/6150",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  89000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-21385E",
+        "name":  "小型平面磨床/手动卧轴矩台平面磨床",
+        "category":  "machine_equipment",
+        "spec":  "M260A/M300",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  28000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-F675E4",
+        "name":  "卧式锯床/液压半自动多功能切割小型带锯床",
+        "category":  "machine_equipment",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9800.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-CAAC5E",
+        "name":  "数控外圆磨床",
+        "category":  "machine_equipment",
+        "spec":  "MK1332D",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  231000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-9B1DB9",
+        "name":  "立式小型CNC数控钻铣中心",
+        "category":  "machine_equipment",
+        "spec":  "V300",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  103000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-5D6637",
+        "name":  "数控铣床",
+        "category":  "machine_equipment",
+        "spec":  "XK7136",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  103000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-08DB1F",
+        "name":  "四爪卡盘/四爪自定心车床卡盘",
+        "category":  "machine_equipment",
+        "spec":  "K72315 400/500/630/800",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-E5CE09",
+        "name":  "株洲非标定制合金铣刀平头铣刀球头铣刀",
+        "category":  "milling_tools",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  10.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-610E47",
+        "name":  "圆弧立铣刀R3快进给圆鼻铣刀杆",
+        "category":  "milling_tools",
+        "spec":  "VC-C25-25-160-1T",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-26AE85",
+        "name":  "海纳快进给平面铣刀盘PDMT0905硬质合金刀片",
+        "category":  "milling_tools",
+        "spec":  "HPD09-50-22-4刃",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  431.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-2015E7",
+        "name":  "代理批发机用刀片三菱铣刀片",
+        "category":  "milling_tools",
+        "spec":  "APMT1604PDER-H2/M2 VP15TF R0.8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  20.8,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-09-E5CE09",
+        "name":  "雕刻刀电脑雕刻刀四刃合金铣刀钨钢铣刀",
+        "category":  "milling_tools",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  30.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-CA941F",
+        "name":  "东莞意大利Tecnologie FRB端面驱动顶针",
+        "category":  "machine_tool_accessories",
+        "spec":  "FRB",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1500.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-01AA54",
+        "name":  "25#圆钢厂家直供无锡25#圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "25#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  6900.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-E2BC96",
+        "name":  "20#圆钢支持零割无锡20#圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "20#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  3990.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-84828C",
+        "name":  "10#圆钢厂家直供无锡10#圆钢价格",
+        "category":  "tool_raw_materials",
+        "spec":  "10#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  3990.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-6107C3",
+        "name":  "EC10 12 16 20镗头专用筒夹NBJ精密变径套",
+        "category":  "machine_tool_accessories",
+        "spec":  "EC/NBJ10/12/16/20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  80.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-64A28F",
+        "name":  "BT40锁刀座BT30卸刀座立卧全铝制ISO30刀夹",
+        "category":  "machine_tool_accessories",
+        "spec":  "BT40/BT30/ISO30/BT50",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  66.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-992CA7",
+        "name":  "筒夹ER夹套嗦咀高精刀夹刀柄筒夹ER11 25",
+        "category":  "machine_tool_accessories",
+        "spec":  "ER11/25",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-09-82C2F5",
+        "name":  "一级代理LEMMA台湾正河源直角式角固虎钳VAV-6",
+        "category":  "machine_tool_accessories",
+        "spec":  "VAV-6",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1248.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-94C8B5",
+        "name":  "白钢刀高速钢车刀条超硬白钢刀M42M41",
+        "category":  "tool_raw_materials",
+        "spec":  "M42/M41",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-CD5216",
+        "name":  "ISO20-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO20-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-D93B57",
+        "name":  "ISO25-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO25-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-CC1444",
+        "name":  "ISO30-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO30-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-9E7179",
+        "name":  "BT30-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-7FCE9D",
+        "name":  "BT40-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-161867",
+        "name":  "BT50-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT50-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2250.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-E7C05B",
+        "name":  "BT60-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT60-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  4880.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-7E0552",
+        "name":  "BT30-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-6C6FC1",
+        "name":  "BT40-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-0E511E",
+        "name":  "BT50-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT50-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-9DDCED",
+        "name":  "主轴拉力计ISOBT30油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT30",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-5C25AD",
+        "name":  "主轴拉力计ISOBT40油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT40",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-B9922F",
+        "name":  "主轴拉力计ISOBT50油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT50",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2250.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-09-C451E4",
+        "name":  "HSK32-PFG加工中心主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "HSK32-PFG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2580.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-5C5813",
+        "name":  "优势批发台湾硬质合金圆棒",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  16.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-ABAA11",
+        "name":  "YL10.2硬质合金挤压管材",
+        "category":  "tool_raw_materials",
+        "spec":  "YL10.2",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  90.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-1F7B54",
+        "name":  "硬质合金耐磨刀条YG6X",
+        "category":  "tool_raw_materials",
+        "spec":  "YG6X",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  480.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-A2BBA2",
+        "name":  "YG8硬质合金刀条",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  450.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-A2BBA2",
+        "name":  "冲击钨钢板YG8硬质合金板块",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  362.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-A2BBA2",
+        "name":  "YG8合金长条塑料切粒机滚刀",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  26.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-A2BBA2",
+        "name":  "钨钢板材YG8板块碳化钨方条",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  100.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-60CC17",
+        "name":  "直供硬质合金圆棒精磨小圆棒",
+        "category":  "tool_raw_materials",
+        "spec":  "精磨圆棒",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  10.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-833C16",
+        "name":  "精磨钨钢圆棒3.175*330mm",
+        "category":  "tool_raw_materials",
+        "spec":  "3.175*330mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  36.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-3D1D86",
+        "name":  "株洲硬质合金钨钢条带孔异型长条",
+        "category":  "tool_raw_materials",
+        "spec":  "带孔异型",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  380.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-DB9567",
+        "name":  "大型株洲硬质合金板材",
+        "category":  "tool_raw_materials",
+        "spec":  "105*55*50mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  425.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-A2BBA2",
+        "name":  "硬质合金精磨圆棒YG8",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  385.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-09-DC2787",
+        "name":  "YG20钨钢板块耐磨硬质合金厚板材",
+        "category":  "tool_raw_materials",
+        "spec":  "YG20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  480.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-62AB74",
+        "name":  "日本NIKKEN日研感触器3D光电万向寻边器",
+        "category":  "measuring_tools",
+        "spec":  "S20-UMT",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1680.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-2EA352",
+        "name":  "海纳TSEP1020A陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP1020A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-8E4DB3",
+        "name":  "海纳CME-1020陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-DF66E8",
+        "name":  "海纳VPS-301C陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "VPS-301C",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-9F8291",
+        "name":  "海纳WH-1020陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-032A86",
+        "name":  "海纳WH-1020A偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1020A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-7A1BD7",
+        "name":  "海纳TSEP1020偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-074142",
+        "name":  "海纳MEP-1020偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-C8FB6D",
+        "name":  "海纳VPS-302S偏心式寻边器不锈钢无磁",
+        "category":  "measuring_tools",
+        "spec":  "VPS-302S",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  175.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-5C0DB0",
+        "name":  "海纳WH-420偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-420",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  295.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-FDD457",
+        "name":  "海纳TSEP-420A偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP-420A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  235.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-636B24",
+        "name":  "海纳CME-1010偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-1010",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-B5D0F7",
+        "name":  "海纳ME-100偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "ME-100",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-83860D",
+        "name":  "海纳MEP-10偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-8DE37A",
+        "name":  "海纳MEP-10B偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-10B",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-B83A13",
+        "name":  "海纳TSEP10偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-F0A69D",
+        "name":  "海纳VPS-201C偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "VPS-201C",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-2FE467",
+        "name":  "海纳WH-1010偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1010",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-61526B",
+        "name":  "海纳SOE-20L光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "SOE-20L",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-EF2AEB",
+        "name":  "海纳ES20光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "ES20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-09-EF345C",
+        "name":  "海纳LR-20光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "LR-20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-09",
+        "change":  {
+                       "day_pct":  null,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TURN-2026-05-10-B77651",
+        "name":  "韩国特固克陶瓷车刀片",
+        "category":  "turning_tools",
+        "spec":  "TNMG160404L-FS CT3000",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  13.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TURN-2026-05-10-2ABE12",
+        "name":  "NASKA纳斯卡数控刀片",
+        "category":  "turning_tools",
+        "spec":  "DNMG110404EX MU7025",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  24.6,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TURN-2026-05-10-3948ED",
+        "name":  "双双三角单面镗孔刀片",
+        "category":  "turning_tools",
+        "spec":  "TCMT16/TCMT11",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  7.5,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-760F5F",
+        "name":  "废角刀片再利用75度数控铣刀盘",
+        "category":  "milling_tools",
+        "spec":  "RCC12-80-27-5T/CCMT120408",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  390.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-E92798",
+        "name":  "海纳多功能倒角铣刀杆",
+        "category":  "milling_tools",
+        "spec":  "MC900020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-HOLE-2026-05-10-6024E9",
+        "name":  "日本住友喷水钻刀片/U钻刀片",
+        "category":  "hole_making_tools",
+        "spec":  "WCMT080412FN ACZ330",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  14.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-HOLE-2026-05-10-4B3A32",
+        "name":  "Seco内冷圆柱形右旋整体硬质合金钻头",
+        "category":  "hole_making_tools",
+        "spec":  "直径16mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2310.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-637927",
+        "name":  "wiha德国威汉直柄星型梅花扳手",
+        "category":  "machine_tool_accessories",
+        "spec":  "362/T6-T20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  56.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-0E0871",
+        "name":  "海纳数控刀具拉钉扳手",
+        "category":  "machine_tool_accessories",
+        "spec":  "HW-MAS-BT30",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  78.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-27875F",
+        "name":  "海纳铝合金快夹式修边器",
+        "category":  "machine_tool_accessories",
+        "spec":  "RB1000/BS2012",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  30.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-D33535",
+        "name":  "HSK-BT30锁刀座",
+        "category":  "machine_tool_accessories",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  220.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-10-A69454",
+        "name":  "德国TILUNR无色金属防锈油",
+        "category":  "metalworking_fluids",
+        "spec":  "LP-1809",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  36.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-10-7EAAA1",
+        "name":  "哈斯太机床导轨油",
+        "category":  "metalworking_fluids",
+        "spec":  "32#/46#/68#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  178.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-10-1728EF",
+        "name":  "巴索Blasocut水溶性植物油基切削液",
+        "category":  "metalworking_fluids",
+        "spec":  "Vasco7000",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9650.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-META-2026-05-10-924E93",
+        "name":  "润滑油气动工具用",
+        "category":  "metalworking_fluids",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-49DB17",
+        "name":  "株洲硬质合金长条/切削用钨钢条",
+        "category":  "tool_raw_materials",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  380.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-49DB17",
+        "name":  "硬质合金模具材料/钨钢板材",
+        "category":  "tool_raw_materials",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-6BC1D9",
+        "name":  "高速钢M35圆钢/M35高速钢刀片",
+        "category":  "tool_raw_materials",
+        "spec":  "M35",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  135.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-A3612B",
+        "name":  "6063挤压棒/硬质铝条/航空用铝合金铝棒",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  22.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-F272AD",
+        "name":  "YG20硬质合金板块/碳化钨板料",
+        "category":  "tool_raw_materials",
+        "spec":  "抗震合金板材",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-A3612B",
+        "name":  "YG8/YF10硬质合金长条/株洲钨钢长条",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-22600A",
+        "name":  "不锈钢棒材316/321/430/431不锈圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "316/321/430/431",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  25.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-EE7FE4",
+        "name":  "海纳偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-420",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-D7BA88",
+        "name":  "海纳偏心式寻边器不锈钢无磁机械式回转分中棒",
+        "category":  "measuring_tools",
+        "spec":  "SME-420ST",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  98.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-845FC0",
+        "name":  "海纳光电寻边器/电子分中棒CNC对刀仪",
+        "category":  "measuring_tools",
+        "spec":  "VPS-20B",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-2184C1",
+        "name":  "海纳机械寻边器分中棒",
+        "category":  "measuring_tools",
+        "spec":  "PM10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  24.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-A3749B",
+        "name":  "温州盛测电子标尺/数显卡尺",
+        "category":  "measuring_tools",
+        "spec":  "0-150mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  140.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-BABB31",
+        "name":  "SYNTEK高精度电子数字数显百分表/千分表",
+        "category":  "measuring_tools",
+        "spec":  "0.001mm/0-12.7/25.4",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-A3749B",
+        "name":  "游标卡尺",
+        "category":  "measuring_tools",
+        "spec":  "0-150mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  45.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-10-B73DF7",
+        "name":  "白刚玉磨料/白刚玉细粉",
+        "category":  "abrasives",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-10-D17C88",
+        "name":  "打磨抛光带/砂带机砂布带",
+        "category":  "abrasives",
+        "spec":  "砂布带",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  20.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-10-741E3F",
+        "name":  "尼龙抛光轮/不锈钢木材平面打磨抛光轮",
+        "category":  "abrasives",
+        "spec":  "尼龙抛光轮",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  240.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-10-D2544A",
+        "name":  "金属打磨抛光轮/尼龙抛光轮",
+        "category":  "abrasives",
+        "spec":  "精密抛光",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  240.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-ABRA-2026-05-10-6C2B96",
+        "name":  "砂布水磨抚平浸泡打磨抛光砂纸",
+        "category":  "abrasives",
+        "spec":  "MTE",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  0.8,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-10-EA0990",
+        "name":  "立方氮化硼刀片/PCD刀具/CBN刀片",
+        "category":  "superhard_tools",
+        "spec":  "高硬材料加工",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  150.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-10-608A81",
+        "name":  "PCD倒角刀/PCD斜边刀片/金刚石切断雕刻刀",
+        "category":  "superhard_tools",
+        "spec":  "非标定制",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  280.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-SUPE-2026-05-10-63D498",
+        "name":  "CBN焊接刀片",
+        "category":  "superhard_tools",
+        "spec":  "CNGA120402/富耐克",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  300.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-536BDF",
+        "name":  "油路刀柄",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-OMS25/32/40 BT30/BT50-OSL",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  680.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-4F2BDF",
+        "name":  "台湾主轴拉力计/BT40主轴维修测力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30/50德国进口",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  4600.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-31A243",
+        "name":  "BT30外转内冷快速钻头刀柄",
+        "category":  "cnc_tool_holders",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  580.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-FF1CCB",
+        "name":  "BT50-LBK镗刀柄/定制中心数控刀具",
+        "category":  "cnc_tool_holders",
+        "spec":  "高碳钢镗孔刀柄",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-DA41B0",
+        "name":  "手动三档数控车床",
+        "category":  "machine_equipment",
+        "spec":  "CAK6150D/6150",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  89000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-8B76E7",
+        "name":  "小型平面磨床/手动卧轴矩台平面磨床",
+        "category":  "machine_equipment",
+        "spec":  "M260A/M300",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  28000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-ED563E",
+        "name":  "卧式锯床/液压半自动多功能切割小型带锯床",
+        "category":  "machine_equipment",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9800.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-F236BF",
+        "name":  "数控外圆磨床",
+        "category":  "machine_equipment",
+        "spec":  "MK1332D",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  231000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-4DB113",
+        "name":  "立式小型CNC数控钻铣中心",
+        "category":  "machine_equipment",
+        "spec":  "V300",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  103000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-822121",
+        "name":  "数控铣床",
+        "category":  "machine_equipment",
+        "spec":  "XK7136",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  103000.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-618ABA",
+        "name":  "四爪卡盘/四爪自定心车床卡盘",
+        "category":  "machine_equipment",
+        "spec":  "K72315 400/500/630/800",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-FBF21D",
+        "name":  "株洲非标定制合金铣刀平头铣刀球头铣刀",
+        "category":  "milling_tools",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  10.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-5AFB4E",
+        "name":  "圆弧立铣刀R3快进给圆鼻铣刀杆",
+        "category":  "milling_tools",
+        "spec":  "VC-C25-25-160-1T",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-9FCC6B",
+        "name":  "海纳快进给平面铣刀盘PDMT0905硬质合金刀片",
+        "category":  "milling_tools",
+        "spec":  "HPD09-50-22-4刃",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  431.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-EA3D87",
+        "name":  "代理批发机用刀片三菱铣刀片",
+        "category":  "milling_tools",
+        "spec":  "APMT1604PDER-H2/M2 VP15TF R0.8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  20.8,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MILL-2026-05-10-FBF21D",
+        "name":  "雕刻刀电脑雕刻刀四刃合金铣刀钨钢铣刀",
+        "category":  "milling_tools",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  30.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-91A078",
+        "name":  "东莞意大利Tecnologie FRB端面驱动顶针",
+        "category":  "machine_tool_accessories",
+        "spec":  "FRB",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1500.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-A0AB09",
+        "name":  "25#圆钢厂家直供无锡25#圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "25#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  6900.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-F1A926",
+        "name":  "20#圆钢支持零割无锡20#圆钢",
+        "category":  "tool_raw_materials",
+        "spec":  "20#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  3990.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-63F7E6",
+        "name":  "10#圆钢厂家直供无锡10#圆钢价格",
+        "category":  "tool_raw_materials",
+        "spec":  "10#",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  3990.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-8D3D39",
+        "name":  "EC10 12 16 20镗头专用筒夹NBJ精密变径套",
+        "category":  "machine_tool_accessories",
+        "spec":  "EC/NBJ10/12/16/20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  80.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-ADCCF5",
+        "name":  "BT40锁刀座BT30卸刀座立卧全铝制ISO30刀夹",
+        "category":  "machine_tool_accessories",
+        "spec":  "BT40/BT30/ISO30/BT50",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  66.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-4EBBC1",
+        "name":  "筒夹ER夹套嗦咀高精刀夹刀柄筒夹ER11 25",
+        "category":  "machine_tool_accessories",
+        "spec":  "ER11/25",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  9.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MACH-2026-05-10-CBEC88",
+        "name":  "一级代理LEMMA台湾正河源直角式角固虎钳VAV-6",
+        "category":  "machine_tool_accessories",
+        "spec":  "VAV-6",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1248.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-3AB6B8",
+        "name":  "白钢刀高速钢车刀条超硬白钢刀M42M41",
+        "category":  "tool_raw_materials",
+        "spec":  "M42/M41",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  8.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-EB4A61",
+        "name":  "ISO20-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO20-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-2694E1",
+        "name":  "ISO25-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO25-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-0A9A87",
+        "name":  "ISO30-TM高速数控雕刻机主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO30-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1890.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-D43DFE",
+        "name":  "BT30-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-6383ED",
+        "name":  "BT40-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-5262C7",
+        "name":  "BT50-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT50-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2250.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-320981",
+        "name":  "BT60-TM数控加工中心主轴维修检测拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT60-TM",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  4880.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-B8F4F3",
+        "name":  "BT30-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT30-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-80483C",
+        "name":  "BT40-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT40-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-702E6F",
+        "name":  "BT50-FPG数控加工中心液压主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "BT50-FPG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-2C8976",
+        "name":  "主轴拉力计ISOBT30油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT30",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1550.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-1B1DBB",
+        "name":  "主轴拉力计ISOBT40油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT40",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1850.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-F3976E",
+        "name":  "主轴拉力计ISOBT50油压机械主轴测力器",
+        "category":  "cnc_tool_holders",
+        "spec":  "ISO/BT50",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2250.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-CNC_-2026-05-10-6BB344",
+        "name":  "HSK32-PFG加工中心主轴拉力计",
+        "category":  "cnc_tool_holders",
+        "spec":  "HSK32-PFG",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  2580.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-A3612B",
+        "name":  "优势批发台湾硬质合金圆棒",
+        "category":  "tool_raw_materials",
+        "spec":  "",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  16.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-D167AF",
+        "name":  "YL10.2硬质合金挤压管材",
+        "category":  "tool_raw_materials",
+        "spec":  "YL10.2",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  90.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-DF653C",
+        "name":  "硬质合金耐磨刀条YG6X",
+        "category":  "tool_raw_materials",
+        "spec":  "YG6X",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  480.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-5CC91D",
+        "name":  "YG8硬质合金刀条",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  450.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-5CC91D",
+        "name":  "冲击钨钢板YG8硬质合金板块",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  362.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-5CC91D",
+        "name":  "YG8合金长条塑料切粒机滚刀",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  26.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-5CC91D",
+        "name":  "钨钢板材YG8板块碳化钨方条",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  100.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-2CD44B",
+        "name":  "直供硬质合金圆棒精磨小圆棒",
+        "category":  "tool_raw_materials",
+        "spec":  "精磨圆棒",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  10.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-86CB9A",
+        "name":  "精磨钨钢圆棒3.175*330mm",
+        "category":  "tool_raw_materials",
+        "spec":  "3.175*330mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  36.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-A5C7F7",
+        "name":  "株洲硬质合金钨钢条带孔异型长条",
+        "category":  "tool_raw_materials",
+        "spec":  "带孔异型",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  380.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-C5FBC1",
+        "name":  "大型株洲硬质合金板材",
+        "category":  "tool_raw_materials",
+        "spec":  "105*55*50mm",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  425.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-5CC91D",
+        "name":  "硬质合金精磨圆棒YG8",
+        "category":  "tool_raw_materials",
+        "spec":  "YG8",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  385.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-TOOL-2026-05-10-F5D614",
+        "name":  "YG20钨钢板块耐磨硬质合金厚板材",
+        "category":  "tool_raw_materials",
+        "spec":  "YG20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  480.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-3D3BDF",
+        "name":  "日本NIKKEN日研感触器3D光电万向寻边器",
+        "category":  "measuring_tools",
+        "spec":  "S20-UMT",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  1680.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-BA5E86",
+        "name":  "海纳TSEP1020A陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP1020A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-2BB710",
+        "name":  "海纳CME-1020陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-91F29F",
+        "name":  "海纳VPS-301C陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "VPS-301C",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-653389",
+        "name":  "海纳WH-1020陶瓷偏心式寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  185.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-A55865",
+        "name":  "海纳WH-1020A偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1020A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-D3C53D",
+        "name":  "海纳TSEP1020偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-A0332D",
+        "name":  "海纳MEP-1020偏心式分中棒陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-1020",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  165.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-A1B475",
+        "name":  "海纳VPS-302S偏心式寻边器不锈钢无磁",
+        "category":  "measuring_tools",
+        "spec":  "VPS-302S",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  175.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-147809",
+        "name":  "海纳WH-420偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-420",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  295.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-24A978",
+        "name":  "海纳TSEP-420A偏心无磁陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP-420A",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  235.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-41207C",
+        "name":  "海纳CME-1010偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "CME-1010",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-CFF7EC",
+        "name":  "海纳ME-100偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "ME-100",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-5FD750",
+        "name":  "海纳MEP-10偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-4C61C7",
+        "name":  "海纳MEP-10B偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "MEP-10B",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-41D47F",
+        "name":  "海纳TSEP10偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "TSEP10",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-8EFE78",
+        "name":  "海纳VPS-201C偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "VPS-201C",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-F9BCD4",
+        "name":  "海纳WH-1010偏心陶瓷寻边器",
+        "category":  "measuring_tools",
+        "spec":  "WH-1010",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  125.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-3C04E3",
+        "name":  "海纳SOE-20L光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "SOE-20L",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-1337DC",
+        "name":  "海纳ES20光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "ES20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "product_id":  "EC-MEAS-2026-05-10-325796",
+        "name":  "海纳LR-20光电寻边器",
+        "category":  "measuring_tools",
+        "spec":  "LR-20",
+        "price":  {
+                      "currency":  "CNY",
+                      "value":  120.0,
+                      "unit":  "piece"
+                  },
+        "source":  "ecommerce",
+        "date":  "2026-05-10",
+        "change":  {
+                       "day_pct":  0.0,
+                       "week_pct":  null,
+                       "month_pct":  null
+                   }
+    },
+    {
+        "record_type":  "ecommerce_quote",
+        "platform":  {
+                         "name":  "某B2B商城",
+                         "item_url":  "https://example.com/item/CNMG120408",
+                         "item_id":  "E10001"
+                     },
+        "shop":  {
+                     "name":  "华东刀具旗舰店",
+                     "region":  "上海",
+                     "rating":  4.8
+                 },
+        "product":  {
+                        "brand":  "Sandvik",
+                        "model":  "CNMG 120408-PM",
+                        "spec":  "CNMG120408",
+                        "category":  "turning_insert",
+                        "material":  "carbide",
+                        "coating":  "PVD"
+                    },
+        "price":  {
+                      "currency":  "CNY",
+                      "unit_price":  31.5,
+                      "unit":  "piece",
+                      "tax_included":  true,
+                      "freight":  0,
+                      "promotion":  "满100片减50"
+                  },
+        "availability":  {
+                             "stock_status":  "in_stock",
+                             "stock_qty":  860,
+                             "lead_time_days":  2
+                         },
+        "crawl":  {
+                      "crawl_time":  "2026-05-11T09:30:00+08:00",
+                      "raw_text":  "CNMG 120408-PM 硬质合金刀片 31.5元/片 现货"
+                  }
+    }
+]

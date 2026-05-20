@@ -1,0 +1,1 @@
+import{l as a}from"./index-HywmEUgK.js";function r(o=0,u={}){const t=a(!1),e=a(),n=a(!1);function s(){console.log(1111),t.value=!0}return{bindIdentity:t,identityPop:e,isOpenSuccess:n,openBind:s,setDate:()=>{e.value&&e.value.resetData&&e.value.resetData(),t.value=!1,n.value=!0}}}export{r as u};

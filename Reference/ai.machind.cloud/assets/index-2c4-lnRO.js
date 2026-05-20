@@ -1,0 +1,1 @@
+import{s as r}from"./index-HywmEUgK.js";async function n(e){return await r({method:"post",url:"/user/expert/queryExportPage",data:e,headers:{service:"konwledge"}})}async function o(e){return await r({method:"get",url:"/user/expert/queryExpertContent",params:e,headers:{service:"konwledge"}})}export{o as a,n as g};

@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{p as o,o as t}from"./index-HywmEUgK.js";const c={},r={class:"flex h-full w-full flex-col p-[20px] theme-bg theme-color flex-center"};function l(s,n){return t(),o("div",r," history111111111 内容建设中... ")}const a=e(c,[["render",l]]);export{a as default};

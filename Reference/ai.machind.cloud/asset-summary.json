@@ -1,0 +1,42 @@
+﻿[
+    {
+        "Extension":  ".css",
+        "Count":  83,
+        "Bytes":  384369
+    },
+    {
+        "Extension":  ".gif",
+        "Count":  1,
+        "Bytes":  605595
+    },
+    {
+        "Extension":  ".html",
+        "Count":  1,
+        "Bytes":  563
+    },
+    {
+        "Extension":  ".js",
+        "Count":  299,
+        "Bytes":  18186820
+    },
+    {
+        "Extension":  ".png",
+        "Count":  55,
+        "Bytes":  14619232
+    },
+    {
+        "Extension":  ".svg",
+        "Count":  10,
+        "Bytes":  2002769
+    },
+    {
+        "Extension":  ".ttf",
+        "Count":  21,
+        "Bytes":  2429464
+    },
+    {
+        "Extension":  ".woff",
+        "Count":  39,
+        "Bytes":  313813
+    }
+]

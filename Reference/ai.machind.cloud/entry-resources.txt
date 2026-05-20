@@ -1,0 +1,4 @@
+﻿https://ai.machind.cloud/assets/index-CJlP8U9r.css
+https://ai.machind.cloud/assets/index-HywmEUgK.js
+https://ai.machind.cloud/logo.png
+https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js

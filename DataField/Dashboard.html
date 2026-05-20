@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>报价字段导航仪表盘</title>
+  <style>
+    :root {
+      --bg: #f3f5f7;
+      --panel: #ffffff;
+      --panel-2: #f9fafb;
+      --line: #d9e0e5;
+      --line-strong: #c6d0d7;
+      --text: #14212a;
+      --muted: #687782;
+      --soft: #edf2f4;
+      --blue: #256f93;
+      --blue-soft: #e4f0f5;
+      --green: #2e7658;
+      --green-soft: #e4f2eb;
+      --amber: #a76d1f;
+      --amber-soft: #f7ecd9;
+      --red: #a5463d;
+      --red-soft: #f6e6e4;
+      --ink: #101a20;
+      --ink-2: #16232b;
+      --shadow: 0 16px 38px rgba(20, 33, 42, 0.1);
+      --shadow-soft: 0 8px 18px rgba(20, 33, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    button, input { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 306px minmax(0, 1fr) 380px;
+    }
+
+    .app.sidebar-hidden {
+      grid-template-columns: minmax(0, 1fr) 380px;
+    }
+
+    .app.detail-hidden {
+      grid-template-columns: 306px minmax(0, 1fr);
+    }
+
+    .app.sidebar-hidden.detail-hidden {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .app.sidebar-hidden .sidebar,
+    .app.detail-hidden .detail {
+      display: none;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: var(--ink);
+      color: #f4f7f8;
+      border-right: 1px solid #0c1216;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 12px 0 30px rgba(14, 24, 31, 0.14);
+    }
+
+    .brand {
+      padding: 24px 22px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      background: #122029;
+    }
+
+    .brand-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .brand p {
+      margin: 8px 0 0;
+      color: #adbac3;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .nav {
+      padding: 16px 12px 24px;
+      overflow: auto;
+    }
+
+    .nav::-webkit-scrollbar,
+    .detail::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    .nav::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+    }
+
+    .detail::-webkit-scrollbar-thumb {
+      background: #cad4da;
+      border-radius: 999px;
+      border: 2px solid #fff;
+    }
+
+    .nav-section {
+      margin: 12px 0 8px;
+      padding: 0 10px;
+      color: #8fa1ad;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .nav-section-row {
+      display: grid;
+      grid-template-columns: 1fr 38px;
+      gap: 4px;
+      align-items: center;
+      margin: 12px 0 6px;
+    }
+
+    .nav-section-row .section-filter,
+    .nav-section-row .section-toggle {
+      min-height: 34px;
+      border-radius: 8px;
+      color: #adbac3;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .nav-section-row .section-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .nav-section-row .section-toggle {
+      display: grid;
+      place-items: center;
+    }
+
+    .nav-section-row .section-filter:hover,
+    .nav-section-row .section-toggle:hover,
+    .nav-section-row .section-filter.active {
+      background: rgba(255,255,255,0.07);
+      color: #fff;
+    }
+
+    .nav-children.collapsed {
+      display: none;
+    }
+
+    .nav button {
+      width: 100%;
+      min-height: 42px;
+      border: 0;
+      background: transparent;
+      color: #d6e0e5;
+      display: grid;
+      grid-template-columns: 28px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .nav button:hover { background: rgba(255,255,255,0.07); }
+    .nav button.active {
+      background: #233640;
+      color: #fff;
+      box-shadow: inset 3px 0 0 #67b2c8;
+    }
+
+    .nav-section-row .section-filter {
+      grid-template-columns: 1fr auto;
+    }
+
+    .nav-section-row .section-toggle {
+      grid-template-columns: 1fr;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .nav .count {
+      color: #aebbc4;
+      font-size: 12px;
+      padding-left: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .icon-button,
+    .floating-button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #22313a;
+      border-radius: 8px;
+      min-width: 36px;
+      height: 36px;
+      display: inline-grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background .15s, border-color .15s, color .15s, transform .15s;
+    }
+
+    .icon-button:hover,
+    .floating-button:hover {
+      border-color: var(--line-strong);
+      background: var(--panel-2);
+      transform: translateY(-1px);
+    }
+
+    .brand .icon-button {
+      background: rgba(255,255,255,0.08);
+      color: #f4f7f8;
+      border-color: rgba(255,255,255,0.16);
+      flex: 0 0 auto;
+    }
+
+    .brand .icon-button:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.24);
+    }
+
+    .floating-button {
+      position: fixed;
+      z-index: 12;
+      box-shadow: var(--shadow);
+    }
+
+    .show-sidebar {
+      left: 16px;
+      top: 16px;
+      display: none;
+    }
+
+    .show-detail {
+      right: 16px;
+      top: 16px;
+      display: none;
+    }
+
+    .app.sidebar-hidden ~ .show-sidebar,
+    .app.detail-hidden ~ .show-detail {
+      display: inline-grid;
+    }
+
+    .main {
+      min-width: 0;
+      padding: 28px 28px 32px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 20px;
+      padding-bottom: 2px;
+    }
+
+    .title h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 760px;
+    }
+
+    .search {
+      width: min(430px, 100%);
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0 15px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .search:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(37, 111, 147, 0.13), var(--shadow-soft);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      min-height: 90px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #67b2c8;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 20px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #34434d;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      box-shadow: 0 1px 0 rgba(20, 33, 42, 0.03);
+      transition: background .15s, border-color .15s, color .15s, transform .15s;
+    }
+
+    .chip:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-1px);
+    }
+
+    .chip.active {
+      color: #fff;
+      background: #1f3a46;
+      border-color: #1f3a46;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .section-head span {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field-card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 16px;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+      box-shadow: 0 1px 0 rgba(20, 33, 42, 0.03);
+    }
+
+    .field-card:hover {
+      border-color: #b7c7cf;
+      box-shadow: var(--shadow);
+      transform: translateY(-1px);
+    }
+
+    .field-card.selected {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(37, 111, 147, 0.13), var(--shadow-soft);
+    }
+
+    .field-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .field-title strong {
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .level {
+      flex: 0 0 auto;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .high { background: var(--red); }
+    .medium { background: var(--amber); }
+    .low { background: var(--green); }
+
+    .field-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .tag {
+      color: #40515d;
+      background: var(--soft);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      border: 1px solid rgba(198, 208, 215, 0.58);
+    }
+
+    .detail {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: var(--panel);
+      border-left: 1px solid var(--line);
+      padding: 26px 24px;
+      overflow: auto;
+      box-shadow: -12px 0 28px rgba(20, 33, 42, 0.06);
+    }
+
+    .detail-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .detail-header-main {
+      min-width: 0;
+    }
+
+    .detail-kicker {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.45;
+    }
+
+    .detail h2 {
+      margin: 8px 0 8px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .detail .en {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .detail-block {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    .detail-block h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #1d2c35;
+    }
+
+    .detail-block p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--soft);
+      font-size: 13px;
+    }
+
+    .meta-row span:first-child { color: var(--muted); }
+    .meta-row span:last-child { font-weight: 700; text-align: right; }
+
+    .index-panel {
+      margin-top: 18px;
+      background: #202a31;
+      color: #eef4f5;
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .index-panel h3 {
+      margin: 0 0 12px;
+      font-size: 17px;
+    }
+
+    .index-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .index-item {
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      padding: 12px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .index-item strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .index-item p {
+      margin: 0;
+      color: #b9c7cf;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .empty {
+      border: 1px dashed #bcc5ca;
+      border-radius: 8px;
+      padding: 28px;
+      color: var(--muted);
+      background: #fff;
+      text-align: center;
+    }
+
+    @media (max-width: 1180px) {
+      .app { grid-template-columns: 260px minmax(0, 1fr); }
+      .detail {
+        position: fixed;
+        right: 18px;
+        top: 18px;
+        bottom: 18px;
+        height: auto;
+        width: min(420px, calc(100vw - 36px));
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        z-index: 5;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .app { display: block; }
+      .sidebar {
+        position: relative;
+        height: auto;
+      }
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+        max-height: 420px;
+      }
+      .nav-section {
+        grid-column: 1 / -1;
+      }
+      .main { padding: 18px; }
+      .topbar { grid-template-columns: 1fr; }
+      .search { width: 100%; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .field-grid, .index-list { grid-template-columns: 1fr; }
+      .detail {
+        position: relative;
+        inset: auto;
+        width: auto;
+        height: auto;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-top">
+          <h1>报价字段导航仪表盘</h1>
+          <button class="icon-button" id="hideSidebar" type="button" title="隐藏边栏" aria-label="隐藏边栏">←</button>
+        </div>
+        <p>按成本、风险、交付和合规维度组织刀具报价字段。</p>
+      </div>
+      <nav class="nav" id="nav"></nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="title">
+          <h2 id="pageTitle">全部报价字段</h2>
+          <p id="pageDesc">从物理制造、市场商务到高级指数，快速定位字段含义、报价影响方向和建议数据类型。</p>
+        </div>
+        <input id="search" class="search" type="search" placeholder="搜索字段、英文名、影响标签..." />
+      </div>
+
+      <section class="stats">
+        <div class="stat"><b id="statFields">0</b><span id="labelFields">当前字段</span></div>
+        <div class="stat"><b id="statGroups">0</b><span id="labelGroups">分类模块</span></div>
+        <div class="stat"><b id="statHigh">0</b><span id="labelHigh">高影响字段</span></div>
+        <div class="stat"><b id="statIndexes">0</b><span id="labelIndexes">高级指数</span></div>
+      </section>
+
+      <div class="filters" id="filters"></div>
+      <div id="content"></div>
+
+    </main>
+
+    <aside class="detail" id="detail"></aside>
+  </div>
+  <button class="floating-button show-sidebar" id="showSidebar" type="button" title="显示边栏" aria-label="显示边栏">☰</button>
+  <button class="floating-button show-detail" id="showDetail" type="button" title="显示详细信息" aria-label="显示详细信息">ⓘ</button>
+
+  <script>
+    const impactLabels = ["材料成本", "加工难度", "涂层分摊", "检测质量", "供应风险", "商务摩擦", "交付服务", "合规ESG"];
+
+    const sections = [
+      {
+        id: "physics",
+        title: "物理与制造层面",
+        desc: "决定刀具真实制造成本、良率、性能边界和可重复生产难度。",
+        groups: [
+          {
+            name: "材料与基体",
+            icon: "M",
+            fields: [
+              f("基体材料类别", "Substrate Material Class", "决定硬度、韧性、耐磨性和基础成本。", ["材料成本"], "高", "枚举"),
+              f("硬质合金牌号", "Carbide Grade", "不同 WC-Co 配方对应不同切削场景和价格区间。", ["材料成本", "加工难度"], "高", "枚举"),
+              f("WC 含量", "WC Content", "钨碳化物含量越高，材料成本和耐磨属性越明显。", ["材料成本", "供应风险"], "高", "百分比"),
+              f("Co 粘结相含量", "Cobalt Binder Content", "影响韧性、抗崩刃能力和钴价敏感度。", ["材料成本", "供应风险"], "高", "百分比"),
+              f("晶粒尺寸", "Grain Size", "超细晶粒提高硬度和刃口锋利性，但粉末和烧结控制成本更高。", ["材料成本", "加工难度"], "高", "数值"),
+              f("晶粒分布均匀性", "Grain Distribution Uniformity", "组织越均匀，寿命离散越小，制造控制成本越高。", ["检测质量", "材料成本"], "中", "等级"),
+              f("微量强化相类型", "Additive Phase Type", "VC、Cr3C2、TaC、NbC 等添加相会改变耐磨性、韧性和磨削难度。", ["材料成本", "供应风险"], "中", "枚举"),
+              f("加工难度指数", "Grindability Index", "即使硬度相同，不同配方对砂轮损耗和节拍的影响也不同。", ["加工难度"], "高", "指数"),
+              f("砂轮磨耗系数", "Wheel Wear Coefficient", "材料越难磨，金刚石砂轮消耗越快。", ["加工难度", "材料成本"], "高", "数值"),
+              f("粉末纯度", "Powder Purity", "杂质越少，性能越稳定，但原料价格更高。", ["材料成本", "检测质量"], "中", "等级"),
+              f("抗弯强度", "TRS", "决定刀具抵抗断裂的能力。", ["检测质量", "材料成本"], "中", "数值"),
+              f("断裂韧性", "KIC", "韧性越高，越适合断续切削和重载加工。", ["材料成本"], "中", "数值"),
+              f("硬度", "HRA / HV", "硬度越高耐磨性越好，但磨削难度通常更高。", ["材料成本", "加工难度"], "高", "数值"),
+              f("剩余基体寿命", "Remaining Substrate Life", "用于评估修磨重涂后的刀具残值。", ["材料成本", "交付服务"], "中", "指数")
+            ]
+          },
+          {
+            name: "几何与结构复杂度",
+            icon: "G",
+            fields: [
+              f("刀具直径", "Diameter D", "直接影响材料用量、磨削面积和刚性。", ["材料成本", "加工难度"], "高", "数值"),
+              f("总长", "OAL", "总长越长，毛坯成本、磨削稳定性和跳动控制难度越高。", ["加工难度"], "高", "数值"),
+              f("刃长", "LOC", "刃长越长，开槽磨削时间和几何一致性控制难度越高。", ["加工难度"], "高", "数值"),
+              f("长径比", "L/D", "长径比越大，越容易变形、振动和断裂。", ["加工难度", "检测质量"], "高", "数值"),
+              f("刃数", "Flute Count Z", "刃数越多，磨削次数越多，排屑空间通常越小。", ["加工难度"], "中", "整数"),
+              f("螺旋角", "Helix Angle", "影响切削力、排屑方向和五轴磨削路径复杂度。", ["加工难度"], "中", "角度"),
+              f("不等螺旋角", "Variable Helix", "可抑制振动，但编程、磨削和检测难度更高。", ["加工难度", "检测质量"], "高", "布尔"),
+              f("不等齿距", "Variable Pitch", "可降低共振，但齿间几何控制成本更高。", ["加工难度"], "高", "布尔"),
+              f("芯厚", "Core Diameter", "决定刀具刚性和排屑空间之间的平衡。", ["加工难度"], "中", "数值"),
+              f("排屑空间比", "Chip Flute Volume Ratio", "衡量容屑槽体积占比，是几何难度和排屑性能核心字段。", ["加工难度"], "高", "百分比"),
+              f("槽磨去除体积", "Flute Removal Volume", "表示磨削过程中需要去除多少硬质合金。", ["加工难度", "材料成本"], "高", "数值"),
+              f("前角", "Rake Angle", "影响切削锋利性、切削力和刃口强度。", ["加工难度"], "中", "角度"),
+              f("后角", "Relief Angle", "影响摩擦、发热和刃口支撑强度。", ["加工难度"], "中", "角度"),
+              f("球头半径", "Ball Radius", "球头轮廓越精密，三维刃形磨削和检测成本越高。", ["加工难度", "检测质量"], "高", "数值"),
+              f("圆鼻半径", "Corner Radius", "圆角增强刃口强度，但增加成形磨削和检测成本。", ["加工难度", "检测质量"], "中", "数值"),
+              f("成形轮廓复杂度", "Form Profile Complexity", "轮廓越复杂，砂轮修整、程序开发和检测成本越高。", ["加工难度", "检测质量"], "高", "指数"),
+              f("多阶复合结构", "Multi-step Compound Geometry", "集成多直径、倒角或成形功能时，制造和检测复杂度显著上升。", ["加工难度", "检测质量"], "高", "等级")
+            ]
+          },
+          {
+            name: "内冷结构",
+            icon: "C",
+            fields: [
+              f("是否内冷", "Internal Coolant", "内冷结构会增加毛坯、孔加工、检测和封堵成本。", ["加工难度", "检测质量"], "高", "布尔"),
+              f("内冷孔数量", "Coolant Hole Count", "孔数越多，毛坯制备和孔位控制越复杂。", ["加工难度"], "高", "整数"),
+              f("内冷孔直径", "Coolant Hole Diameter", "孔径越小，加工和堵塞风险越高。", ["加工难度"], "中", "数值"),
+              f("内冷孔位置精度", "Coolant Hole Position Accuracy", "孔位偏差会影响出水方向、刀具强度和动平衡。", ["检测质量"], "高", "公差"),
+              f("内冷孔长度", "Coolant Channel Length", "通道越长，成形难度、堵塞风险和检测成本越高。", ["加工难度", "检测质量"], "中", "数值"),
+              f("内冷孔几何路径复杂度", "Coolant Channel Geometry", "中心直孔、斜孔、分支孔和螺旋内冷的制造成本差异很大。", ["加工难度"], "高", "等级"),
+              f("螺旋内冷结构", "Helical Coolant Channel", "更贴近切削刃，但毛坯成形和烧结控制成本高。", ["加工难度"], "高", "布尔"),
+              f("分支冷却通道", "Branched Coolant Channel", "多出口或定向喷射结构提升冷却效果，但增加孔道设计和封孔难度。", ["加工难度"], "高", "布尔"),
+              f("出水角度", "Coolant Exit Angle", "角度越精准，越能提升断屑和冷却效果，但制造控制更难。", ["检测质量", "加工难度"], "中", "角度"),
+              f("冷却通道通畅率检测", "Coolant Flow Inspection", "高端内冷刀具需要流量、压力或通孔检测。", ["检测质量"], "中", "布尔")
+            ]
+          },
+          {
+            name: "微观刃口质量",
+            icon: "E",
+            fields: [
+              f("平均刃口半径", "Edge Radius Mean", "决定刀具锋利性、抗崩刃能力和切削力。", ["检测质量", "加工难度"], "高", "数值"),
+              f("刃口半径离散度", "Edge Radius Variation", "多刃之间钝化半径越一致，寿命和表面质量越稳定。", ["检测质量"], "高", "数值"),
+              f("刃口微观形貌对称度", "Edge Symmetry Index", "衡量各刃口在微观圆弧、钝化和形貌上的一致性。", ["检测质量"], "中", "指数"),
+              f("K-factor 刃口钝化偏置", "K-factor", "表示刃口圆弧偏向前刀面还是后刀面。", ["检测质量"], "中", "数值"),
+              f("倒棱宽度", "Land Width", "倒棱越宽，刃口强度越高，但切削力可能增加。", ["加工难度", "检测质量"], "中", "数值"),
+              f("倒棱钝化协同公差", "K-land vs Hone Interaction", "倒棱宽度与钝化半径同时受控时，制造难度非线性上升。", ["加工难度", "检测质量"], "高", "公差"),
+              f("齿间负载均衡度", "Tooth-to-Tooth Load Balance", "综合跳动、刃口半径和刃形误差，反映每齿实际负载是否均匀。", ["检测质量"], "高", "指数"),
+              f("微崩口数量", "Micro-chipping Count", "微小崩口会影响初期寿命和高精度加工稳定性。", ["检测质量"], "中", "整数"),
+              f("涂层后刃口半径", "Post-coating Edge Radius", "涂层会改变实际有效刃口，需要作为最终刃口状态评估。", ["涂层分摊", "检测质量"], "中", "数值"),
+              f("刃口处理方式", "Edge Preparation Method", "刷磨、喷砂、拖曳式钝化等工艺会影响刃口一致性和成本。", ["加工难度"], "中", "枚举")
+            ]
+          },
+          {
+            name: "涂层与批处理成本",
+            icon: "P",
+            fields: [
+              f("涂层类型", "Coating Type", "TiN、TiAlN、AlCrN、DLC、金刚石等对应不同材料、工艺和成本。", ["涂层分摊", "材料成本"], "高", "枚举"),
+              f("涂层工艺", "PVD / CVD", "不同沉积工艺的温度、膜厚、批量效率和适用场景不同。", ["涂层分摊"], "高", "枚举"),
+              f("涂层厚度", "Coating Thickness", "厚涂层提高耐磨性，但可能钝化刃口并增加沉积时间。", ["涂层分摊"], "中", "数值"),
+              f("涂层附着力", "Adhesion", "附着力越高，前处理和工艺控制要求越高。", ["涂层分摊", "检测质量"], "中", "等级"),
+              f("涂后抛光", "Post-coating Polishing", "降低摩擦和粘屑风险，但增加人工或设备成本。", ["涂层分摊"], "中", "布尔"),
+              f("涂层炉次成本", "Batch Furnace Cost", "涂层设备一次运行成本基本固定，需要按合格件数量分摊。", ["涂层分摊"], "高", "金额"),
+              f("腔体占用率", "Batch Cavity Occupancy", "形状越占空间，单炉可装数量越少，单件分摊成本越高。", ["涂层分摊"], "高", "百分比"),
+              f("有效装炉密度", "Effective Loading Density", "一炉实际可装合格刀具数量越低，单件涂层成本越高。", ["涂层分摊"], "高", "数值"),
+              f("混炉兼容性", "Coating Batch Compatibility", "涂层体系、膜厚、基体和客户要求不一致时无法混炉。", ["涂层分摊", "交付服务"], "中", "等级"),
+              f("遮蔽风险", "Shadowing Risk", "复杂形状可能导致局部膜厚不足或涂层不均匀。", ["涂层分摊", "检测质量"], "中", "等级"),
+              f("最小涂层批量成本", "Minimum Coating Batch Cost", "小批量非标产品需要承担最低炉次分摊成本。", ["涂层分摊", "商务摩擦"], "高", "金额")
+            ]
+          },
+          {
+            name: "制造良率与质量控制",
+            icon: "Q",
+            fields: [
+              f("制造节拍", "Cycle Time", "单件加工时间越长，设备折旧和人工成本越高。", ["加工难度"], "高", "时间"),
+              f("换线时间", "Setup Time", "小批量订单中，装夹、对刀、编程和首件确认会显著摊高单价。", ["加工难度", "商务摩擦"], "高", "时间"),
+              f("首件确认成本", "First Article Cost", "首件检测、修正和确认在小批量订单中占比很高。", ["检测质量", "商务摩擦"], "高", "金额"),
+              f("试磨数量", "Trial Grinding Quantity", "达到稳定尺寸前需要消耗的试制件越多，报价越高。", ["加工难度"], "高", "整数"),
+              f("编程成本", "Programming Cost", "五轴磨削路径、补偿参数和专用轮廓开发需要单独摊销。", ["加工难度"], "高", "金额"),
+              f("砂轮修整成本", "Wheel Dressing Cost", "特殊轮廓需要频繁修整砂轮，增加耗材和停机时间。", ["加工难度"], "中", "金额"),
+              f("量产良率", "Mass Production Yield", "稳定生产中的合格率直接影响单位制造成本。", ["加工难度", "检测质量"], "高", "百分比"),
+              f("小批量成本倍数", "Small Batch Cost Multiplier", "数量越少，固定成本、试制损耗和涂层分摊越难摊薄。", ["商务摩擦"], "高", "倍数"),
+              f("直径公差", "Diameter Tolerance", "公差越严，精磨和检测成本越高。", ["检测质量"], "高", "公差"),
+              f("柄径公差", "Shank Tolerance", "影响夹持精度，高等级公差需要更严格外圆磨削。", ["检测质量"], "中", "公差"),
+              f("圆跳动", "Runout", "跳动越低，多刃切削负载越均衡。", ["检测质量"], "高", "数值"),
+              f("表面粗糙度", "Surface Roughness Ra", "槽面、前刀面和后刀面粗糙度会影响摩擦与排屑。", ["检测质量", "加工难度"], "中", "数值"),
+              f("全检比例", "Full Inspection Ratio", "全检提升一致性，但显著增加质量成本。", ["检测质量"], "中", "百分比"),
+              f("检测报告要求", "Inspection Report Requirement", "材质、尺寸、涂层、硬度和显微组织报告都会增加文件与检测成本。", ["检测质量", "合规ESG"], "中", "枚举")
+            ]
+          }
+        ]
+      },
+      {
+        id: "market",
+        title: "市场与非物理层面",
+        desc: "反映品牌溢价、供应链约束、交付服务、合规文件和商业条款对报价的影响。",
+        groups: [
+          {
+            name: "品牌、渠道与技术溢价",
+            icon: "B",
+            fields: [
+              f("品牌等级", "Brand Tier", "高端品牌包含研发、稳定性、应用数据库和服务溢价。", ["商务摩擦"], "高", "枚举"),
+              f("品牌原产地认知", "Country-of-origin Perception", "不同产地在客户心中的质量和稳定性认知会影响价格。", ["商务摩擦"], "中", "枚举"),
+              f("授权代理状态", "Authorized Distribution", "授权渠道价格更高，但提供真伪、售后和技术保障。", ["商务摩擦"], "中", "布尔"),
+              f("渠道层级", "Distribution Layer", "渠道层级越多，渠道毛利叠加越明显。", ["商务摩擦"], "中", "等级"),
+              f("OEM / ODM / 白牌属性", "OEM / ODM / Private Label", "白牌价格低，但客户承担更多验证和应用风险。", ["商务摩擦"], "中", "枚举"),
+              f("专利或专有技术", "Proprietary Technology", "专有槽型、牌号或涂层会降低可替代性并提高溢价。", ["商务摩擦"], "高", "布尔"),
+              f("替代品牌数量", "Alternative Supplier Count", "可替代供应商越多，议价空间越大。", ["商务摩擦"], "中", "整数"),
+              f("客户验证状态", "Customer Validation Status", "已通过产线验证的刀具具备切换成本溢价。", ["商务摩擦"], "高", "枚举")
+            ]
+          },
+          {
+            name: "供应链与宏观风险",
+            icon: "R",
+            fields: [
+              f("钨价格敏感度", "Tungsten Price Sensitivity", "硬质合金刀具对钨价波动高度敏感。", ["供应风险", "材料成本"], "高", "等级"),
+              f("钴价格敏感度", "Cobalt Price Sensitivity", "高钴牌号受钴价影响更明显。", ["供应风险", "材料成本"], "高", "等级"),
+              f("涂层靶材价格敏感度", "Target Material Price Sensitivity", "Al、Ti、Cr、Zr 等靶材价格会影响涂层成本。", ["供应风险", "涂层分摊"], "中", "等级"),
+              f("稀有添加剂供应风险", "Rare Additive Supply Risk", "Ta、Nb、VC 等添加剂供应波动会影响特殊牌号成本。", ["供应风险"], "中", "等级"),
+              f("供应链地理冗余度", "Supply Chain Geo-Redundancy", "关键粉末、靶材或毛坯来源越单一，供应中断风险溢价越高。", ["供应风险"], "高", "等级"),
+              f("单一来源依赖度", "Single-source Dependency", "依赖单一国家、矿山、粉末厂或涂层厂会增加长期协议风险。", ["供应风险"], "高", "等级"),
+              f("出口管制风险", "Export Control Risk", "关键原料或高端刀具技术受管制时，交付和价格风险上升。", ["供应风险", "合规ESG"], "高", "等级"),
+              f("关税暴露度", "Tariff Exposure", "进口成品、粉末、毛坯或涂层材料的关税会改变到岸成本。", ["供应风险", "商务摩擦"], "中", "百分比"),
+              f("汇率风险", "FX Risk", "外币计价的进口刀具或原材料会受到汇率波动影响。", ["供应风险", "商务摩擦"], "中", "等级"),
+              f("产能利用率", "Capacity Utilization", "供应商产能越满，折扣越少，交期和价格越硬。", ["供应风险", "交付服务"], "中", "百分比")
+            ]
+          },
+          {
+            name: "ESG 与合规",
+            icon: "S",
+            fields: [
+              f("产品碳足迹", "Product Carbon Footprint", "单件刀具从原料到制造、涂层、运输的碳排放会影响高端客户采购评分。", ["合规ESG"], "中", "数值"),
+              f("CBAM 暴露度", "CBAM Exposure", "出口欧洲或进入相关供应链时，碳成本和申报要求可能影响报价。", ["合规ESG", "商务摩擦"], "中", "等级"),
+              f("用电碳因子", "Electricity Carbon Factor", "相同工艺在不同能源结构下对应不同碳排放强度。", ["合规ESG"], "低", "数值"),
+              f("烧结能耗强度", "Sintering Energy Intensity", "烧结和 HIP 的能效会影响单件能耗和碳足迹。", ["合规ESG", "材料成本"], "中", "数值"),
+              f("涂层能耗强度", "Coating Energy Intensity", "PVD/CVD 炉次能耗会进入高端客户的碳成本核算。", ["合规ESG", "涂层分摊"], "中", "数值"),
+              f("回收料证明", "Recycled Material Certificate", "回收钨、回收钴比例需要文件支持，增加合规管理成本。", ["合规ESG"], "低", "布尔"),
+              f("RoHS / REACH 合规", "RoHS / REACH Compliance", "进入电子、欧洲或高端制造供应链时常需要材料合规证明。", ["合规ESG"], "中", "布尔"),
+              f("冲突矿产声明", "Conflict Minerals Declaration", "钨、钴等原料可能需要供应链来源声明。", ["合规ESG"], "中", "布尔"),
+              f("原产地证书", "Certificate of Origin", "影响关税、合规准入和客户采购要求。", ["合规ESG", "商务摩擦"], "低", "布尔"),
+              f("ESG 文件成本", "ESG Documentation Cost", "碳足迹、材料来源和第三方认证文件都需要额外管理成本。", ["合规ESG", "商务摩擦"], "中", "金额")
+            ]
+          },
+          {
+            name: "交付、库存与服务",
+            icon: "L",
+            fields: [
+              f("现货状态", "Stock Availability", "现货占用库存资金，通常具备价格溢价。", ["交付服务"], "中", "枚举"),
+              f("交期", "Lead Time", "交期越短，越可能涉及插单、加班、调拨或空运。", ["交付服务"], "高", "天数"),
+              f("加急费", "Expedite Fee", "加急订单会打乱排产并提高制造和物流成本。", ["交付服务", "商务摩擦"], "高", "金额"),
+              f("MOQ 最小起订量", "Minimum Order Quantity", "订单量越低，换线、涂层和检测分摊成本越高。", ["商务摩擦"], "高", "整数"),
+              f("本地仓储成本", "Local Warehousing Cost", "本地仓缩短交付时间，但增加库存资金和管理成本。", ["交付服务"], "中", "金额"),
+              f("VMI 资金占用费", "Financial Carrying Cost of VMI", "寄售库存中供应商承担库存融资、呆滞和管理成本。", ["交付服务", "商务摩擦"], "中", "金额"),
+              f("刀具柜服务成本", "Tool Cabinet Service Cost", "自动刀具柜、补货、扫码和盘点系统都需要摊入价格。", ["交付服务"], "中", "金额"),
+              f("呆滞库存风险", "Obsolete Inventory Risk", "客户项目变更或需求下降会导致专用库存无法消耗。", ["交付服务", "商务摩擦"], "中", "等级"),
+              f("旧刀回收价值", "Used Tool Recycling Value", "硬质合金回收可抵扣部分材料成本。", ["材料成本", "交付服务"], "低", "金额"),
+              f("修磨服务成本", "Regrinding Service Cost", "重磨、退涂、再涂和再检测构成刀具全生命周期服务成本。", ["交付服务", "涂层分摊"], "中", "金额")
+            ]
+          },
+          {
+            name: "包装、运输与无损交付",
+            icon: "D",
+            fields: [
+              f("包装保护等级", "Packaging Protection Grade", "微径刀、长刀和重型刀具需要更高等级防护包装。", ["交付服务"], "中", "等级"),
+              f("微径刀具防护包装", "Micro Tool Protection", "0.2mm 以下微刀具需要防振、防碰刃和单支固定设计。", ["交付服务"], "高", "布尔"),
+              f("重型刀具包装结构", "Heavy Tool Packaging", "大重量刀具需要抗冲击、承重和防松动包装。", ["交付服务"], "中", "布尔"),
+              f("真空包装", "Vacuum Packaging", "用于防潮、防氧化或洁净要求较高的刀具。", ["交付服务"], "低", "布尔"),
+              f("氮气保护包装", "Nitrogen Packaging", "用于防氧化、防腐蚀或高端精密刀具长期储存。", ["交付服务"], "低", "布尔"),
+              f("防锈等级", "Anti-rust Grade", "刀体、刀杆或钢制组件需要防锈油、VCI 纸或密封包装。", ["交付服务"], "中", "等级"),
+              f("运输震动风险", "Transport Vibration Risk", "长途运输振动可能导致微崩刃或涂层损伤。", ["交付服务", "检测质量"], "中", "等级"),
+              f("单支包装比例", "Single-piece Packaging Ratio", "单支包装保护性更好，但包装和分拣成本更高。", ["交付服务"], "低", "百分比"),
+              f("客户标签要求", "Customer Label Requirement", "条码、二维码、批次号和客户料号标签会增加包装作业成本。", ["交付服务", "商务摩擦"], "低", "枚举")
+            ]
+          },
+          {
+            name: "商务条款与需求波动",
+            icon: "T",
+            fields: [
+              f("采购数量", "Purchase Quantity", "数量越大，固定成本和批处理成本越容易摊薄。", ["商务摩擦"], "高", "整数"),
+              f("年度协议量", "Annual Contract Volume", "年度锁量可降低供应商产能和库存不确定性。", ["商务摩擦"], "中", "整数"),
+              f("预测准确率", "Forecast Accuracy", "客户预测越准确，供应商越容易规划材料、产能和库存。", ["商务摩擦", "交付服务"], "中", "百分比"),
+              f("需求碎片化程度", "Order Fragmentation", "总量大但每批数量小，会导致频繁换线、分拣和发货成本上升。", ["商务摩擦"], "高", "等级"),
+              f("释放订单节奏", "Release Schedule", "稳定释放订单有利于降低库存和排产风险。", ["商务摩擦", "交付服务"], "中", "枚举"),
+              f("价格有效期", "Quote Validity", "有效期越长，供应商承担的原料、汇率和能源波动风险越高。", ["商务摩擦", "供应风险"], "中", "天数"),
+              f("付款周期", "Payment Terms", "账期越长，资金成本和坏账风险越高。", ["商务摩擦"], "高", "天数"),
+              f("客户信用等级", "Customer Credit Rating", "信用风险越高，报价中风险溢价越高。", ["商务摩擦"], "中", "等级"),
+              f("币种", "Currency", "不同币种带来不同汇率风险。", ["商务摩擦", "供应风险"], "低", "枚举"),
+              f("贸易条款", "Incoterms", "EXW、FOB、CIF、DDP 会改变运费、保险、清关和税费承担方。", ["商务摩擦", "交付服务"], "中", "枚举"),
+              f("返利政策", "Rebate Policy", "年返、季返和项目返利会改变表面单价和真实净价。", ["商务摩擦"], "中", "枚举"),
+              f("NRE 工程费", "NRE Engineering Cost", "非标设计、试制、砂轮、夹具和检测程序需要一次性或分摊收费。", ["商务摩擦", "加工难度"], "高", "金额"),
+              f("模具费", "Tooling Cost", "可转位刀片、专用刀体或成形刀可能涉及专用模具和夹具费用。", ["商务摩擦", "加工难度"], "中", "金额"),
+              f("样品费", "Sample Cost", "样品无法摊薄固定成本，单价通常高于量产价格。", ["商务摩擦"], "中", "金额")
+            ]
+          }
+        ]
+      }
+    ];
+
+    const indexes = [
+      idx("Material Grindability Index", "材料磨削难度指数", "汇总材料配方、硬度、微量元素和砂轮磨耗对制造成本的影响。", ["材料成本", "加工难度"], "物理制造指数"),
+      idx("Geometry Complexity Index", "几何复杂度指数", "汇总直径、刃长、刃数、槽深、螺旋角、芯厚和成形轮廓的非线性难度。", ["加工难度"], "物理制造指数"),
+      idx("Coolant Channel Complexity Index", "内冷通道复杂度指数", "汇总内冷孔数量、路径、长度、出水角度和封孔工艺难度。", ["加工难度", "检测质量"], "物理制造指数"),
+      idx("Edge Quality Index", "刃口质量指数", "汇总刃口半径、K-factor、倒棱、钝化一致性和微观对称度。", ["检测质量"], "物理制造指数"),
+      idx("Reconditioning Value Index", "可再制造残值指数", "汇总修磨、退涂、重涂、钴流失和基体剩余寿命。", ["交付服务", "材料成本"], "物理制造指数"),
+      idx("Coating Batch Cost Index", "涂层批处理成本指数", "汇总炉次成本、腔体占用率、装炉密度、混炉兼容性和夹具适配性。", ["涂层分摊"], "物理制造指数"),
+      idx("Setup Loss Index", "换线损失指数", "汇总调机、首件确认、试磨报废、编程和小批量分摊成本。", ["商务摩擦", "加工难度"], "市场商务指数"),
+      idx("Supply Risk Premium Index", "供应链风险溢价指数", "汇总地理冗余度、单一来源依赖、出口管制和关键材料供应风险。", ["供应风险"], "市场商务指数"),
+      idx("Packaging Risk Index", "包装无损风险指数", "汇总微径刀、重型刀具、真空氮气包装和运输震动风险。", ["交付服务"], "市场商务指数"),
+      idx("Commercial Friction Index", "商业摩擦成本指数", "汇总 VMI、账期、需求碎片化、预测偏差、MOQ 和交付服务成本。", ["商务摩擦", "交付服务"], "市场商务指数")
+    ];
+
+    let activeSection = "all";
+    let activeGroup = "all";
+    let activeImpact = "全部";
+    let selectedField = null;
+    const collapsedNav = {
+      physics: false,
+      market: false,
+      indexes: false
+    };
+
+    function f(name, en, desc, tags, level, type) {
+      return { name, en, desc, tags, level, type };
+    }
+
+    function idx(en, name, desc, tags, layer) {
+      return { en, name, desc, tags, layer, kind: "index" };
+    }
+
+    function allGroups() {
+      return sections.flatMap(section => section.groups.map(group => ({ ...group, section })));
+    }
+
+    function allFields() {
+      return allGroups().flatMap(group => group.fields.map(field => ({ ...field, group: group.name, section: group.section.title })));
+    }
+
+    function levelClass(level) {
+      return level === "高" ? "high" : level === "中" ? "medium" : "low";
+    }
+
+    function renderNav() {
+      const nav = document.getElementById("nav");
+      const total = allFields().length;
+      const physicalIndexCount = indexes.filter(item => item.layer === "物理制造指数").length;
+      const marketIndexCount = indexes.filter(item => item.layer === "市场商务指数").length;
+      nav.innerHTML = `
+        <div class="nav-section">总览</div>
+        <button class="${activeGroup === "all" ? "active" : ""}" data-section="all" data-group="all">
+          <span>●</span><span>全部字段</span><span class="count">${total}</span>
+        </button>
+        ${sections.map(section => `
+          <div class="nav-section-row">
+            <button class="section-filter ${activeGroup === "section-" + section.id ? "active" : ""}" data-section="${section.id}" data-group="section-${section.id}">
+              <span>${section.title}</span><span class="count">${section.groups.reduce((sum, group) => sum + group.fields.length, 0)}</span>
+            </button>
+            <button class="section-toggle" data-toggle="${section.id}" type="button" title="${collapsedNav[section.id] ? "展开" : "折叠"}">${collapsedNav[section.id] ? "›" : "⌄"}</button>
+          </div>
+          <div class="nav-children ${collapsedNav[section.id] ? "collapsed" : ""}">
+            ${section.groups.map(group => `
+              <button class="${activeGroup === group.name ? "active" : ""}" data-section="${section.id}" data-group="${group.name}">
+                <span>${group.icon}</span><span>${group.name}</span><span class="count">${group.fields.length}</span>
+              </button>
+            `).join("")}
+          </div>
+        `).join("")}
+        <div class="nav-section-row">
+          <button class="section-filter ${activeGroup === "indexes-all" ? "active" : ""}" data-section="indexes" data-group="indexes-all">
+            <span>聚合字段 · 高级指数层</span><span class="count">${indexes.length}</span>
+          </button>
+          <button class="section-toggle" data-toggle="indexes" type="button" title="${collapsedNav.indexes ? "展开" : "折叠"}">${collapsedNav.indexes ? "›" : "⌄"}</button>
+        </div>
+        <div class="nav-children ${collapsedNav.indexes ? "collapsed" : ""}">
+          <button class="${activeGroup === "indexes-physics" ? "active" : ""}" data-section="indexes" data-group="indexes-physics">
+            <span>∑</span><span>物理制造指数</span><span class="count">${physicalIndexCount}</span>
+          </button>
+          <button class="${activeGroup === "indexes-market" ? "active" : ""}" data-section="indexes" data-group="indexes-market">
+            <span>∑</span><span>市场商务指数</span><span class="count">${marketIndexCount}</span>
+          </button>
+        </div>
+      `;
+
+      nav.querySelectorAll("button[data-group]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeSection = button.dataset.section;
+          activeGroup = button.dataset.group;
+          selectedField = null;
+          render();
+        });
+      });
+
+      nav.querySelectorAll("button[data-toggle]").forEach(button => {
+        button.addEventListener("click", () => {
+          const key = button.dataset.toggle;
+          collapsedNav[key] = !collapsedNav[key];
+          renderNav();
+        });
+      });
+    }
+
+    function renderFilters() {
+      const filters = document.getElementById("filters");
+      const labels = ["全部", ...impactLabels];
+      filters.innerHTML = labels.map(label => `<button class="chip ${activeImpact === label ? "active" : ""}" data-impact="${label}">${label}</button>`).join("");
+      filters.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+          activeImpact = button.dataset.impact;
+          selectedField = null;
+          render();
+        });
+      });
+    }
+
+    function isIndexView() {
+      return activeSection === "indexes";
+    }
+
+    function currentGroups() {
+      if (isIndexView()) return [];
+      if (activeGroup === "all") return allGroups();
+      if (activeGroup.startsWith("section-")) {
+        const sectionId = activeGroup.replace("section-", "");
+        return allGroups().filter(group => group.section.id === sectionId);
+      }
+      return allGroups().filter(group => group.name === activeGroup);
+    }
+
+    function filteredFieldsFor(group) {
+      const q = document.getElementById("search").value.trim().toLowerCase();
+      return group.fields
+        .map(field => ({ ...field, group: group.name, section: group.section.title }))
+        .filter(field => {
+          const text = [field.name, field.en, field.desc, field.group, field.section, field.type, field.level, ...field.tags].join(" ").toLowerCase();
+          const matchSearch = !q || text.includes(q);
+          const matchImpact = activeImpact === "全部" || field.tags.includes(activeImpact);
+          return matchSearch && matchImpact;
+        });
+    }
+
+    function visibleFields() {
+      return currentGroups().flatMap(group => filteredFieldsFor(group));
+    }
+
+    function filteredIndexes() {
+      const q = document.getElementById("search").value.trim().toLowerCase();
+      return indexes.filter(item => {
+        const matchLayer =
+          activeGroup === "indexes-all" ||
+          (activeGroup === "indexes-physics" && item.layer === "物理制造指数") ||
+          (activeGroup === "indexes-market" && item.layer === "市场商务指数");
+        const text = [item.name, item.en, item.desc, item.layer, ...item.tags].join(" ").toLowerCase();
+        const matchSearch = !q || text.includes(q);
+        const matchImpact = activeImpact === "全部" || item.tags.includes(activeImpact);
+        return matchLayer && matchSearch && matchImpact;
+      });
+    }
+
+    function renderContent() {
+      const content = document.getElementById("content");
+      if (isIndexView()) {
+        renderIndexContent(content);
+        return;
+      }
+      const groups = currentGroups();
+      const blocks = groups.map(group => {
+        const fields = filteredFieldsFor(group);
+        if (!fields.length) return "";
+        return `
+          <section>
+            <div class="section-head">
+              <h3>${group.name}</h3>
+              <span>${group.section.title} · ${fields.length} 个字段</span>
+            </div>
+            <div class="field-grid">
+              ${fields.map(field => card(field)).join("")}
+            </div>
+          </section>
+        `;
+      }).join("");
+
+      content.innerHTML = blocks || `<div class="empty">没有匹配字段。可以清空搜索词或切换影响标签。</div>`;
+
+      content.querySelectorAll(".field-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const id = card.dataset.id;
+          selectedField = allFields().find(field => field.name === id);
+          setDetailVisible(true);
+          renderDetail();
+          document.querySelectorAll(".field-card").forEach(el => el.classList.toggle("selected", el.dataset.id === id));
+        });
+      });
+    }
+
+    function renderIndexContent(content) {
+      const list = filteredIndexes();
+      const layers = ["物理制造指数", "市场商务指数"];
+      const blocks = layers.map(layer => {
+        const items = list.filter(item => item.layer === layer);
+        if (!items.length) return "";
+        return `
+          <section>
+            <div class="section-head">
+              <h3>${layer}</h3>
+              <span>聚合字段 · ${items.length} 个聚合变量</span>
+            </div>
+            <div class="field-grid">
+              ${items.map(item => indexCard(item)).join("")}
+            </div>
+          </section>
+        `;
+      }).join("");
+
+      content.innerHTML = blocks || `<div class="empty">没有匹配指数。可以清空搜索词或切换影响标签。</div>`;
+
+      content.querySelectorAll(".field-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const id = card.dataset.id;
+          selectedField = indexes.find(item => item.name === id);
+          setDetailVisible(true);
+          renderDetail();
+          document.querySelectorAll(".field-card").forEach(el => el.classList.toggle("selected", el.dataset.id === id));
+        });
+      });
+    }
+
+    function card(field) {
+      const selected = selectedField && selectedField.name === field.name ? "selected" : "";
+      return `
+        <article class="field-card ${selected}" data-id="${field.name}">
+          <div class="field-title">
+            <strong>${field.name}</strong>
+            <span class="level ${levelClass(field.level)}">${field.level}影响</span>
+          </div>
+          <p>${field.desc}</p>
+          <div class="tags">${field.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>
+        </article>
+      `;
+    }
+
+    function indexCard(item) {
+      const selected = selectedField && selectedField.name === item.name ? "selected" : "";
+      return `
+        <article class="field-card ${selected}" data-id="${item.name}">
+          <div class="field-title">
+            <strong>${item.name}</strong>
+            <span class="level medium">聚合</span>
+          </div>
+          <p>${item.desc}</p>
+          <div class="tags">
+            <span class="tag">${item.layer}</span>
+            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+          </div>
+        </article>
+      `;
+    }
+
+    function renderStats() {
+      if (isIndexView()) {
+        const list = filteredIndexes();
+        document.getElementById("statFields").textContent = list.length;
+        document.getElementById("statGroups").textContent = new Set(list.map(item => item.layer)).size;
+        document.getElementById("statHigh").textContent = list.length;
+        document.getElementById("statIndexes").textContent = indexes.length;
+        document.getElementById("labelFields").textContent = "当前指数";
+        document.getElementById("labelGroups").textContent = "指数分组";
+        document.getElementById("labelHigh").textContent = "聚合变量";
+        document.getElementById("labelIndexes").textContent = "高级指数总数";
+
+        const titleMap = {
+          "indexes-all": "聚合字段 · 高级指数层",
+          "indexes-physics": "物理制造指数",
+          "indexes-market": "市场商务指数"
+        };
+        document.getElementById("pageTitle").textContent = titleMap[activeGroup] || "聚合字段 · 高级指数层";
+        document.getElementById("pageDesc").textContent = "高级指数层把底层字段压缩成可计算、可比较、可用于报价决策的中间变量；它和底层字段分开展示。";
+        return;
+      }
+
+      const groups = currentGroups();
+      const fields = visibleFields();
+      document.getElementById("statFields").textContent = fields.length;
+      document.getElementById("statGroups").textContent = groups.filter(group => filteredFieldsFor(group).length).length;
+      document.getElementById("statHigh").textContent = fields.filter(field => field.level === "高").length;
+      document.getElementById("statIndexes").textContent = indexes.length;
+      document.getElementById("labelFields").textContent = "当前字段";
+      document.getElementById("labelGroups").textContent = "分类模块";
+      document.getElementById("labelHigh").textContent = "高影响字段";
+      document.getElementById("labelIndexes").textContent = "高级指数";
+
+      const title = activeGroup === "all" ? "全部报价字段" : activeGroup.startsWith("section-")
+        ? sections.find(item => item.id === activeGroup.replace("section-", ""))?.title
+        : activeGroup;
+      const section = activeGroup === "all" ? null : activeGroup.startsWith("section-")
+        ? sections.find(item => item.id === activeGroup.replace("section-", ""))
+        : allGroups().find(group => group.name === activeGroup)?.section;
+      document.getElementById("pageTitle").textContent = title;
+      document.getElementById("pageDesc").textContent = section ? section.desc : "从物理制造、市场商务到高级指数，快速定位字段含义、报价影响方向和建议数据类型。";
+    }
+
+    function renderIndexes() {
+      return;
+    }
+
+    function renderDetail() {
+      const detail = document.getElementById("detail");
+      const field = selectedField || (isIndexView() ? filteredIndexes()[0] : visibleFields()[0]) || allFields()[0];
+      selectedField = field;
+      const isIndex = field.kind === "index";
+      const related = isIndex ? [] : indexes.filter(item => item.tags.some(tag => field.tags.includes(tag))).slice(0, 3);
+      detail.innerHTML = `
+        <div class="detail-header">
+          <div class="detail-header-main">
+            <div class="detail-kicker">${isIndex ? "聚合字段 · 高级指数层 / " + field.layer : field.section + " / " + field.group}</div>
+            <h2>${field.name}</h2>
+            <p class="en">${field.en}</p>
+          </div>
+          <button class="icon-button" id="closeDetail" type="button" title="关闭详细信息" aria-label="关闭详细信息">×</button>
+        </div>
+        <div class="tags">${field.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>
+
+        <div class="detail-block">
+          <h4>${isIndex ? "聚合说明" : "字段说明"}</h4>
+          <p>${field.desc}</p>
+        </div>
+
+        <div class="detail-block">
+          <h4>报价建模建议</h4>
+          <div class="meta-list">
+            <div class="meta-row"><span>${isIndex ? "变量类型" : "建议输入类型"}</span><span>${isIndex ? "聚合指数" : field.type}</span></div>
+            <div class="meta-row"><span>${isIndex ? "计算位置" : "报价影响等级"}</span><span>${isIndex ? "中间变量层" : field.level}</span></div>
+            <div class="meta-row"><span>影响方向</span><span>${directionText(field.tags)}</span></div>
+            <div class="meta-row"><span>适合位置</span><span>${isIndex ? field.layer : field.group}</span></div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <h4>${isIndex ? "与底层字段关系" : "关联高级指数"}</h4>
+          <p>${isIndex ? "该项由多个底层字段聚合得到，用于在报价前形成可计算、可比较、可解释的决策变量。" : (related.length ? related.map(item => item.name).join("、") : "暂无直接关联指数，可作为补充字段处理。")}</p>
+        </div>
+      `;
+      document.getElementById("closeDetail").addEventListener("click", () => {
+        setDetailVisible(false);
+      });
+    }
+
+    function directionText(tags) {
+      if (tags.includes("商务摩擦")) return "进入溢价或折扣修正";
+      if (tags.includes("供应风险")) return "进入风险溢价";
+      if (tags.includes("涂层分摊")) return "进入批处理分摊";
+      if (tags.includes("交付服务")) return "进入服务与库存成本";
+      if (tags.includes("合规ESG")) return "进入合规文件与碳成本";
+      if (tags.includes("检测质量")) return "进入质检与良率成本";
+      return "进入制造基础成本";
+    }
+
+    function setSidebarVisible(visible) {
+      document.querySelector(".app").classList.toggle("sidebar-hidden", !visible);
+    }
+
+    function setDetailVisible(visible) {
+      document.querySelector(".app").classList.toggle("detail-hidden", !visible);
+    }
+
+    function render() {
+      renderNav();
+      renderFilters();
+      renderStats();
+      renderContent();
+      renderIndexes();
+      renderDetail();
+    }
+
+    document.getElementById("hideSidebar").addEventListener("click", () => setSidebarVisible(false));
+    document.getElementById("showSidebar").addEventListener("click", () => setSidebarVisible(true));
+    document.getElementById("showDetail").addEventListener("click", () => setDetailVisible(true));
+
+    document.getElementById("search").addEventListener("input", () => {
+      selectedField = null;
+      renderStats();
+      renderContent();
+      renderDetail();
+    });
+
+    render();
+  </script>
+</body>
+</html>
