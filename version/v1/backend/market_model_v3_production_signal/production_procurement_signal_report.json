@@ -1,0 +1,77 @@
+{
+  "updated_rows": 8,
+  "sample": [
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "AL",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "铝30天行情预测信号为0.34%，风险等级为正常波动，建议正常采购。预测区间跨越零点，不确定性较高，建议分批决策。短期可观望，中期准备提前采购或锁价。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "CO",
+      "horizon_day": 30,
+      "risk_level": "下跌风险",
+      "procurement_signal": "谨慎采购/适度观望",
+      "procurement_advice": "钴30天行情预测信号为-2.52%，风险等级为下跌风险，建议谨慎采购/适度观望。接近下跌风险阈值，建议谨慎采购，避免高位囤货。相对走势偏弱，可避免高位囤货。预测区间跨越零点，不确定性较高，建议分批决策。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "CU",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "铜30天行情预测信号为0.83%，风险等级为正常波动，建议正常采购。预测区间跨越零点，不确定性较高，建议分批决策。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "IRON_ORE",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "铁矿石澳30天行情预测信号为-0.05%，风险等级为正常波动，建议正常采购。预测区间跨越零点，不确定性较高，建议分批决策。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "NI",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购/谨慎补库",
+      "procurement_advice": "镍30天行情预测信号为-1.36%，风险等级为正常波动，建议正常采购/谨慎补库。相对走势偏弱，可避免高位囤货。预测区间跨越零点，不确定性较高，建议分批决策。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "PB",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "铅30天行情预测信号为1.14%，风险等级为正常波动，建议正常采购。相对强度排名靠前，但预测涨幅尚未达到提前采购阈值，建议正常采购并提前询价/重点关注。预测区间跨越零点，不确定性较高，建议分批决策。短期存在价格压力，但不建议长期大量囤货。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "SN",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "锡30天行情预测信号为2.38%，风险等级为正常波动，建议正常采购。相对强度排名靠前，但预测涨幅尚未达到提前采购阈值，建议正常采购并提前询价/重点关注。接近提前采购阈值，可提前询价并关注后续行情。预测区间跨越零点，不确定性较高，建议分批决策。"
+    },
+    {
+      "model_version": "v3_production_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "ZN",
+      "horizon_day": 30,
+      "risk_level": "正常波动",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "锌30天行情预测信号为-1.10%，风险等级为正常波动，建议正常采购。预测区间跨越零点，不确定性较高，建议分批决策。"
+    }
+  ]
+}

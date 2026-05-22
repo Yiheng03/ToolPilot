@@ -1,0 +1,28 @@
+{
+  "upserted_rows": 70517,
+  "present_factors": [
+    "AL",
+    "BRENT",
+    "CO",
+    "CU",
+    "GOLD",
+    "IRON_ORE",
+    "NATURAL_GAS",
+    "NI",
+    "PB",
+    "SILVER",
+    "SN",
+    "WTI",
+    "ZN"
+  ],
+  "missing_factors": {
+    "DXY": "no matching existing database rows or CSV source found",
+    "USD_CNY": "no matching existing database rows or CSV source found",
+    "SP500": "no matching existing database rows or CSV source found",
+    "NASDAQ": "no matching existing database rows or CSV source found",
+    "CSI300": "no matching existing database rows or CSV source found",
+    "SHANGHAI_INDEX": "no matching existing database rows or CSV source found"
+  },
+  "csv_file_errors": {},
+  "source_policy": "database market_quant_features plus existing CSV files only; no synthetic price backfill"
+}

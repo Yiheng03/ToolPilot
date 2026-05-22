@@ -1,0 +1,93 @@
+{
+  "updated_rows": 8,
+  "sample": [
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "AL",
+      "horizon_day": 30,
+      "relative_strength_rank": 5,
+      "volatility_level": "低",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天铝价格变化有限，建议按正常周期采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "CO",
+      "horizon_day": 30,
+      "relative_strength_rank": 8,
+      "volatility_level": "低",
+      "risk_level": "低或下跌风险",
+      "procurement_signal": "观望/减少库存",
+      "procurement_advice": "预计未来30天钴价格存在下行风险，可适当观望，避免高位囤货。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "CU",
+      "horizon_day": 30,
+      "relative_strength_rank": 2,
+      "volatility_level": "中",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天铜价格变化有限，建议按正常周期采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "IRON_ORE",
+      "horizon_day": 30,
+      "relative_strength_rank": 4,
+      "volatility_level": "低",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天铁矿石澳价格变化有限，建议按正常周期采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "NI",
+      "horizon_day": 30,
+      "relative_strength_rank": 7,
+      "volatility_level": "中",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天镍价格变化有限，建议按正常周期采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "PB",
+      "horizon_day": 30,
+      "relative_strength_rank": 3,
+      "volatility_level": "低",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天铅价格变化有限，建议按正常周期采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "SN",
+      "horizon_day": 30,
+      "relative_strength_rank": 1,
+      "volatility_level": "中",
+      "risk_level": "中高",
+      "procurement_signal": "建议提前采购",
+      "procurement_advice": "预计未来30天锡价格存在上涨压力，且相对强度排名靠前，建议适度提前采购。"
+    },
+    {
+      "model_version": "v3_20260522",
+      "forecast_date": "2026-05-21",
+      "metal_code": "ZN",
+      "horizon_day": 30,
+      "relative_strength_rank": 6,
+      "volatility_level": "低",
+      "risk_level": "中",
+      "procurement_signal": "正常采购",
+      "procurement_advice": "预计未来30天锌价格变化有限，建议按正常周期采购。"
+    }
+  ]
+}

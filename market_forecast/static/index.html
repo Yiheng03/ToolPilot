@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>金属价格预测 - ToolPilot</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail">
+      <div class="brand-mark">TP</div>
+      <div>
+        <p class="rail-kicker">ToolPilot</p>
+        <h1>工业智能分析</h1>
+      </div>
+      <nav>
+        <a class="active" href="/market-forecast">金属价格预测</a>
+      </nav>
+      <div class="rail-foot">PostgreSQL 实时数据</div>
+    </aside>
+
+    <main class="workspace">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Market Intelligence</p>
+          <h2>金属价格预测</h2>
+          <p class="subtitle">基于历史日度价格与 LightGBM 模型的未来 90 天价格趋势预测</p>
+        </div>
+        <div class="hero-status">
+          <span id="batchBadge">加载预测批次...</span>
+          <button id="refreshButton" type="button">刷新</button>
+        </div>
+      </header>
+
+      <section class="panel filters">
+        <label>
+          <span>金属</span>
+          <select id="metalSelect"></select>
+        </label>
+        <label>
+          <span>历史开始日期</span>
+          <input id="historyStart" type="date">
+        </label>
+        <label>
+          <span>历史结束日期</span>
+          <input id="historyEnd" type="date">
+        </label>
+        <label>
+          <span>预测开始日期</span>
+          <input id="forecastStart" type="date">
+        </label>
+        <label>
+          <span>预测结束日期</span>
+          <input id="forecastEnd" type="date">
+        </label>
+        <label>
+          <span>预测批次</span>
+          <select id="batchSelect"></select>
+        </label>
+      </section>
+
+      <section id="metricGrid" class="metric-grid"></section>
+
+      <section class="panel chart-panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Price Timeline</p>
+            <h3>价格-时间曲线</h3>
+          </div>
+          <div class="legend">
+            <span><i class="history-dot"></i>历史价格</span>
+            <span><i class="forecast-dot"></i>预测价格</span>
+            <span><i class="range-dot"></i>预测区间</span>
+          </div>
+        </div>
+        <div id="chartEmpty" class="empty-state hidden"></div>
+        <div id="chartWrap" class="chart-wrap">
+          <svg id="priceChart" role="img" aria-label="金属历史和预测价格曲线"></svg>
+          <div id="chartTooltip" class="chart-tooltip hidden"></div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel table-panel">
+          <div class="panel-head compact">
+            <div>
+              <p class="section-kicker">Forecast</p>
+              <h3>预测结果</h3>
+            </div>
+          </div>
+          <div id="forecastEmpty" class="empty-state hidden">暂无预测数据，请先运行预测脚本。</div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>预测日期</th>
+                  <th>天数</th>
+                  <th>预测价格</th>
+                  <th>预测涨跌幅</th>
+                  <th>下界</th>
+                  <th>上界</th>
+                  <th>点类型</th>
+                </tr>
+              </thead>
+              <tbody id="forecastTable"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel table-panel">
+          <div class="panel-head compact">
+            <div>
+              <p class="section-kicker">History</p>
+              <h3>历史价格</h3>
+            </div>
+          </div>
+          <div id="historyEmpty" class="empty-state hidden">该时间范围暂无历史价格数据。</div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>价格</th>
+                  <th>涨跌幅</th>
+                  <th>来源</th>
+                  <th>价格类型</th>
+                </tr>
+              </thead>
+              <tbody id="historyTable"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel model-panel">
+        <div class="panel-head compact">
+          <div>
+            <p class="section-kicker">Model Run</p>
+            <h3>模型运行信息</h3>
+          </div>
+        </div>
+        <div id="modelInfo" class="model-info"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "base_quant_model_version": "v3_20260522",
+  "row_count": 8026,
+  "metal_count": 8,
+  "date_range": [
+    "2022-08-17",
+    "2026-05-21"
+  ],
+  "factor_columns": [
+    "metal_return_30d",
+    "metal_return_90d",
+    "target_return_30d",
+    "target_return_90d",
+    "pred_lgb_return_30d",
+    "pred_lgb_return_90d",
+    "industrial_metals_return_30d",
+    "industrial_metals_return_90d",
+    "energy_return_30d",
+    "energy_return_90d",
+    "precious_metals_return_30d",
+    "precious_metals_return_90d",
+    "target_excess_return_30d",
+    "target_excess_return_90d"
+  ],
+  "pair_ratio_columns": [
+    "cu_al_ratio",
+    "ni_co_ratio",
+    "co_cu_ratio",
+    "ni_cu_ratio",
+    "sn_cu_ratio",
+    "zn_al_ratio",
+    "pb_al_ratio",
+    "iron_ore_cu_ratio"
+  ],
+  "no_future_leakage": "feature columns are joined by price_date from same-day or earlier rolling features; targets are stored separately and excluded from model feature_columns",
+  "upserted_rows": 8026,
+  "complete_target_rows": {
+    "7": 7970,
+    "30": 7786,
+    "90": 7306
+  }
+}

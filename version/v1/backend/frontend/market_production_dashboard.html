@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToolPilot 工业智能分析</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --app-bg: #f3f1ff;
+      --sidebar: #fbfbff;
+      --panel: #ffffff;
+      --panel-soft: #f8f8ff;
+      --ink: #151b45;
+      --muted: #6c7288;
+      --line: #e9eaf2;
+      --blue: #352edb;
+      --blue-2: #2383c5;
+      --red: #c44d5b;
+      --green: #14845d;
+      --shadow: 0 18px 42px rgba(41, 42, 116, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--app-bg);
+      color: var(--ink);
+      font: 14px/1.5 "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    button, input, select { font: inherit; }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 24px 18px;
+      background: var(--sidebar);
+      border-right: 1px solid #ebeafd;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #4a42f0, #2234cc);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(53, 46, 219, .28);
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 18px;
+      color: #343b93;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .brand strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+      line-height: 1.25;
+      color: #17205b;
+    }
+
+    .nav-item {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      border-radius: 7px;
+      background: linear-gradient(90deg, #3c32e7, #243be5);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .source-pill {
+      margin-top: auto;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: #8a8fa3;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    .content {
+      min-width: 0;
+      padding: 22px 28px 34px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: minmax(180px, 1.2fr) repeat(3, minmax(150px, 1fr)) auto;
+      gap: 12px;
+      align-items: end;
+    }
+
+    .control {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    select, input {
+      min-height: 40px;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--ink);
+      padding: 8px 10px;
+      outline: none;
+    }
+
+    select:focus, input:focus {
+      border-color: rgba(53, 46, 219, .55);
+      box-shadow: 0 0 0 3px rgba(53, 46, 219, .1);
+    }
+
+    .refresh {
+      min-height: 40px;
+      border: 0;
+      border-radius: 7px;
+      padding: 0 18px;
+      background: #312fe0;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric {
+      position: relative;
+      min-height: 112px;
+      overflow: hidden;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .metric::after {
+      content: "";
+      position: absolute;
+      top: -32px;
+      right: -18px;
+      width: 74px;
+      height: 74px;
+      border-radius: 0 0 0 72px;
+      background: #f0ecff;
+    }
+
+    .metric-label {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .metric-value {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 800;
+      color: #20275c;
+      overflow-wrap: anywhere;
+    }
+
+    .metric-note {
+      position: relative;
+      z-index: 1;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .positive { color: var(--red); }
+    .negative { color: var(--green); }
+    .neutral { color: #7d7080; }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      min-height: 72px;
+      padding: 18px 18px 10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .eyebrow {
+      color: #3a3aa4;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1.25;
+    }
+
+    h1 { margin-top: 3px; font-size: 20px; }
+    h2 { margin-top: 3px; font-size: 18px; }
+
+    .legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .swatch {
+      width: 20px;
+      height: 0;
+      border-top: 3px solid #443cc8;
+      display: inline-block;
+    }
+
+    .swatch.forecast { border-top-color: var(--blue-2); border-top-style: dashed; }
+    .swatch.band {
+      height: 8px;
+      border: 1px solid rgba(35, 131, 197, .22);
+      background: rgba(35, 131, 197, .1);
+    }
+
+    .chart-shell {
+      position: relative;
+      padding: 0 18px 18px;
+    }
+
+    .chart-tooltip {
+      position: absolute;
+      z-index: 5;
+      min-width: 178px;
+      max-width: 260px;
+      padding: 10px 12px;
+      border: 1px solid rgba(53, 46, 219, .16);
+      border-radius: 7px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: 0 14px 32px rgba(30, 36, 90, .16);
+      color: var(--ink);
+      pointer-events: none;
+      transform: translate(12px, -50%);
+      display: none;
+    }
+
+    .chart-tooltip strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .chart-tooltip div {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .model-details {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .model-details summary {
+      min-height: 58px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 800;
+    }
+
+    .model-details summary::-webkit-details-marker { display: none; }
+    .model-details summary:focus { outline: none; }
+
+    .summary-note {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0 18px 18px;
+    }
+
+    .detail-card {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fbfbff;
+      padding: 14px;
+    }
+
+    .detail-card h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      color: #20275c;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 6px 0;
+      border-top: 1px solid #ececf6;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-row b {
+      color: var(--ink);
+      font-weight: 700;
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .lower-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .9fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .table-wrap {
+      max-height: 360px;
+      overflow: auto;
+      border-top: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th, td {
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: #f6f6fc;
+      color: #303862;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .empty {
+      padding: 18px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1400px) {
+      .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 1100px) {
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .refresh { min-height: 38px; }
+    }
+
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      .sidebar {
+        position: static;
+        height: auto;
+        padding: 18px;
+        flex-direction: row;
+        align-items: center;
+      }
+      .brand small, .brand strong { margin-top: 0; }
+      .nav-item { margin-left: auto; }
+      .source-pill { display: none; }
+      .content { padding: 16px; }
+      .metric-grid, .lower-grid, .filters { grid-template-columns: 1fr; }
+      .detail-grid { grid-template-columns: 1fr; }
+      svg { height: 360px; }
+      .panel-head { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">TP</div>
+      <div class="brand">
+        <small>ToolPilot</small>
+        <strong>工业智能分析</strong>
+      </div>
+      <div class="nav-item">金属价格预测</div>
+      <div class="source-pill">PostgreSQL 实时数据</div>
+    </aside>
+
+    <main class="content">
+      <section class="filters" aria-label="筛选条件">
+        <label class="control">金属
+          <select id="metalSelect"></select>
+        </label>
+        <label class="control">历史开始
+          <input id="historyStart" type="date">
+        </label>
+        <label class="control">历史结束
+          <input id="historyEnd" type="date">
+        </label>
+        <label class="control">预测基准日
+          <input id="forecastDate" type="date">
+        </label>
+        <button class="refresh" id="refreshBtn" type="button">刷新</button>
+      </section>
+
+      <section class="metric-grid" aria-label="核心指标">
+        <article class="metric">
+          <div class="metric-label">当前金属</div>
+          <div class="metric-value" id="metalCode">-</div>
+          <div class="metric-note" id="metalName">-</div>
+        </article>
+        <article class="metric">
+          <div class="metric-label">最新历史价格</div>
+          <div class="metric-value" id="basePrice">-</div>
+          <div class="metric-note" id="baseDate">-</div>
+        </article>
+        <article class="metric">
+          <div class="metric-label">7 天预测</div>
+          <div class="metric-value" id="price7">-</div>
+          <div class="metric-note" id="return7">-</div>
+        </article>
+        <article class="metric">
+          <div class="metric-label">30 天预测</div>
+          <div class="metric-value" id="price30">-</div>
+          <div class="metric-note" id="return30">-</div>
+        </article>
+        <article class="metric">
+          <div class="metric-label">90 天预测</div>
+          <div class="metric-value" id="price90">-</div>
+          <div class="metric-note" id="return90">-</div>
+        </article>
+        <article class="metric">
+          <div class="metric-label">可靠性评分</div>
+          <div class="metric-value" id="modelMetric">-</div>
+          <div class="metric-note" id="modelNote">-</div>
+        </article>
+      </section>
+
+      <details class="model-details">
+        <summary>
+          <span>模型详细指标</span>
+          <span class="summary-note" id="modelSummary">展开查看 7 / 30 / 90 天各项数据</span>
+        </summary>
+        <div class="detail-grid" id="modelDetails"></div>
+      </details>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="eyebrow">价格走势</div>
+            <h1>价格-时间曲线</h1>
+            <div class="status" id="status">读取 market_production_forecasts</div>
+          </div>
+          <div class="legend">
+            <span><i class="swatch"></i>历史价格</span>
+            <span><i class="swatch forecast"></i>预测价格</span>
+            <span><i class="swatch band"></i>预测区间</span>
+          </div>
+        </div>
+        <div class="chart-shell">
+          <svg id="chart" role="img" aria-label="价格时间曲线"></svg>
+          <div class="chart-tooltip" id="chartTooltip"></div>
+        </div>
+      </section>
+
+      <section class="lower-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="eyebrow">预测数据</div>
+              <h2>预测结果</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>预测日期</th>
+                  <th>天数</th>
+                  <th>预测价格</th>
+                  <th>预测涨跌幅</th>
+                  <th>下界</th>
+                  <th>上界</th>
+                  <th>趋势</th>
+                </tr>
+              </thead>
+              <tbody id="forecastBody"></tbody>
+            </table>
+          </div>
+          <div class="empty" id="forecastEmpty" hidden>暂无预测数据</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="eyebrow">历史数据</div>
+              <h2>历史价格</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>价格</th>
+                  <th>涨跌幅</th>
+                  <th>来源</th>
+                  <th>价格类型</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+          <div class="empty" id="historyEmpty" hidden>暂无历史数据</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      ranking: [],
+      detail: null,
+      selectedMetal: "",
+      forecastDateTouched: false,
+      historyRangeTouched: false,
+      chartPoints: []
+    };
+
+    const metalNames = {
+      CU: "铜",
+      AL: "铝",
+      NI: "镍",
+      CO: "钴",
+      ZN: "锌",
+      SN: "锡",
+      PB: "铅",
+      IRON_ORE: "铁矿石"
+    };
+
+    const $ = id => document.getElementById(id);
+    const fmtNum = value => value == null || Number.isNaN(Number(value)) ? "--" : Number(value).toLocaleString("zh-CN", { maximumFractionDigits: 2 });
+    const fmtMoney = value => value == null || Number.isNaN(Number(value)) ? "--" : `${fmtNum(value)} 元/吨`;
+    const fmtPct = value => value == null || Number.isNaN(Number(value)) ? "--" : `${Number(value) >= 0 ? "+" : ""}${(Number(value) * 100).toFixed(2)}%`;
+    const toDate = value => value ? new Date(`${value}T00:00:00`) : null;
+    const tone = value => Number(value) > 0.005 ? "positive" : Number(value) < -0.005 ? "negative" : "neutral";
+    const trendText = value => Number(value) > 0.02 ? "上涨" : Number(value) < -0.02 ? "下跌" : "小幅波动";
+    const todayText = () => {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, "0");
+      const d = String(now.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
+    };
+    const historyDateOf = row => row.date || row.price_date || row.trade_date || null;
+    const historyPriceOf = row => row.actual_price ?? row.close_price ?? row.price ?? row.avg_price ?? null;
+    const intervalJudgement = row => {
+      if (row.interval_judgement) return row.interval_judgement;
+      const p10 = Number(row.predicted_return_p10);
+      const p50 = Number(row.predicted_return_p50);
+      const p90 = Number(row.predicted_return_p90);
+      if (![p10, p50, p90].every(Number.isFinite)) return "--";
+      if (p10 > 0 && p50 > 0 && p90 > 0) return "方向一致向上";
+      if (p10 < 0 && p50 < 0 && p90 < 0) return "方向一致向下";
+      if (p10 < 0 && p90 > 0) return "区间跨零";
+      return "方向不明确";
+    };
+    const reliabilityScoreText = row => row?.reliability_score == null ? "--" : `${Math.round(Number(row.reliability_score))}/100`;
+    const addDays = (date, days) => {
+      if (!date || days == null) return null;
+      const [year, month, day] = String(date).split("-").map(Number);
+      const parsed = new Date(Date.UTC(year, month - 1, day + Number(days)));
+      return parsed.toISOString().slice(0, 10);
+    };
+    const forecastDateOf = detail => detail.forecast_date || (detail.forecasts || []).find(row => row.forecast_date)?.forecast_date || null;
+    const basePriceOf = detail => detail.base_price ?? (detail.forecasts || []).find(row => row.base_price != null)?.base_price ?? null;
+    const targetDateOf = row => row.forecast_target_date || addDays(row.forecast_date, row.horizon_day) || "--";
+
+    async function api(path) {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`${path} ${res.status}`);
+      return res.json();
+    }
+
+    function buildParams() {
+      const params = new URLSearchParams({ metal_code: state.selectedMetal });
+      if (state.forecastDateTouched && $("forecastDate").value) params.set("forecast_date", $("forecastDate").value);
+      if (state.historyRangeTouched && $("historyStart").value) params.set("history_start_date", $("historyStart").value);
+      if (state.historyRangeTouched && $("historyEnd").value) params.set("history_end_date", $("historyEnd").value);
+      return params.toString();
+    }
+
+    async function loadRanking() {
+      $("status").textContent = "正在读取 market_production_forecasts";
+      state.ranking = await api("/api/market/production-ranking");
+      renderMetalOptions();
+      if (!state.selectedMetal && state.ranking.length) {
+        state.selectedMetal = state.ranking[0].metal_code;
+        $("metalSelect").value = state.selectedMetal;
+      }
+      await loadDetail();
+    }
+
+    async function loadDetail() {
+      if (!state.selectedMetal) return;
+      state.detail = await api(`/api/market/production-detail?${buildParams()}`);
+      applyDefaultDates(state.detail);
+      renderPage();
+      $("status").textContent = `基准日 ${forecastDateOf(state.detail) || "--"}`;
+    }
+
+    function applyDefaultDates(detail) {
+      if (!$("forecastDate").value) $("forecastDate").value = todayText();
+      if (!state.historyRangeTouched) {
+        const dates = (detail.history || []).map(historyDateOf).filter(Boolean).sort();
+        if (dates.length) {
+          $("historyStart").value = dates[0];
+          $("historyEnd").value = dates[dates.length - 1];
+        }
+      }
+    }
+
+    function renderMetalOptions() {
+      const select = $("metalSelect");
+      const selected = select.value || state.selectedMetal;
+      select.innerHTML = "";
+      for (const row of state.ranking) {
+        const option = document.createElement("option");
+        option.value = row.metal_code;
+        option.textContent = `${row.metal_code} ${row.metal_name || metalNames[row.metal_code] || ""}`;
+        select.appendChild(option);
+      }
+      if (selected) select.value = selected;
+    }
+
+    function byHorizon(forecasts, horizon) {
+      return forecasts.find(row => Number(row.horizon_day) === horizon) || {};
+    }
+
+    function renderPage() {
+      const detail = state.detail || {};
+      const forecasts = detail.forecasts || [];
+      const forecastDate = forecastDateOf(detail);
+      const basePrice = basePriceOf(detail);
+      const name = detail.metal_name || metalNames[detail.metal_code] || detail.metal_code || "--";
+      const f7 = byHorizon(forecasts, 7);
+      const f30 = byHorizon(forecasts, 30);
+      const f90 = byHorizon(forecasts, 90);
+      const signal = detail.current_signal || {};
+
+      $("metalCode").textContent = detail.metal_code || "--";
+      $("metalName").textContent = name;
+      $("basePrice").textContent = fmtMoney(basePrice);
+      $("baseDate").textContent = forecastDate || "--";
+      setForecastMetric("price7", "return7", f7);
+      setForecastMetric("price30", "return30", f30);
+      setForecastMetric("price90", "return90", f90);
+      $("modelMetric").textContent = reliabilityScoreText(signal.reliability_score != null ? signal : f30);
+      $("modelNote").textContent = signal.reliability_score_note || f30.reliability_score_note || intervalJudgement(f30);
+      $("modelSummary").textContent = `30 天评分 ${reliabilityScoreText(signal.reliability_score != null ? signal : f30)}，${signal.reliability_score_note || f30.reliability_score_note || "--"}，${intervalJudgement(f30)}`;
+
+      renderForecastTable(forecasts);
+      renderHistoryTable(detail.history || []);
+      renderModelDetails(forecasts);
+      renderChart(buildChartSeries(detail));
+    }
+
+    function setForecastMetric(priceId, returnId, row) {
+      const price = row.final_predicted_price ?? row.predicted_price_p50;
+      const predictedReturn = row.final_predicted_return ?? row.predicted_return_p50;
+      $(priceId).textContent = fmtMoney(price);
+      $(returnId).textContent = `累计 ${fmtPct(predictedReturn)}`;
+      $(priceId).className = `metric-value ${tone(predictedReturn)}`;
+    }
+
+    function renderForecastTable(forecasts) {
+      const body = $("forecastBody");
+      body.innerHTML = "";
+      $("forecastEmpty").hidden = forecasts.length > 0;
+      for (const row of forecasts) {
+        const predictedReturn = row.final_predicted_return ?? row.predicted_return_p50;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${targetDateOf(row)}</td>
+          <td>${row.horizon_day ?? "--"}</td>
+          <td>${fmtNum(row.final_predicted_price ?? row.predicted_price_p50)}</td>
+          <td class="${tone(predictedReturn)}">${fmtPct(predictedReturn)}</td>
+          <td>${fmtNum(row.predicted_price_p10)}</td>
+          <td>${fmtNum(row.predicted_price_p90)}</td>
+          <td>${trendText(predictedReturn)}</td>
+        `;
+        body.appendChild(tr);
+      }
+    }
+
+    function metricRow(label, value) {
+      return `<div class="detail-row"><span>${label}</span><b>${value}</b></div>`;
+    }
+
+    function renderModelDetails(forecasts) {
+      const wrap = $("modelDetails");
+      wrap.innerHTML = "";
+      for (const row of forecasts) {
+        const drivers = row.key_drivers || {};
+        const scoreParts = row.reliability_score_breakdown || {};
+        const card = document.createElement("article");
+        card.className = "detail-card";
+        card.innerHTML = `
+          <h3>${row.horizon_day ?? "--"} 天预测</h3>
+          ${metricRow("可靠性评分", reliabilityScoreText(row))}
+          ${metricRow("评分结论", row.reliability_score_note || "--")}
+          ${metricRow("区间判断", intervalJudgement(row))}
+          ${metricRow("数据贡献", scoreParts.data_quality == null ? "--" : `${scoreParts.data_quality}/35`)}
+          ${metricRow("方向贡献", scoreParts.direction_interval == null ? "--" : `${scoreParts.direction_interval}/30`)}
+          ${metricRow("宽度贡献", scoreParts.interval_width == null ? "--" : `${scoreParts.interval_width}/25`)}
+          ${metricRow("信号贡献", scoreParts.median_signal == null ? "--" : `${scoreParts.median_signal}/10`)}
+          ${metricRow("数据质量", fmtNum(row.data_quality_score))}
+          ${metricRow("区间宽度", row.interval_width == null ? "--" : fmtPct(row.interval_width))}
+          ${metricRow("波动水平", row.volatility_level || "--")}
+          ${metricRow("风险等级", row.risk_level || "--")}
+          ${metricRow("相对强度排名", row.relative_strength_rank ?? "--")}
+          ${metricRow("基础模型", fmtPct(drivers.base_lgb))}
+          ${metricRow("市场因子", fmtPct(drivers.market_factor))}
+          ${metricRow("超额收益模型", fmtPct(drivers.catboost_excess))}
+          ${metricRow("配对调整", fmtPct(drivers.pair_adjustment))}
+        `;
+        wrap.appendChild(card);
+      }
+      if (!forecasts.length) {
+        wrap.innerHTML = `<div class="empty">暂无模型指标数据</div>`;
+      }
+    }
+
+    function renderHistoryTable(history) {
+      const body = $("historyBody");
+      body.innerHTML = "";
+      $("historyEmpty").hidden = history.length > 0;
+      const sorted = history.slice().sort((a, b) => toDate(historyDateOf(b)) - toDate(historyDateOf(a)));
+      for (const [index, row] of sorted.entries()) {
+        const previous = sorted[index + 1];
+        const price = historyPriceOf(row);
+        const previousPrice = previous ? historyPriceOf(previous) : null;
+        const change = previousPrice && Number(previousPrice)
+          ? (Number(price) - Number(previousPrice)) / Number(previousPrice)
+          : null;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${historyDateOf(row) || "--"}</td>
+          <td>${fmtNum(price)}</td>
+          <td class="${tone(change)}">${change == null ? "--" : fmtPct(change)}</td>
+          <td>PostgreSQL</td>
+          <td>现货基准</td>
+        `;
+        body.appendChild(tr);
+      }
+    }
+
+    function buildChartSeries(detail) {
+      const history = (detail.history || []).map(row => ({
+        date: historyDateOf(row),
+        actualPrice: Number(historyPriceOf(row)),
+        pointType: "history"
+      })).filter(row => row.date && Number.isFinite(row.actualPrice));
+
+      const forecastDate = forecastDateOf(detail);
+      const basePrice = basePriceOf(detail);
+      const historyStart = $("historyStart").value;
+      const start = forecastDate && basePrice != null ? [{
+        date: forecastDate,
+        actualPrice: Number(basePrice),
+        forecastPrice: Number(basePrice),
+        forecastLow: Number(basePrice),
+        forecastHigh: Number(basePrice),
+        label: "预测基准",
+        pointType: "forecast_start"
+      }] : [];
+
+      const forecasts = (detail.forecasts || []).map(row => ({
+        date: targetDateOf(row),
+        forecastPrice: Number(row.final_predicted_price ?? row.predicted_price_p50),
+        forecastLow: Number(row.predicted_price_p10),
+        forecastHigh: Number(row.predicted_price_p90),
+        horizonDay: row.horizon_day,
+        predictedReturn: row.final_predicted_return ?? row.predicted_return_p50,
+        reliabilityScore: row.reliability_score,
+        reliabilityNote: row.reliability_score_note,
+        label: `${row.horizon_day} 天预测`,
+        pointType: "forecast"
+      })).filter(row => row.date && Number.isFinite(row.forecastPrice));
+
+      return history.concat(start, forecasts)
+        .filter(row => !historyStart || row.date >= historyStart)
+        .sort((a, b) => toDate(a.date) - toDate(b.date));
+    }
+
+    function renderChart(series) {
+      const svg = $("chart");
+      const tooltip = $("chartTooltip");
+      const w = svg.clientWidth || 1200;
+      const h = svg.clientHeight || 420;
+      svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      svg.innerHTML = "";
+      tooltip.style.display = "none";
+      state.chartPoints = [];
+      if (!series.length) return;
+
+      const pad = { l: 72, r: 28, t: 24, b: 42 };
+      const dates = series.map(row => toDate(row.date)).filter(Boolean);
+      const values = series.flatMap(row => [row.actualPrice, row.forecastPrice, row.forecastLow, row.forecastHigh]).filter(Number.isFinite);
+      if (!dates.length || !values.length) return;
+
+      const minTime = Math.min(...dates.map(d => d.getTime()));
+      const maxTime = Math.max(...dates.map(d => d.getTime()));
+      const minValue = Math.min(...values);
+      const maxValue = Math.max(...values);
+      const yPad = Math.max(1, (maxValue - minValue) * 0.12);
+      const lowValue = minValue - yPad;
+      const highValue = maxValue + yPad;
+      const innerW = w - pad.l - pad.r;
+      const innerH = h - pad.t - pad.b;
+      const sx = date => pad.l + ((toDate(date).getTime() - minTime) / Math.max(1, maxTime - minTime)) * innerW;
+      const sy = value => h - pad.b - ((value - lowValue) / Math.max(1, highValue - lowValue)) * innerH;
+
+      const make = (name, attrs = {}) => {
+        const el = document.createElementNS("http://www.w3.org/2000/svg", name);
+        for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, value);
+        svg.appendChild(el);
+        return el;
+      };
+
+      for (let i = 0; i <= 4; i++) {
+        const y = pad.t + i * innerH / 4;
+        make("line", { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: "#eef0f6" });
+        const labelValue = highValue - i * (highValue - lowValue) / 4;
+        make("text", { x: 12, y: y + 4, "font-size": 11, fill: "#868b9d" }).textContent = fmtNum(labelValue);
+      }
+
+      const actual = series.filter(row => Number.isFinite(row.actualPrice));
+      const forecast = series.filter(row => Number.isFinite(row.forecastPrice));
+      const band = series.filter(row => Number.isFinite(row.forecastLow) && Number.isFinite(row.forecastHigh));
+      const start = series.find(row => row.pointType === "forecast_start");
+
+      if (band.length >= 2) {
+        const upper = band.map(row => `${sx(row.date)},${sy(row.forecastHigh)}`).join(" ");
+        const lower = band.slice().reverse().map(row => `${sx(row.date)},${sy(row.forecastLow)}`).join(" ");
+        make("polygon", { points: `${upper} ${lower}`, fill: "rgba(35, 131, 197, .08)", stroke: "none" });
+      }
+
+      if (actual.length >= 2) {
+        make("path", {
+          d: actual.map((row, i) => `${i ? "L" : "M"}${sx(row.date)},${sy(row.actualPrice)}`).join(" "),
+          fill: "none",
+          stroke: "#443cc8",
+          "stroke-width": 2.6,
+          "stroke-linecap": "round",
+          "stroke-linejoin": "round"
+        });
+      }
+
+      if (forecast.length >= 2) {
+        make("path", {
+          d: forecast.map((row, i) => `${i ? "L" : "M"}${sx(row.date)},${sy(row.forecastPrice)}`).join(" "),
+          fill: "none",
+          stroke: "#2383c5",
+          "stroke-width": 2.6,
+          "stroke-dasharray": "7 6",
+          "stroke-linecap": "round",
+          "stroke-linejoin": "round"
+        });
+      }
+
+      if (start) {
+        const x = sx(start.date);
+        make("line", { x1: x, y1: pad.t, x2: x, y2: h - pad.b, stroke: "#7e8192", "stroke-dasharray": "4 4" });
+        make("text", { x: Math.min(w - pad.r - 120, x + 8), y: pad.t + 16, "font-size": 12, fill: "#5f6478" }).textContent = `基准日 ${start.date}`;
+      }
+
+      for (const row of forecast.filter(item => item.pointType === "forecast")) {
+        const circle = make("circle", { cx: sx(row.date), cy: sy(row.forecastPrice), r: 4, fill: "#2383c5", stroke: "#fff", "stroke-width": 1.4 });
+        const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        title.textContent = `${row.horizonDay} 天预测\n价格 ${fmtNum(row.forecastPrice)}\n涨跌幅 ${fmtPct(row.predictedReturn)}`;
+        circle.appendChild(title);
+      }
+
+      const ticks = 5;
+      for (let i = 0; i < ticks; i++) {
+        const t = minTime + i * (maxTime - minTime) / Math.max(1, ticks - 1);
+        const date = new Date(t).toISOString().slice(5, 10);
+        const text = make("text", { x: pad.l + i * innerW / Math.max(1, ticks - 1), y: h - 16, "font-size": 11, fill: "#8a8fa3" });
+        text.textContent = date;
+        if (i === ticks - 1) text.setAttribute("text-anchor", "end");
+      }
+
+      state.chartPoints = series.flatMap(row => {
+        const points = [];
+        if (Number.isFinite(row.actualPrice)) {
+          points.push({ x: sx(row.date), y: sy(row.actualPrice), date: row.date, price: row.actualPrice, type: row.pointType === "forecast_start" ? "预测基准" : "历史价格" });
+        }
+        if (row.pointType === "forecast" && Number.isFinite(row.forecastPrice)) {
+          points.push({
+            x: sx(row.date),
+            y: sy(row.forecastPrice),
+            date: row.date,
+            price: row.forecastPrice,
+            type: row.label || "预测价格",
+            change: row.predictedReturn,
+            low: row.forecastLow,
+            high: row.forecastHigh,
+            reliabilityScore: row.reliabilityScore,
+            reliabilityNote: row.reliabilityNote
+          });
+        }
+        return points;
+      });
+
+      const hoverLine = make("line", { x1: 0, y1: pad.t, x2: 0, y2: h - pad.b, stroke: "#2f3378", "stroke-dasharray": "3 4", opacity: 0 });
+      const hoverDot = make("circle", { cx: 0, cy: 0, r: 5, fill: "#fff", stroke: "#2f3378", "stroke-width": 2, opacity: 0 });
+
+      svg.onmousemove = event => {
+        if (!state.chartPoints.length) return;
+        const rect = svg.getBoundingClientRect();
+        const x = (event.clientX - rect.left) * (w / rect.width);
+        const nearest = state.chartPoints.reduce((best, point) => Math.abs(point.x - x) < Math.abs(best.x - x) ? point : best, state.chartPoints[0]);
+        hoverLine.setAttribute("x1", nearest.x);
+        hoverLine.setAttribute("x2", nearest.x);
+        hoverLine.setAttribute("opacity", ".55");
+        hoverDot.setAttribute("cx", nearest.x);
+        hoverDot.setAttribute("cy", nearest.y);
+        hoverDot.setAttribute("opacity", "1");
+        tooltip.innerHTML = `
+          <strong>${nearest.date} · ${nearest.type}</strong>
+          <div>价格：${fmtMoney(nearest.price)}</div>
+          ${nearest.change == null ? "" : `<div>涨跌幅：${fmtPct(nearest.change)}</div>`}
+          ${nearest.low == null || nearest.high == null ? "" : `<div>区间：${fmtNum(nearest.low)} - ${fmtNum(nearest.high)}</div>`}
+          ${nearest.reliabilityScore == null ? "" : `<div>可靠性评分：${Math.round(Number(nearest.reliabilityScore))}/100</div>`}
+          ${nearest.reliabilityNote ? `<div>结论：${nearest.reliabilityNote}</div>` : ""}
+        `;
+        const tooltipX = Math.min(rect.width - 290, Math.max(8, event.clientX - rect.left + 10));
+        const tooltipY = Math.min(rect.height - 30, Math.max(40, event.clientY - rect.top));
+        tooltip.style.left = `${tooltipX}px`;
+        tooltip.style.top = `${tooltipY}px`;
+        tooltip.style.display = "block";
+      };
+
+      svg.onmouseleave = () => {
+        hoverLine.setAttribute("opacity", "0");
+        hoverDot.setAttribute("opacity", "0");
+        tooltip.style.display = "none";
+      };
+    }
+
+    $("metalSelect").addEventListener("change", event => {
+      state.selectedMetal = event.target.value;
+      loadDetail().catch(showError);
+    });
+
+    $("refreshBtn").addEventListener("click", () => loadDetail().catch(showError));
+    $("forecastDate").addEventListener("change", () => {
+      state.forecastDateTouched = true;
+      loadDetail().catch(showError);
+    });
+    $("historyStart").addEventListener("change", () => {
+      state.historyRangeTouched = true;
+      loadDetail().catch(showError);
+    });
+    $("historyEnd").addEventListener("change", () => {
+      state.historyRangeTouched = true;
+      loadDetail().catch(showError);
+    });
+
+    function showError(error) {
+      $("status").textContent = `读取失败：${error.message}`;
+    }
+
+    $("forecastDate").value = todayText();
+    loadRanking().catch(showError);
+  </script>
+</body>
+</html>

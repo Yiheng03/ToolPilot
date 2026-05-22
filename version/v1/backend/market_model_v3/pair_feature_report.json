@@ -1,0 +1,22 @@
+{
+  "requested_pairs": [
+    "CU/AL",
+    "NI/CO",
+    "W/CU",
+    "W/AL",
+    "CO/CU",
+    "NI/CU"
+  ],
+  "generated_pairs": [
+    "CO/CU",
+    "CU/AL",
+    "NI/CO",
+    "NI/CU"
+  ],
+  "skipped_pairs": {
+    "W/CU": "missing metal: W",
+    "W/AL": "missing metal: W"
+  },
+  "row_count": 4013,
+  "upserted_rows": 4013
+}

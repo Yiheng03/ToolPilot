@@ -1,0 +1,10 @@
+{
+  "input_rows": 62598,
+  "upserted_rows": 62598,
+  "factor_count": 13,
+  "date_range": [
+    "2000-01-03",
+    "2026-05-21"
+  ],
+  "no_future_leakage": "all returns, rolling statistics, momentum, and zscore use current or prior rows within each factor_code"
+}
