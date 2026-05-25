@@ -18,7 +18,7 @@ export function Header() {
               <Wrench className="h-5 w-5 text-primary-foreground" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-foreground">BladeWise</span>
+              <span className="text-lg font-bold text-foreground">ToolPilot</span>
               <span className="text-xs text-muted-foreground -mt-1">刀具智能体平台</span>
             </div>
           </Link>

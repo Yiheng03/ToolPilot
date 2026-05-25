@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: '机械工业刀具智能体平台 - BladeWise',
+  title: '机械工业刀具智能体平台 - ToolPilot',
   description: '基于AI的机械工业刀具智能推荐系统，根据行业和使用场景智能生成刀具材料、尺寸和报价',
   generator: 'v0.app',
   icons: {

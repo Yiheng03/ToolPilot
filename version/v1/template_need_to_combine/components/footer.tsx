@@ -13,7 +13,7 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
                 <Wrench className="h-4 w-4 text-primary-foreground" />
               </div>
-              <span className="text-lg font-bold text-foreground">BladeWise</span>
+              <span className="text-lg font-bold text-foreground">ToolPilot</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               机械工业刀具智能体平台，助力制造业智能升级
@@ -95,7 +95,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2026 BladeWise 机械工业刀具智能体平台. 保留所有权利.
+            © 2026 ToolPilot 机械工业刀具智能体平台. 保留所有权利.
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

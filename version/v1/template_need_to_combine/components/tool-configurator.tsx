@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
 
@@ -417,21 +416,18 @@ export function ToolConfigurator() {
                   <Factory className="h-4 w-4 text-muted-foreground" />
                   所属行业
                 </Label>
-                <Select value={industry} onValueChange={setIndustry}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="请选择您的行业" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {industries.map((ind) => (
-                      <SelectItem key={ind.value} value={ind.value}>
-                        <span className="flex items-center gap-2">
-                          <span>{ind.icon}</span>
-                          <span>{ind.label}</span>
-                        </span>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <select
+                  className="border-input bg-background text-foreground h-10 w-full rounded-md border px-3 py-2 text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                  value={industry}
+                  onChange={(event) => setIndustry(event.target.value)}
+                >
+                  <option value="">请选择您的行业</option>
+                  {industries.map((ind) => (
+                    <option key={ind.value} value={ind.value}>
+                      {ind.icon} {ind.label}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="space-y-2">
@@ -439,18 +435,18 @@ export function ToolConfigurator() {
                   <Wrench className="h-4 w-4 text-muted-foreground" />
                   使用场景
                 </Label>
-                <Select value={scenario} onValueChange={setScenario}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="请选择加工类型" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {scenarios.map((sc) => (
-                      <SelectItem key={sc.value} value={sc.value}>
-                        {sc.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <select
+                  className="border-input bg-background text-foreground h-10 w-full rounded-md border px-3 py-2 text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                  value={scenario}
+                  onChange={(event) => setScenario(event.target.value)}
+                >
+                  <option value="">请选择加工类型</option>
+                  {scenarios.map((sc) => (
+                    <option key={sc.value} value={sc.value}>
+                      {sc.label}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="space-y-2">
@@ -458,18 +454,18 @@ export function ToolConfigurator() {
                   <Layers className="h-4 w-4 text-muted-foreground" />
                   工件材料
                 </Label>
-                <Select value={workpieceMaterial} onValueChange={setWorkpieceMaterial}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="请选择工件材料" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {materials.map((mat) => (
-                      <SelectItem key={mat.value} value={mat.value}>
-                        {mat.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <select
+                  className="border-input bg-background text-foreground h-10 w-full rounded-md border px-3 py-2 text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                  value={workpieceMaterial}
+                  onChange={(event) => setWorkpieceMaterial(event.target.value)}
+                >
+                  <option value="">请选择工件材料</option>
+                  {materials.map((mat) => (
+                    <option key={mat.value} value={mat.value}>
+                      {mat.label}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="space-y-4">

@@ -21,7 +21,7 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 
 function DetailCard({ row }: { row: ForecastRow }) {
   const drivers = row.key_drivers || {};
-  const scoreParts = row.reliability_score_breakdown || {};
+  const scoreParts = row.reliability_score_breakdown;
 
   return (
     <Card>
@@ -30,15 +30,15 @@ function DetailCard({ row }: { row: ForecastRow }) {
         <DetailRow label="可靠性评分" value={reliabilityScoreText(row)} />
         <DetailRow label="评分结论" value={row.reliability_score_note || "--"} />
         <DetailRow label="区间判断" value={intervalJudgement(row)} />
-        <DetailRow label="数据贡献" value={scoreParts.data_quality == null ? "--" : `${scoreParts.data_quality}/35`} />
-        <DetailRow label="方向贡献" value={scoreParts.direction_interval == null ? "--" : `${scoreParts.direction_interval}/30`} />
-        <DetailRow label="宽度贡献" value={scoreParts.interval_width == null ? "--" : `${scoreParts.interval_width}/25`} />
-        <DetailRow label="信号贡献" value={scoreParts.median_signal == null ? "--" : `${scoreParts.median_signal}/10`} />
+        <DetailRow label="数据贡献" value={scoreParts?.data_quality == null ? "--" : `${scoreParts.data_quality}/35`} />
+        <DetailRow label="方向贡献" value={scoreParts?.direction_interval == null ? "--" : `${scoreParts.direction_interval}/30`} />
+        <DetailRow label="宽度贡献" value={scoreParts?.interval_width == null ? "--" : `${scoreParts.interval_width}/25`} />
+        <DetailRow label="信号贡献" value={scoreParts?.median_signal == null ? "--" : `${scoreParts.median_signal}/10`} />
         <DetailRow label="数据质量" value={fmtNum(row.data_quality_score)} />
         <DetailRow label="区间宽度" value={row.interval_width == null ? "--" : fmtPct(row.interval_width)} />
         <DetailRow label="波动水平" value={row.volatility_level || "--"} />
         <DetailRow label="风险等级" value={row.risk_level || "--"} />
-        <DetailRow label="相对强度排名" value={row.relative_strength_rank ?? "--"} />
+        <DetailRow label="相对强度排名" value={row.relative_strength_rank == null ? "--" : String(row.relative_strength_rank)} />
         <DetailRow label="基础模型" value={fmtPct(drivers.base_lgb)} />
         <DetailRow label="市场因子" value={fmtPct(drivers.market_factor)} />
         <DetailRow label="超额收益模型" value={fmtPct(drivers.catboost_excess)} />
