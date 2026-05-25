@@ -1,11 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { MarketFilters } from "@/components/market/market-filters";
 import { MetricGrid } from "@/components/market/metric-grid";
 import { ModelDetails } from "@/components/market/model-details";
-import { PriceChart } from "@/components/market/price-chart";
 import { ForecastTable } from "@/components/market/forecast-table";
 import { HistoryTable } from "@/components/market/history-table";
 import {
@@ -17,6 +19,11 @@ import {
   forecastDateOf,
   historyDateOf,
 } from "@/lib/market-utils";
+
+const PriceChart = dynamic(
+  () => import("@/components/market/price-chart").then((m) => m.PriceChart),
+  { ssr: false }
+);
 
 export default function MarketPage() {
   const [ranking, setRanking] = useState<MetalRanking[]>([]);
@@ -144,7 +151,9 @@ export default function MarketPage() {
   }, [detail, historyStart, historyEnd]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
+      <Header />
+      <main className="flex-1">
       <section className="relative py-10 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -216,6 +225,8 @@ export default function MarketPage() {
           </>
         )}
       </div>
+      </main>
+      <Footer />
     </div>
   );
 }

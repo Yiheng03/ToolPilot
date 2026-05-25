@@ -1,0 +1,47 @@
+[
+  {
+    "supplier": "benchmark:常州市崚钨合金有限公司",
+    "category": "四刃古铜硬质合金铣刀",
+    "rawSpec": "D6*50L",
+    "price": 26.7,
+    "priceLabel": "¥26.7",
+    "material": "CARBIDE",
+    "coating": "BRONZE"
+  },
+  {
+    "supplier": "benchmark:常州市京锋工具有限公司",
+    "category": "七彩U槽铣刀",
+    "rawSpec": "Φ6*25*6*75L",
+    "price": 48,
+    "priceLabel": "¥48.0",
+    "material": "CARBIDE",
+    "coating": "RAINBOW"
+  },
+  {
+    "supplier": "benchmark:镇江新区大港宏峰工具厂",
+    "category": "55度钨钢铣刀 古铜色涂层 平刀",
+    "rawSpec": "6*75",
+    "price": 101,
+    "priceLabel": "平刀: ¥101.0",
+    "material": "CARBIDE",
+    "coating": "BRONZE"
+  },
+  {
+    "supplier": "benchmark:镇江新区大港宏峰工具厂",
+    "category": "55度钨钢铣刀 古铜色涂层 球刀",
+    "rawSpec": "6*75",
+    "price": 105,
+    "priceLabel": "球刀: ¥105.0",
+    "material": "CARBIDE",
+    "coating": "BRONZE"
+  },
+  {
+    "supplier": "benchmark:镇江新区大港宏峰工具厂",
+    "category": "55度钨钢铣刀 古铜色涂层 圆鼻刀",
+    "rawSpec": "6*75",
+    "price": 109.95,
+    "priceLabel": "圆鼻刀: ¥109.95",
+    "material": "CARBIDE",
+    "coating": "BRONZE"
+  }
+]

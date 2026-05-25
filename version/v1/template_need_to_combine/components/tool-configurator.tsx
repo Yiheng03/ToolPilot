@@ -5,9 +5,26 @@ import { AlertCircle, CheckCircle2, CircleDollarSign, Cog, Factory, Layers, Load
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
+import rawQuoteAnchors from "@/data/quote-anchors.json"
+import {
+  calculateToolPriceV2,
+  inferCoating,
+  inferToolKind,
+  normalizeQuoteAnchors,
+  parseToolSpec,
+  type QuoteAnchor,
+  type RawQuoteAnchor,
+  type ToolCoating,
+  type ToolKind,
+  type ToolMaterial,
+  type ToolPriceV2Result,
+  type ToolQuoteSpec,
+} from "@/lib/tool-price-formula-v2"
 
 type MetalCode = "CU" | "AL" | "ZN" | "NI" | "SN" | "PB" | "CO" | "IRON_ORE"
 type Horizon = 7 | 30 | 90
@@ -38,6 +55,7 @@ interface FactorSnapshot {
   fWorkpiece: number
   metalIndices: Record<MetalCode, number>
   forecastDate?: string | null
+  detailQuote?: ToolPriceV2Result
 }
 
 interface ToolRecommendation {
@@ -71,6 +89,25 @@ interface ToolRecommendation {
 
 const METALS: MetalCode[] = ["CU", "AL", "ZN", "NI", "SN", "PB", "CO", "IRON_ORE"]
 const HORIZONS: Horizon[] = [7, 30, 90]
+const QUOTE_ANCHORS: QuoteAnchor[] = normalizeQuoteAnchors(rawQuoteAnchors as RawQuoteAnchor[])
+
+const toolKindOptions: ToolKind[] = [
+  "END_MILL",
+  "BALL_END_MILL",
+  "CORNER_RADIUS_END_MILL",
+  "ROUGHING_END_MILL",
+  "DRILL",
+  "REAMER",
+  "STEP_DRILL",
+  "ROD",
+  "INSERT",
+  "BORING_TOOL",
+]
+
+const materialOptions: ToolMaterial[] = ["CARBIDE", "HSS", "CERAMIC", "PCD", "CBN", "STEEL_HOLDER"]
+const coatingOptions: ToolCoating[] = ["UNCOATED", "BRONZE", "BLACK_NANO", "BLUE_NANO", "DLC", "RAINBOW", "ALTIN", "TIALN", "CHAMPAGNE", "UNKNOWN"]
+const taxModeOptions: NonNullable<ToolQuoteSpec["taxMode"]>[] = ["UNKNOWN", "TAX_INCLUDED", "TAX_EXCLUDED"]
+const hardnessOptions: NonNullable<ToolQuoteSpec["hardnessDegree"]>[] = [45, 50, 55, 58, 60, 65, 68]
 
 const industries = [
   { value: "AUTOMOTIVE", label: "汽车制造", icon: "🚗" },
@@ -149,8 +186,123 @@ function fmtFactor(value: number) {
   return value.toFixed(4)
 }
 
+type DetailedQuoteForm = {
+  supplier: string
+  category: string
+  toolKind: ToolKind
+  material: ToolMaterial
+  coating: ToolCoating
+  rawSpec: string
+  diameterMm: string
+  radiusMm: string
+  fluteLengthMm: string
+  totalLengthMm: string
+  shankDiameterMm: string
+  fluteCount: string
+  helixAngleDeg: string
+  hardnessDegree: string
+  tolerance: string
+  taxMode: NonNullable<ToolQuoteSpec["taxMode"]>
+}
+
+const emptyDetailedQuoteForm: DetailedQuoteForm = {
+  supplier: "",
+  category: "",
+  toolKind: "END_MILL",
+  material: "CARBIDE",
+  coating: "UNKNOWN",
+  rawSpec: "",
+  diameterMm: "",
+  radiusMm: "",
+  fluteLengthMm: "",
+  totalLengthMm: "",
+  shankDiameterMm: "",
+  fluteCount: "",
+  helixAngleDeg: "",
+  hardnessDegree: "",
+  tolerance: "",
+  taxMode: "UNKNOWN",
+}
+
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value))
+}
+
+function toNumber(value: string) {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined
+}
+
+function toInt(value: string) {
+  const parsed = Number.parseInt(value, 10)
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined
+}
+
+function recommendationToQuoteDefaults(recommendation: ToolRecommendation | null): DetailedQuoteForm {
+  if (!recommendation) return emptyDetailedQuoteForm
+
+  return {
+    ...emptyDetailedQuoteForm,
+    category: recommendation.toolType,
+    toolKind: toolKindOptions.includes(recommendation.toolTypeCode as ToolKind) ? (recommendation.toolTypeCode as ToolKind) : inferToolKind(recommendation.toolType),
+    material: materialOptions.includes(recommendation.toolMaterialCode as ToolMaterial) ? (recommendation.toolMaterialCode as ToolMaterial) : "CARBIDE",
+    coating: inferCoating(recommendation.coating),
+  }
+}
+
+function formHasDetailedSpec(form: DetailedQuoteForm) {
+  return Boolean(
+    form.rawSpec.trim() ||
+      form.diameterMm.trim() ||
+      form.radiusMm.trim() ||
+      form.fluteLengthMm.trim() ||
+      form.totalLengthMm.trim() ||
+      form.shankDiameterMm.trim() ||
+      form.fluteCount.trim() ||
+      form.helixAngleDeg.trim() ||
+      form.hardnessDegree.trim() ||
+      form.tolerance.trim(),
+  )
+}
+
+function formToToolQuoteSpec(form: DetailedQuoteForm): ToolQuoteSpec {
+  const parsed = parseToolSpec(form.rawSpec, form.category)
+
+  return {
+    supplier: form.supplier.trim() || undefined,
+    category: form.category.trim() || "默认刀具品类",
+    toolKind: form.toolKind,
+    material: form.material,
+    coating: form.coating,
+    diameterMm: toNumber(form.diameterMm) ?? parsed.diameterMm,
+    radiusMm: toNumber(form.radiusMm) ?? parsed.radiusMm,
+    fluteLengthMm: toNumber(form.fluteLengthMm) ?? parsed.fluteLengthMm,
+    totalLengthMm: toNumber(form.totalLengthMm) ?? parsed.totalLengthMm,
+    shankDiameterMm: toNumber(form.shankDiameterMm) ?? parsed.shankDiameterMm,
+    fluteCount: toInt(form.fluteCount) ?? parsed.fluteCount,
+    helixAngleDeg: toNumber(form.helixAngleDeg) ?? parsed.helixAngleDeg,
+    hardnessDegree: toInt(form.hardnessDegree) as ToolQuoteSpec["hardnessDegree"],
+    cornerRadiusMm: toNumber(form.radiusMm) ?? parsed.cornerRadiusMm,
+    tolerance: form.tolerance.trim() || parsed.tolerance,
+    rawSpec: form.rawSpec.trim() || undefined,
+    taxMode: form.taxMode,
+  }
+}
+
+function applyDefaultPricing(recommendation: ToolRecommendation): FactorSnapshot[] {
+  return recommendation.forecasts.map((forecast) => {
+    const predictedPrice = recommendation.basePrice * forecast.fIndustry * forecast.fProcess * forecast.fWorkpiece * forecast.mFuture
+    const rounded = Number(predictedPrice.toFixed(2))
+
+    return {
+      ...forecast,
+      predictedPrice: rounded,
+      lowerPrice: Number((rounded * 0.7).toFixed(2)),
+      upperPrice: Number((rounded * 1.3).toFixed(2)),
+      priceChangePct: Number((((rounded / recommendation.basePrice) - 1) * 100).toFixed(2)),
+      detailQuote: undefined,
+    }
+  })
 }
 
 function weighted(indices: Record<MetalCode, number>, weights: Partial<Record<MetalCode, number>>) {
@@ -356,6 +508,8 @@ export function ToolConfigurator() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [recommendation, setRecommendation] = useState<ToolRecommendation | null>(null)
+  const [isQuoteDialogOpen, setIsQuoteDialogOpen] = useState(false)
+  const [quoteForm, setQuoteForm] = useState<DetailedQuoteForm>(emptyDetailedQuoteForm)
 
   const handleGenerate = async () => {
     if (!industry || !scenario || !workpieceMaterial) return
@@ -385,11 +539,95 @@ export function ToolConfigurator() {
     }
   }
 
+  const updateQuoteForm = <Key extends keyof DetailedQuoteForm>(key: Key, value: DetailedQuoteForm[Key]) => {
+    setQuoteForm((current) => ({ ...current, [key]: value }))
+  }
+
+  const openQuoteDialog = () => {
+    setQuoteForm((current) => (formHasDetailedSpec(current) || current.supplier.trim() || current.category.trim() ? current : recommendationToQuoteDefaults(recommendation)))
+    setIsQuoteDialogOpen(true)
+  }
+
+  const handleParseSpec = () => {
+    const parsed = parseToolSpec(quoteForm.rawSpec, quoteForm.category)
+    setQuoteForm((current) => ({
+      ...current,
+      toolKind: inferToolKind(current.category, current.rawSpec),
+      coating: inferCoating(current.category),
+      diameterMm: parsed.diameterMm?.toString() ?? current.diameterMm,
+      radiusMm: parsed.radiusMm?.toString() ?? current.radiusMm,
+      fluteLengthMm: parsed.fluteLengthMm?.toString() ?? current.fluteLengthMm,
+      totalLengthMm: parsed.totalLengthMm?.toString() ?? current.totalLengthMm,
+      shankDiameterMm: parsed.shankDiameterMm?.toString() ?? current.shankDiameterMm,
+      fluteCount: parsed.fluteCount?.toString() ?? current.fluteCount,
+      helixAngleDeg: parsed.helixAngleDeg?.toString() ?? current.helixAngleDeg,
+      tolerance: parsed.tolerance ?? current.tolerance,
+    }))
+  }
+
+  const handleUseDefaultSpec = () => {
+    if (!recommendation) return
+    setRecommendation({
+      ...recommendation,
+      forecasts: applyDefaultPricing(recommendation),
+    })
+    setIsQuoteDialogOpen(false)
+  }
+
+  const handleDetailedQuote = () => {
+    if (!recommendation || !formHasDetailedSpec(quoteForm)) {
+      handleUseDefaultSpec()
+      return
+    }
+
+    const spec = formToToolQuoteSpec(quoteForm)
+    setRecommendation({
+      ...recommendation,
+      forecasts: recommendation.forecasts.map((forecast) => {
+        const detailQuote = calculateToolPriceV2({
+          spec,
+          quoteAnchors: QUOTE_ANCHORS,
+          fIndustry: forecast.fIndustry,
+          fProcess: forecast.fProcess,
+          fWorkpiece: forecast.fWorkpiece,
+          mFuture: forecast.mFuture,
+          precision: precision[0],
+        })
+
+        return {
+          ...forecast,
+          predictedPrice: detailQuote.predictedPrice,
+          lowerPrice: detailQuote.lowerPrice,
+          upperPrice: detailQuote.upperPrice,
+          priceChangePct: Number((((detailQuote.predictedPrice / detailQuote.specBasePrice) - 1) * 100).toFixed(2)),
+          detailQuote,
+        }
+      }),
+    })
+    setIsQuoteDialogOpen(false)
+  }
+
   const isFormComplete = Boolean(industry && scenario && workpieceMaterial)
   const activeForecast = recommendation?.forecasts.find((item) => item.horizon === selectedHorizon)
+  const activeDetailQuote = activeForecast?.detailQuote
   const materialLabel = materials.find((item) => item.value === workpieceMaterial)?.label || "--"
   const industryLabel = industries.find((item) => item.value === industry)?.label || "--"
   const scenarioLabel = scenarios.find((item) => item.value === scenario)?.label || "--"
+  const selectClass =
+    "border-input bg-background text-foreground h-10 w-full rounded-md border px-3 py-2 text-sm outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+
+  const renderTextField = (key: keyof DetailedQuoteForm, label: string, type: "text" | "number" = "text") => (
+    <div className="space-y-2">
+      <Label htmlFor={`quote-${key}`}>{label}</Label>
+      <Input
+        id={`quote-${key}`}
+        type={type}
+        value={quoteForm[key]}
+        onChange={(event) => updateQuoteForm(key, event.target.value as never)}
+        step={type === "number" ? "0.01" : undefined}
+      />
+    </div>
+  )
 
   return (
     <section id="configurator" className="py-20 bg-muted/30">
@@ -524,7 +762,9 @@ export function ToolConfigurator() {
                 <Sparkles className="h-5 w-5 text-accent" />
                 推荐方案
               </CardTitle>
-              <CardDescription>基于市场预测和 tool_price_formula_v1 的刀具报价结果。</CardDescription>
+              <CardDescription>
+                {activeDetailQuote ? "基于详细规格、报价锚点和 tool_price_formula_v2 的刀具报价结果。" : "基于市场预测和 tool_price_formula_v1 的刀具报价结果。"}
+              </CardDescription>
             </CardHeader>
             <CardContent>
               {recommendation && activeForecast ? (
@@ -580,7 +820,9 @@ export function ToolConfigurator() {
                         {spec}
                       </Badge>
                     ))}
-                    <p className="text-xs text-muted-foreground w-full mt-1">未选定产品规格，使用默认规格进行计算，详细规格点击获得详细报价</p>
+                    <p className="text-xs text-muted-foreground w-full mt-1">
+                      {activeDetailQuote ? "已按详细产品规格重新报价。" : "未选定产品规格，使用默认规格进行计算，详细规格点击获得详细报价"}
+                    </p>
                   </div>
 
                   <div className="flex gap-2">
@@ -629,6 +871,47 @@ export function ToolConfigurator() {
                     </p>
                   </div>
 
+                  {activeDetailQuote && (
+                    <div className="space-y-3 rounded-lg border border-primary/20 bg-primary/5 p-4 text-sm">
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        <div>
+                          <p className="text-xs text-muted-foreground">公式版本</p>
+                          <p className="font-semibold">formulaVersion = "{activeDetailQuote.formulaVersion}"</p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-muted-foreground">规格基准价 specBasePrice</p>
+                          <p className="font-semibold">¥{fmtMoney(activeDetailQuote.specBasePrice)}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground mb-2">匹配报价锚点</p>
+                        {activeDetailQuote.matchedAnchors.length > 0 ? (
+                          <div className="space-y-2">
+                            {activeDetailQuote.matchedAnchors.slice(0, 3).map((anchor) => (
+                              <div key={`${anchor.supplier}-${anchor.category}-${anchor.rawSpec}-${anchor.price}`} className="rounded-md bg-background/80 p-2">
+                                <p className="font-medium">{anchor.supplier}</p>
+                                <p className="text-xs text-muted-foreground">
+                                  {anchor.category} / {anchor.rawSpec} / {anchor.priceLabel ?? `¥${fmtMoney(anchor.price)}`} / 相似度 {anchor.similarityWeight.toFixed(2)}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-xs text-muted-foreground">暂无可用锚点，当前使用 fallbackBasePrice。</p>
+                        )}
+                      </div>
+                      <div className="space-y-1 text-xs text-muted-foreground">
+                        {activeDetailQuote.explanation.slice(2).map((item) => (
+                          <p key={item}>{item}</p>
+                        ))}
+                        <p>
+                          合理区间：¥{fmtMoney(activeDetailQuote.lowerPrice)} - ¥{fmtMoney(activeDetailQuote.upperPrice)}（±
+                          {Math.round(activeDetailQuote.intervalRate * 100)}%）
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="flex items-end justify-between gap-4">
                     <div>
                       <p className="text-xs text-muted-foreground uppercase tracking-wider flex items-center gap-1">
@@ -643,7 +926,9 @@ export function ToolConfigurator() {
                         合理区间: ¥{fmtMoney(activeForecast.lowerPrice)} - ¥{fmtMoney(activeForecast.upperPrice)}
                       </p>
                     </div>
-                    <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90">获取详细报价</Button>
+                    <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90" onClick={openQuoteDialog}>
+                      获取详细报价
+                    </Button>
                   </div>
                 </div>
               ) : (
@@ -660,6 +945,105 @@ export function ToolConfigurator() {
             </CardContent>
           </Card>
         </div>
+
+        <Dialog open={isQuoteDialogOpen} onOpenChange={setIsQuoteDialogOpen}>
+          <DialogContent className="max-h-[88vh] overflow-y-auto sm:max-w-4xl">
+            <DialogHeader>
+              <DialogTitle>获取详细报价</DialogTitle>
+              <DialogDescription>输入产品尺寸规格后可按 tool_price_formula_v2 重新计算；留空则继续使用当前默认规格报价。</DialogDescription>
+            </DialogHeader>
+
+            <div className="grid gap-4 md:grid-cols-3">
+              {renderTextField("supplier", "供应商，可选")}
+              {renderTextField("category", "产品品类")}
+
+              <div className="space-y-2">
+                <Label htmlFor="quote-toolKind">刀具类型 toolKind</Label>
+                <select id="quote-toolKind" className={selectClass} value={quoteForm.toolKind} onChange={(event) => updateQuoteForm("toolKind", event.target.value as ToolKind)}>
+                  {toolKindOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="quote-material">基体材料 material</Label>
+                <select id="quote-material" className={selectClass} value={quoteForm.material} onChange={(event) => updateQuoteForm("material", event.target.value as ToolMaterial)}>
+                  {materialOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="quote-coating">涂层 coating</Label>
+                <select id="quote-coating" className={selectClass} value={quoteForm.coating} onChange={(event) => updateQuoteForm("coating", event.target.value as ToolCoating)}>
+                  {coatingOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="quote-taxMode">是否含税 taxMode</Label>
+                <select id="quote-taxMode" className={selectClass} value={quoteForm.taxMode} onChange={(event) => updateQuoteForm("taxMode", event.target.value as NonNullable<ToolQuoteSpec["taxMode"]>)}>
+                  {taxModeOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-2 md:col-span-3">
+                <Label htmlFor="quote-rawSpec">原始规格 rawSpec</Label>
+                <div className="flex gap-2">
+                  <Input id="quote-rawSpec" value={quoteForm.rawSpec} onChange={(event) => updateQuoteForm("rawSpec", event.target.value)} placeholder="例如 D6*50L、D8*100L*4F、R1*D6*50L*4T" />
+                  <Button type="button" variant="outline" onClick={handleParseSpec}>
+                    解析规格
+                  </Button>
+                </div>
+              </div>
+
+              {renderTextField("diameterMm", "直径 diameterMm", "number")}
+              {renderTextField("radiusMm", "R角 radiusMm", "number")}
+              {renderTextField("fluteLengthMm", "刃长 fluteLengthMm", "number")}
+              {renderTextField("totalLengthMm", "总长 totalLengthMm", "number")}
+              {renderTextField("shankDiameterMm", "柄径 shankDiameterMm", "number")}
+              {renderTextField("fluteCount", "刃数 fluteCount", "number")}
+              {renderTextField("helixAngleDeg", "螺旋角 helixAngleDeg", "number")}
+
+              <div className="space-y-2">
+                <Label htmlFor="quote-hardnessDegree">硬度角度 hardnessDegree</Label>
+                <select id="quote-hardnessDegree" className={selectClass} value={quoteForm.hardnessDegree} onChange={(event) => updateQuoteForm("hardnessDegree", event.target.value)}>
+                  <option value="">未指定</option>
+                  {hardnessOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {renderTextField("tolerance", "公差 tolerance")}
+            </div>
+
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={handleUseDefaultSpec}>
+                使用默认规格计算
+              </Button>
+              <Button type="button" className="bg-gradient-to-r from-primary to-accent hover:opacity-90" onClick={handleDetailedQuote}>
+                按详细规格重新报价
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   )
