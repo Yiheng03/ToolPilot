@@ -1,0 +1,466 @@
+{
+  "by_supplier": {
+    "常州欧成精密工具有限公司": {
+      "count": 8,
+      "MAPE": 0.481708,
+      "MdAPE": 0.365248,
+      "within_30pct_rate": 0.5,
+      "interval_hit_rate": 0.875,
+      "mean_signed_percentage_error": 0.434969
+    },
+    "常州市京锋工具有限公司": {
+      "count": 11,
+      "MAPE": 0.299262,
+      "MdAPE": 0.248385,
+      "within_30pct_rate": 0.636364,
+      "interval_hit_rate": 0.818182,
+      "mean_signed_percentage_error": 0.195481
+    },
+    "常州市岚钨合金有限公司": {
+      "count": 8,
+      "MAPE": 0.162632,
+      "MdAPE": 0.166145,
+      "within_30pct_rate": 0.75,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": -0.036977
+    },
+    "常州唐北工具有限公司": {
+      "count": 9,
+      "MAPE": 0.429549,
+      "MdAPE": 0.260376,
+      "within_30pct_rate": 0.888889,
+      "interval_hit_rate": 0.888889,
+      "mean_signed_percentage_error": 0.141506
+    },
+    "南京驰恒机械刀具有限公司": {
+      "count": 2,
+      "MAPE": 0.072195,
+      "MdAPE": 0.072195,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.072195
+    },
+    "镇江天顺精密工具有限公司": {
+      "count": 2,
+      "MAPE": 0.006154,
+      "MdAPE": 0.006154,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.006154
+    },
+    "镇江新区大港宏峰工具厂": {
+      "count": 26,
+      "MAPE": 0.170856,
+      "MdAPE": 0.139906,
+      "within_30pct_rate": 0.884615,
+      "interval_hit_rate": 0.730769,
+      "mean_signed_percentage_error": 0.051046
+    }
+  },
+  "by_category": {
+    "180°台阶钻": {
+      "count": 3,
+      "MAPE": 0.802825,
+      "MdAPE": 0.846914,
+      "within_30pct_rate": 0.333333,
+      "interval_hit_rate": 0.666667,
+      "mean_signed_percentage_error": 0.678187
+    },
+    "2刃键槽铣刀": {
+      "count": 2,
+      "MAPE": 0.733077,
+      "MdAPE": 0.733077,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": 0.733077
+    },
+    "3刃铝用铣刀": {
+      "count": 2,
+      "MAPE": 0.271478,
+      "MdAPE": 0.271478,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.023093
+    },
+    "3刃铝用铣刀（加长款）": {
+      "count": 1,
+      "MAPE": 0.123542,
+      "MdAPE": 0.123542,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.123542
+    },
+    "3D钻头（金鹭材料） 5D钻头（金鹭材料）": {
+      "count": 2,
+      "MAPE": 1.310833,
+      "MdAPE": 1.310833,
+      "within_30pct_rate": 0.5,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": 1.025833
+    },
+    "4刃内R铣刀": {
+      "count": 2,
+      "MAPE": 0.480182,
+      "MdAPE": 0.480182,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.480182
+    },
+    "55°圆棒": {
+      "count": 2,
+      "MAPE": 0.11502,
+      "MdAPE": 0.11502,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.108178
+    },
+    "55度粗皮刀": {
+      "count": 2,
+      "MAPE": 0.229079,
+      "MdAPE": 0.229079,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.06337
+    },
+    "55度定点钻": {
+      "count": 1,
+      "MAPE": 0.307887,
+      "MdAPE": 0.307887,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": -0.307887
+    },
+    "55度加长铣刀": {
+      "count": 3,
+      "MAPE": 0.114351,
+      "MdAPE": 0.140935,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.020395
+    },
+    "55º钨钢铣刀  古铜色涂层": {
+      "count": 4,
+      "MAPE": 0.232935,
+      "MdAPE": 0.068169,
+      "within_30pct_rate": 0.75,
+      "interval_hit_rate": 0.75,
+      "mean_signed_percentage_error": 0.207601
+    },
+    "60°钨钢铣刀 黑纳米涂层": {
+      "count": 2,
+      "MAPE": 0.081799,
+      "MdAPE": 0.081799,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": 0.081799
+    },
+    "65°钨钢铣刀　纳米蓝涂层": {
+      "count": 2,
+      "MAPE": 0.145535,
+      "MdAPE": 0.145535,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": 0.145535
+    },
+    "68°钨钢铣刀　纳米古铜涂层": {
+      "count": 1,
+      "MAPE": 0.090316,
+      "MdAPE": 0.090316,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.090316
+    },
+    "纯陶瓷铣刀": {
+      "count": 2,
+      "MAPE": 0.235843,
+      "MdAPE": 0.235843,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.235843
+    },
+    "高效型动态铣刀（二次钝化+抛光 (AP 涂层)U 槽) 65°铣刀(45度螺旋角)蓝纳米/黑彩 K系列铣刀": {
+      "count": 1,
+      "MAPE": 0.053078,
+      "MdAPE": 0.053078,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.053078
+    },
+    "黑灰动态铣": {
+      "count": 1,
+      "MAPE": 0.350185,
+      "MdAPE": 0.350185,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": 0.350185
+    },
+    "铝用单刃铣刀": {
+      "count": 2,
+      "MAPE": 0.072195,
+      "MdAPE": 0.072195,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.072195
+    },
+    "七彩铝用": {
+      "count": 1,
+      "MAPE": 0.07284,
+      "MdAPE": 0.07284,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.07284
+    },
+    "七彩U槽铝用刀": {
+      "count": 2,
+      "MAPE": 0.099434,
+      "MdAPE": 0.099434,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.099434
+    },
+    "数控英制4刃铣刀": {
+      "count": 2,
+      "MAPE": 0.374804,
+      "MdAPE": 0.374804,
+      "within_30pct_rate": 0.5,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.374804
+    },
+    "数控英制球刀": {
+      "count": 1,
+      "MAPE": 0.478889,
+      "MdAPE": 0.478889,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.478889
+    },
+    "数控直柄铰刀 直槽/螺旋": {
+      "count": 1,
+      "MAPE": 0.047736,
+      "MdAPE": 0.047736,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.047736
+    },
+    "数控直柄钻": {
+      "count": 1,
+      "MAPE": 0.168958,
+      "MdAPE": 0.168958,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.168958
+    },
+    "四刃（古铜）": {
+      "count": 4,
+      "MAPE": 0.162603,
+      "MdAPE": 0.166145,
+      "within_30pct_rate": 0.75,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": -0.086386
+    },
+    "四刃球刀": {
+      "count": 1,
+      "MAPE": 0.374486,
+      "MdAPE": 0.374486,
+      "within_30pct_rate": 0,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": 0.374486
+    },
+    "四刃球刀 螺旋铰刀公差H7": {
+      "count": 1,
+      "MAPE": 0.008727,
+      "MdAPE": 0.008727,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.008727
+    },
+    "微小径深沟平刀/球刀 T型刀": {
+      "count": 1,
+      "MAPE": 0.18,
+      "MdAPE": 0.18,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.18
+    },
+    "微型车刀/镗刀": {
+      "count": 2,
+      "MAPE": 0,
+      "MdAPE": 0,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0
+    },
+    "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）": {
+      "count": 4,
+      "MAPE": 0.250616,
+      "MdAPE": 0.268852,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.250616
+    },
+    "DLC涂层单刃螺旋铣刀": {
+      "count": 2,
+      "MAPE": 0.006154,
+      "MdAPE": 0.006154,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.006154
+    },
+    "G系列黑": {
+      "count": 2,
+      "MAPE": 0.11381,
+      "MdAPE": 0.11381,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": -0.11381
+    },
+    "SS35 系列（香槟金涂层）": {
+      "count": 1,
+      "MAPE": 0.070064,
+      "MdAPE": 0.070064,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.070064
+    },
+    "SS40 系列（香槟金涂层）": {
+      "count": 1,
+      "MAPE": 0.089167,
+      "MdAPE": 0.089167,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.089167
+    },
+    "UA+系列（DLC七彩涂层）": {
+      "count": 2,
+      "MAPE": 0.154448,
+      "MdAPE": 0.154448,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": -0.043363
+    },
+    "UA系列（不涂层光刀）": {
+      "count": 1,
+      "MAPE": 0.2674,
+      "MdAPE": 0.2674,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": -0.2674
+    },
+    "UP+系列（黑纳米涂层）": {
+      "count": 1,
+      "MAPE": 0.044692,
+      "MdAPE": 0.044692,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.044692
+    }
+  },
+  "by_level": {
+    "1": {
+      "count": 35,
+      "MAPE": 0.189266,
+      "MdAPE": 0.123542,
+      "within_30pct_rate": 0.828571,
+      "interval_hit_rate": 0.885714,
+      "mean_signed_percentage_error": 0.092747
+    },
+    "2": {
+      "count": 30,
+      "MAPE": 0.336911,
+      "MdAPE": 0.19438,
+      "within_30pct_rate": 0.733333,
+      "interval_hit_rate": 0.666667,
+      "mean_signed_percentage_error": 0.167513
+    },
+    "4": {
+      "count": 1,
+      "MAPE": 0.179856,
+      "MdAPE": 0.179856,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": -0.179856
+    }
+  },
+  "by_type": {
+    "boundary": {
+      "count": 1,
+      "MAPE": 0.179856,
+      "MdAPE": 0.179856,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 0,
+      "mean_signed_percentage_error": -0.179856
+    },
+    "exact_match": {
+      "count": 35,
+      "MAPE": 0.189266,
+      "MdAPE": 0.123542,
+      "within_30pct_rate": 0.828571,
+      "interval_hit_rate": 0.885714,
+      "mean_signed_percentage_error": 0.092747
+    },
+    "scenario": {
+      "count": 30,
+      "MAPE": 0.336911,
+      "MdAPE": 0.19438,
+      "within_30pct_rate": 0.733333,
+      "interval_hit_rate": 0.666667,
+      "mean_signed_percentage_error": 0.167513
+    }
+  },
+  "by_diameter_bucket": {
+    "10 < D <= 12": {
+      "count": 4,
+      "MAPE": 0.22979,
+      "MdAPE": 0.23933,
+      "within_30pct_rate": 0.75,
+      "interval_hit_rate": 0.5,
+      "mean_signed_percentage_error": -0.009539
+    },
+    "4 < D <= 6": {
+      "count": 19,
+      "MAPE": 0.416948,
+      "MdAPE": 0.277327,
+      "within_30pct_rate": 0.631579,
+      "interval_hit_rate": 0.684211,
+      "mean_signed_percentage_error": 0.260436
+    },
+    "6 < D <= 8": {
+      "count": 16,
+      "MAPE": 0.247537,
+      "MdAPE": 0.131209,
+      "within_30pct_rate": 0.8125,
+      "interval_hit_rate": 0.6875,
+      "mean_signed_percentage_error": 0.134274
+    },
+    "8 < D <= 10": {
+      "count": 7,
+      "MAPE": 0.158283,
+      "MdAPE": 0.168958,
+      "within_30pct_rate": 1,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": -0.019389
+    },
+    "D <= 4": {
+      "count": 14,
+      "MAPE": 0.106201,
+      "MdAPE": 0.071129,
+      "within_30pct_rate": 0.928571,
+      "interval_hit_rate": 1,
+      "mean_signed_percentage_error": 0.053921
+    },
+    "D > 12": {
+      "count": 6,
+      "MAPE": 0.25249,
+      "MdAPE": 0.192384,
+      "within_30pct_rate": 0.666667,
+      "interval_hit_rate": 0.666667,
+      "mean_signed_percentage_error": 0.068997
+    }
+  },
+  "ranking_metrics": {
+    "count": 15,
+    "cheapest_supplier_hit_rate": 0.333333,
+    "cheapest_category_hit_rate": 0.230769,
+    "mean_cheapest_price_error": 0.505107
+  }
+}
