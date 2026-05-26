@@ -1,0 +1,1921 @@
+[
+  {
+    "id": "q_001",
+    "input": {
+      "question": "常州市京锋工具有限公司的6mm七彩U槽铝用刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": "Φ6*25*6*75L",
+      "price": 48,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_002",
+    "input": {
+      "question": "常州市岚钨合金有限公司的D6四刃古铜铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "spec": "D6*50L",
+      "price": 26.7,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_003",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的6mm*75 55°古铜涂层平刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "spec": "6*75",
+      "price": 101,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_004",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的6mm*75 55°古铜涂层球刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "spec": "6*75",
+      "price": 105,
+      "priceLabel": "球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_005",
+    "input": {
+      "question": "镇江天顺精密工具有限公司的3.175柄 DLC单刃螺旋铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江天顺精密工具有限公司",
+      "category": "DLC涂层单刃螺旋铣刀",
+      "spec": "3.175*3.175*12*38",
+      "price": 13,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_006",
+    "input": {
+      "question": "南京驰恒机械刀具有限公司的4mm铝用单刃铣刀(不含税)报价是多少？"
+    },
+    "expected": {
+      "supplier": "南京驰恒机械刀具有限公司",
+      "category": "铝用单刃铣刀",
+      "spec": "4*12*45",
+      "price": 20.5,
+      "priceLabel": "不含税价格"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_007",
+    "input": {
+      "question": "常州唐北工具有限公司的D6动态铣刀4刃报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "高效型动态铣刀（二次钝化+抛光 (AP 涂层)U 槽) 65°铣刀(45度螺旋角)蓝纳米/黑彩 K系列铣刀",
+      "spec": "D6*25*75L*4F",
+      "price": 73.1,
+      "priceLabel": "array_0"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_008",
+    "input": {
+      "question": "常州欧成精密工具有限公司的M3 180°台阶钻报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "spec": "3.4*13H*6.5*15H*6.5D*65L-M3*180°",
+      "price": 162,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_009",
+    "input": {
+      "question": "常州欧成精密工具有限公司的8.2-9.1数控直柄钻报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控直柄钻",
+      "spec": "8.2-9.1*40*70L",
+      "price": 96,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_010",
+    "input": {
+      "question": "常州欧成精密工具有限公司的7-8mm铰刀H7报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控直柄铰刀 直槽/螺旋",
+      "spec": "7.1-8.0*50*100L*6T H7",
+      "price": 106,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_011",
+    "input": {
+      "question": "常州市京锋工具有限公司的D6 2刃键槽铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "2刃键槽铣刀",
+      "spec": "Φ6*15*6*50L",
+      "price": 39,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_012",
+    "input": {
+      "question": "常州市京锋工具有限公司的R1*D6 内R铣刀(钢用)报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "4刃内R铣刀",
+      "spec": "R1*D6*50L*4T 钢用",
+      "price": 55,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_013",
+    "input": {
+      "question": "常州市京锋工具有限公司的D6 3刃铝用铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "spec": "Φ6*18*6*50L*3T",
+      "price": 35,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_014",
+    "input": {
+      "question": "常州唐北工具有限公司的D6 AK铝用高光刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "spec": "6*50",
+      "price": 66.6,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_015",
+    "input": {
+      "question": "常州唐北工具有限公司的D4四刃球刀H7报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "四刃球刀 螺旋铰刀公差H7",
+      "spec": "D4*25L*50L*4F",
+      "price": 27.5,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_016",
+    "input": {
+      "question": "常州欧成精密工具有限公司的1/4英寸4刃铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制4刃铣刀",
+      "spec": "1/4*3/4*1/4*2-1/2*4F",
+      "price": 56,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_017",
+    "input": {
+      "question": "常州市岚钨合金有限公司的D10 G系列黑铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "G系列黑",
+      "spec": "D10*75L",
+      "price": 118.9,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_018",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D6 55°定点钻报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度定点钻",
+      "spec": "6*50",
+      "price": 75.06,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_019",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D10 55°粗皮刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度粗皮刀",
+      "spec": "10*100",
+      "price": 446.06,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_020",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D10 60°黑纳米平刀/球刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "60°钨钢铣刀 黑纳米涂层",
+      "spec": "10*75",
+      "price": 332.08,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_021",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D6 UA+ DLC七彩铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA+系列（DLC七彩涂层）",
+      "spec": "6*18*6*50*3T",
+      "price": 84.98,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_022",
+    "input": {
+      "question": "常州市京锋工具有限公司的MIR Φ4车刀A60报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "微型车刀/镗刀",
+      "spec": "MIR Φ4 A60 L15",
+      "price": 43,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_023",
+    "input": {
+      "question": "常州唐北工具有限公司的5mm 3D钻头报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）",
+      "spec": "4.8-6",
+      "price": 28,
+      "priceLabel": "array_0"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_024",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D6纯陶瓷铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "纯陶瓷铣刀",
+      "spec": "6*50",
+      "price": 49.21,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_025",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D8*120 55°加长铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "spec": "D8*120",
+      "price": 333.03,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_026",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D8 65°纳米蓝平刀/球刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "65°钨钢铣刀　纳米蓝涂层",
+      "spec": "8*75",
+      "price": 266.33,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_027",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D12 68°纳米古铜平刀/球刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "68°钨钢铣刀　纳米古铜涂层",
+      "spec": "12*100",
+      "price": 728,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_028",
+    "input": {
+      "question": "常州欧成精密工具有限公司的1/2英寸英制球刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制球刀",
+      "spec": "1/2*1-1/4*1/2*3*4F",
+      "price": 180,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_029",
+    "input": {
+      "question": "常州市京锋工具有限公司的D8 3刃铝用加长铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀（加长款）",
+      "spec": "Φ8*35*8*100L 加长款",
+      "price": 96,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_030",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的R6*D12 四刃球刀 55°报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "四刃球刀",
+      "spec": "R6*24*12D*100L*4T",
+      "price": 517.99,
+      "priceLabel": "55度单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_031",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D8 UP+黑纳米铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UP+系列（黑纳米涂层）",
+      "spec": "8*20*8*60*4T",
+      "price": 172.96,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_032",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D4 SS35香槟金铣刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "SS35 系列（香槟金涂层）",
+      "spec": "4*16*4*50*4T",
+      "price": 78.5,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_033",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D6 UA不涂层光刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA系列（不涂层光刀）",
+      "spec": "6*18*6*50*3T",
+      "price": 78.16,
+      "priceLabel": "平刀（光刀）"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_034",
+    "input": {
+      "question": "常州唐北工具有限公司的R0.25 T型刀报价是多少？"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "微小径深沟平刀/球刀 T型刀",
+      "spec": "0.5/R0.25\"(2/3/4/6/8)",
+      "price": 24,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_035",
+    "input": {
+      "question": "镇江新区大港宏峰工具厂的D10 55°钨钢圆棒报价是多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55°圆棒",
+      "spec": "10*100",
+      "price": 317.7,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_036",
+    "input": {
+      "question": "我要加工6系铝合金，做一个高光镜面效果，刀具直径6mm，总长50mm"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "spec": "6*50",
+      "price": 66.6,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_037",
+    "input": {
+      "question": "要铣一个U形槽，材料6系铝，槽宽8mm，总长60mm"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": "Φ8*24*8*60L",
+      "price": 63,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_038",
+    "input": {
+      "question": "加工钢件，需要一把D4*50L的四刃铣刀，古铜色涂层"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "spec": "D1*D4*50L",
+      "price": 12.3,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_039",
+    "input": {
+      "question": "钻一个M4的台阶孔，180°沉头角度"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "spec": "4.5*18H*8*20H*D8*75L-M4*180°",
+      "price": 126,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_040",
+    "input": {
+      "question": "在铝合金上铣键槽，槽宽6mm，深度15mm，总长50mm，2刃"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "2刃键槽铣刀",
+      "spec": "Φ6*15*6*50L",
+      "price": 39,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_041",
+    "input": {
+      "question": "内R角加工，R1*D6，钢件用"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "4刃内R铣刀",
+      "spec": "R1*D6*50L*4T 钢用",
+      "price": 55,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_042",
+    "input": {
+      "question": "需要一支D8*60L的铝用铣刀，七彩涂层"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "七彩铝用",
+      "spec": "D8*60L",
+      "price": 56.7,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_043",
+    "input": {
+      "question": "深孔钻削，钻5mm直径的通孔，深度约25mm"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）",
+      "spec": "1.5-1.6",
+      "price": 6,
+      "priceLabel": "array_0"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_044",
+    "input": {
+      "question": "6系铝合金高光加工，用D10铣刀，75mm总长"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "spec": "4*100",
+      "price": 38.2,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_045",
+    "input": {
+      "question": "不锈钢加工，需要65°螺旋角纳米蓝涂层的D8平刀，75mm总长"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "65°钨钢铣刀　纳米蓝涂层",
+      "spec": "8*60",
+      "price": 219.8,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_046",
+    "input": {
+      "question": "D4微型车刀，60°刀尖角，刃长15mm"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "微型车刀/镗刀",
+      "spec": "MIR Φ4 A60 L15",
+      "price": 43,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_047",
+    "input": {
+      "question": "铣削模具钢，需要1/4英寸的4刃铣刀"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制4刃铣刀",
+      "spec": "1/16*1/4*1/8*1-1/2*4F",
+      "price": 15,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_048",
+    "input": {
+      "question": "DLC涂层的单刃螺旋铣刀，柄径3.175mm，刃径1.2mm"
+    },
+    "expected": {
+      "supplier": "镇江天顺精密工具有限公司",
+      "category": "DLC涂层单刃螺旋铣刀",
+      "spec": "3.175*1.2*3*38",
+      "price": 13,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_049",
+    "input": {
+      "question": "加工铝合金需要一把单刃铣刀，4mm柄，刃长12mm"
+    },
+    "expected": {
+      "supplier": "南京驰恒机械刀具有限公司",
+      "category": "铝用单刃铣刀",
+      "spec": "4*12*45",
+      "price": 20.5,
+      "priceLabel": "不含税价格"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_050",
+    "input": {
+      "question": "高效率粗加工钢件，需要D12动态铣刀，总长75mm"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "黑灰动态铣",
+      "spec": "D12*75L",
+      "price": 188.9,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_051",
+    "input": {
+      "question": "纯陶瓷铣刀加工，D6*50，用于高温合金"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "spec": "6*50",
+      "price": 59.3,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_052",
+    "input": {
+      "question": "55度粗皮刀，D8*75，钢件开粗"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "spec": "8*60",
+      "price": 114.04,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_053",
+    "input": {
+      "question": "D6*120 55度加长铣刀，深腔加工"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "spec": "D6*120",
+      "price": 210.58,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_054",
+    "input": {
+      "question": "三刃铝用铣刀，D10*30*10*75L"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "spec": "Φ10*30*10*75L*3T",
+      "price": 130,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_055",
+    "input": {
+      "question": "D8钨钢圆棒，100mm长"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55°圆棒",
+      "spec": "8*100",
+      "price": 207.5,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_056",
+    "input": {
+      "question": "铝件高光加工，6系铝合金，D12*75，要求镜面效果"
+    },
+    "expected": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "spec": "11-12*75",
+      "price": 213,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_057",
+    "input": {
+      "question": "需要一把55°螺旋角的钨钢圆鼻刀，8mm直径，100mm总长，古铜色涂层"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "spec": "D8*60L",
+      "price": 55.6,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_058",
+    "input": {
+      "question": "做深腔加工，需要一把D10*150mm的加长铣刀，55°"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "spec": "D10*120",
+      "price": 481.71,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_059",
+    "input": {
+      "question": "粗加工钢件表面，D20*100，55°粗皮刀"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度粗皮刀",
+      "spec": "20*100",
+      "price": 1415.24,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_060",
+    "input": {
+      "question": "钻一个M8×1.25的螺纹底孔，用台阶钻一次成型，90°沉头"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "spec": "9*28H*14*28H*D12*100L-M8*180°",
+      "price": 368,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_061",
+    "input": {
+      "question": "需要一支D8*60的直柄立铣刀，60°黑纳米涂层，加工模具钢"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "60°钨钢铣刀 黑纳米涂层",
+      "spec": "8*60",
+      "price": 195.93,
+      "priceLabel": "平刀，球刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_062",
+    "input": {
+      "question": "香槟金涂层的D10*75 4刃铣刀，一般钢件加工"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "SS40 系列（香槟金涂层）",
+      "spec": "4*10*4*50*4T",
+      "price": 60,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_063",
+    "input": {
+      "question": "D6*150 DLC七彩涂层铣刀，UA+系列，加工铝合金"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA+系列（DLC七彩涂层）",
+      "spec": "5*15*6*50*3T",
+      "price": 84.98,
+      "priceLabel": "平刀"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_064",
+    "input": {
+      "question": "D12*75的G系列黑铣刀，岚钨合金，价格多少"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "G系列黑",
+      "spec": "D12*75L",
+      "price": 171.2,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_065",
+    "input": {
+      "question": "需要一支D4*50的纯陶瓷铣刀，用于高温合金"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "纯陶瓷铣刀",
+      "spec": "4*50",
+      "price": 32.5,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_066",
+    "input": {
+      "question": "D4*50L规格有哪些供应商和品类？最便宜的选型是？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 15,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_067",
+    "input": {
+      "question": "宏峰D8*60L的5种角度涂层铣刀（55°/58°/60°/65°/68°）分别是什么价？哪个最便宜？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "spec": null,
+      "price": 114.04,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_068",
+    "input": {
+      "question": "直柄钻头，欧成数控直柄钻(5.2-6.1) vs 宏峰直柄钻头(6.1-7.0)，谁便宜？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": null,
+      "spec": null,
+      "price": 30,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_069",
+    "input": {
+      "question": "宏峰60°黑纳米涂层D8铣刀，不同总长(60/75/100/150)的价格梯度是怎样的？每加长一档贵多少？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "60°钨钢铣刀 黑纳米涂层",
+      "spec": null,
+      "price": 195.93,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_070",
+    "input": {
+      "question": "D8.0*L30规格的刀具，哪些供应商有报价？最便宜的是哪家？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": null,
+      "spec": null,
+      "price": 61.2,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_071",
+    "input": {
+      "question": "D6*50L规格的刀具，有哪些供应商和品类可选？哪家最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 34,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_072",
+    "input": {
+      "question": "D8*60L规格的刀具，有哪些供应商和品类可选？哪家最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 63,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_073",
+    "input": {
+      "question": "D10*75L规格的刀具，有哪些供应商和品类可选？哪家最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 120,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_074",
+    "input": {
+      "question": "D12*75L规格的刀具，有哪些供应商和品类可选？哪家最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "spec": null,
+      "price": 160,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_075",
+    "input": {
+      "question": "D8*100L规格的刀具，有哪些供应商和品类可选？哪家最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀（加长款）",
+      "spec": null,
+      "price": 96,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_076",
+    "input": {
+      "question": "常州市京锋工具有限公司在D6*50L规格上有3种品类可选，分别是什么？哪款最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 34,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_077",
+    "input": {
+      "question": "常州市京锋工具有限公司在D8*60L规格上有3种品类可选，分别是什么？哪款最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 63,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_078",
+    "input": {
+      "question": "常州市京锋工具有限公司在D10*75L规格上有3种品类可选，分别是什么？哪款最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "spec": null,
+      "price": 120,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_079",
+    "input": {
+      "question": "常州市京锋工具有限公司在D12*75L规格上有3种品类可选，分别是什么？哪款最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "spec": null,
+      "price": 160,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_080",
+    "input": {
+      "question": "常州市京锋工具有限公司在D8*100L规格上有3种品类可选，分别是什么？哪款最便宜？"
+    },
+    "expected": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀（加长款）",
+      "spec": null,
+      "price": 96,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_081",
+    "input": {
+      "question": "给我报个6mm的铣刀价格"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_082",
+    "input": {
+      "question": "D10左右的古铜色铣刀多少钱？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_083",
+    "input": {
+      "question": "要一把钻头钻8mm的孔"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_084",
+    "input": {
+      "question": "最便宜的3mm铝用铣刀是哪家的？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_085",
+    "input": {
+      "question": "有没有Φ6*75的球刀？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_086",
+    "input": {
+      "question": "D6.35的铣刀有没有报价？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_087",
+    "input": {
+      "question": "我需要一批刀具，D4平刀50L 50把，D6球刀75L 30把，能报个总价吗？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_088",
+    "input": {
+      "question": "加工铝件用什么刀好？D6的"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_089",
+    "input": {
+      "question": "我要一把D6的铣刀，50L，古铜色，平刀，要10把，总价多少？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "spec": "D6*50L",
+      "price": 26.7,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_090",
+    "input": {
+      "question": "有没有4.5mm的铣刀？"
+    },
+    "expected": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "没有直接4.5mm的品类，但以下品类可覆盖：数控直柄钻(4.2-5.1*25*50L / ¥24)",
+      "spec": "近似替代: 4.2-5.1mm范围",
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_091",
+    "input": {
+      "question": "D8的铣刀，宏峰有几种涂层的？哪个最便宜？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": [
+        "55º钨钢铣刀  古铜色涂层",
+        "UA+系列（DLC七彩涂层）",
+        "纯陶瓷铣刀",
+        "65°钨钢铣刀　纳米蓝涂层",
+        "55度定点钻",
+        "UP+系列（黑纳米涂层）",
+        "SG系列（古铜色SP涂层）",
+        "UA系列（不涂层光刀）",
+        "55度粗皮刀",
+        "55°圆棒",
+        "SS40 系列（香槟金涂层）",
+        "58º钨钢铣刀　纳米古铜色涂层",
+        "SH系列（古铜色高硬涂层）",
+        "U6065 系列（纳米古铜涂层）",
+        "60°钨钢铣刀 黑纳米涂层",
+        "SS35 系列（香槟金涂层）",
+        "SA系列（DLC七彩涂层）",
+        "68°钨钢铣刀　纳米古铜涂层"
+      ],
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_092",
+    "input": {
+      "question": "加工铝合金，要D10的刀，七彩U槽刀和AK高光刀哪个更合适？价格差多少？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": "对比分析",
+      "spec": "七彩U槽铝用刀（京锋/岚钨）：适合铣U形槽，D8*60L ¥56.7~63.0，U形槽专用设计排屑好\nAK铝用高光刀（唐北）：适合高光镜面加工，D10*75 ¥147.5~264，6系7系铝高光专用\n建议：单纯铣槽用U槽刀，追求表面质量用AK高光刀",
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_093",
+    "input": {
+      "question": "给我报个价：D4平刀 50L 20把 + D6球刀 75L 15把，总价多少？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司(D4) + 镇江新区大港宏峰工具厂(D6)",
+      "category": "四刃（古铜）(D4平刀) + 55º钨钢铣刀  古铜色涂层(D6球刀)",
+      "spec": "D4平刀*50L *20把 + D6球刀*75L *15把",
+      "price": 4,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_094",
+    "input": {
+      "question": "我需要做不锈钢M6沉头螺丝的台阶孔，用什么刀？多少钱？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": "台阶钻",
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_095",
+    "input": {
+      "question": "有10mm的钨钢圆棒吗？多少钱一根？"
+    },
+    "expected": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55°圆棒",
+      "spec": "10*100",
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_096",
+    "input": {
+      "question": "之前你们给我报过D6*50L的四刃古铜是¥26.7，D8*60L是多少？"
+    },
+    "expected": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "spec": "D8*60L",
+      "price": 55.6,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_097",
+    "input": {
+      "question": "哪种DLC涂层的刀具性价比最高？给个推荐"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_098",
+    "input": {
+      "question": "我想比较一下京锋和岚钨的七彩U槽铝用刀，D8*60L哪个便宜？差多少？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": "七彩U槽铝用刀",
+      "spec": "D8*60L",
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_099",
+    "input": {
+      "question": "我有一批DLC涂层的刀具要采购，天顺的DLC单刃和其他家的DLC系列（如宏峰SA/UA+系列）哪个更适合？价格对比如何？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": null,
+      "spec": null,
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  },
+  {
+    "id": "q_100",
+    "input": {
+      "question": "D6*50的三刃铝用铣刀（京锋）和D6*50的铝用白刃（岚钨）都能加工铝合金，价格差多少？性能上有什么区别？"
+    },
+    "expected": {
+      "supplier": null,
+      "category": "对比: 3刃铝用铣刀 vs 铝用白刃",
+      "spec": "D6*50",
+      "price": null,
+      "priceLabel": "单价"
+    },
+    "scoring": {
+      "supplier": 0.25,
+      "category": 0.25,
+      "spec": 0.25,
+      "price": 0.25
+    }
+  }
+]

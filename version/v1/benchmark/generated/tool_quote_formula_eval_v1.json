@@ -1,0 +1,2128 @@
+[
+  {
+    "id": "q_001",
+    "source_question": "常州市京锋工具有限公司的6mm七彩U槽铝用刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "rawSpec": "Φ6*25*6*75L",
+      "toolKind": "END_MILL",
+      "coating": "RAINBOW",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ6*25*6*75L",
+        "diameterMm": 6,
+        "totalLengthMm": 75,
+        "fluteLengthMm": 25,
+        "shankDiameterMm": 6,
+        "category": "七彩U槽铝用刀"
+      }
+    },
+    "target": {
+      "price": 48,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 1
+  },
+  {
+    "id": "q_002",
+    "source_question": "常州市岚钨合金有限公司的D6四刃古铜铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "rawSpec": "D6*50L",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D6*50L",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "四刃（古铜）"
+      }
+    },
+    "target": {
+      "price": 26.7,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 2
+  },
+  {
+    "id": "q_003",
+    "source_question": "镇江新区大港宏峰工具厂的6mm*75 55°古铜涂层平刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "rawSpec": "6*75",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*75",
+        "diameterMm": 6,
+        "totalLengthMm": 75,
+        "category": "55º钨钢铣刀  古铜色涂层"
+      }
+    },
+    "target": {
+      "price": 101,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 3
+  },
+  {
+    "id": "q_004",
+    "source_question": "镇江新区大港宏峰工具厂的6mm*75 55°古铜涂层球刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "rawSpec": "6*75",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*75",
+        "diameterMm": 6,
+        "totalLengthMm": 75,
+        "category": "55º钨钢铣刀  古铜色涂层"
+      }
+    },
+    "target": {
+      "price": 105,
+      "priceLabel": "球刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 4
+  },
+  {
+    "id": "q_005",
+    "source_question": "镇江天顺精密工具有限公司的3.175柄 DLC单刃螺旋铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江天顺精密工具有限公司",
+      "category": "DLC涂层单刃螺旋铣刀",
+      "rawSpec": "3.175*3.175*12*38",
+      "toolKind": "SINGLE_FLUTE_END_MILL",
+      "coating": "DLC",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "3.175*3.175*12*38",
+        "diameterMm": 3.175,
+        "shankDiameterMm": 3.175,
+        "fluteLengthMm": 12,
+        "totalLengthMm": 38,
+        "category": "DLC涂层单刃螺旋铣刀"
+      }
+    },
+    "target": {
+      "price": 13,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 5
+  },
+  {
+    "id": "q_006",
+    "source_question": "南京驰恒机械刀具有限公司的4mm铝用单刃铣刀(不含税)报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "南京驰恒机械刀具有限公司",
+      "category": "铝用单刃铣刀",
+      "rawSpec": "4*12*45",
+      "toolKind": "SINGLE_FLUTE_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4*12*45",
+        "diameterMm": 4,
+        "fluteLengthMm": 12,
+        "totalLengthMm": 45,
+        "category": "铝用单刃铣刀"
+      }
+    },
+    "target": {
+      "price": 20.5,
+      "priceLabel": "不含税价格",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 6
+  },
+  {
+    "id": "q_007",
+    "source_question": "常州唐北工具有限公司的D6动态铣刀4刃报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "高效型动态铣刀（二次钝化+抛光 (AP 涂层)U 槽) 65°铣刀(45度螺旋角)蓝纳米/黑彩 K系列铣刀",
+      "rawSpec": "D6*25*75L*4F",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D6*25*75L*4F",
+        "fluteCount": 4,
+        "diameterMm": 6,
+        "totalLengthMm": 75,
+        "fluteLengthMm": 25,
+        "category": "高效型动态铣刀（二次钝化+抛光 (AP 涂层)U 槽) 65°铣刀(45度螺旋角)蓝纳米/黑彩 K系列铣刀"
+      }
+    },
+    "target": {
+      "price": 73.1,
+      "priceLabel": "array_0",
+      "pricePickMethod": "array_first_low_confidence",
+      "targetConfidence": "low"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "数组价格语义不明确，需要人工复核",
+    "source_index": 7
+  },
+  {
+    "id": "q_008",
+    "source_question": "常州欧成精密工具有限公司的M3 180°台阶钻报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "rawSpec": "3.4*13H*6.5*15H*6.5D*65L-M3*180°",
+      "toolKind": "STEP_DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "3.4*13H*6.5*15H*6.5D*65L-M3*180°",
+        "totalLengthMm": 65,
+        "diameterMm": 6.5,
+        "fluteLengthMm": 6.5,
+        "shankDiameterMm": 6.5,
+        "maxDiameterMm": 6.5,
+        "threadSize": "M3",
+        "stepCount": 3,
+        "helixAngleDeg": 180,
+        "category": "180°台阶钻"
+      }
+    },
+    "target": {
+      "price": 162,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 8
+  },
+  {
+    "id": "q_009",
+    "source_question": "常州欧成精密工具有限公司的8.2-9.1数控直柄钻报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控直柄钻",
+      "rawSpec": "8.2-9.1*40*70L",
+      "toolKind": "DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8.2-9.1*40*70L",
+        "totalLengthMm": 70,
+        "rawDiameterRange": [
+          8.2,
+          9.1
+        ],
+        "diameterMm": 8.649999999999999,
+        "fluteLengthMm": 40,
+        "category": "数控直柄钻"
+      }
+    },
+    "target": {
+      "price": 96,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 9
+  },
+  {
+    "id": "q_010",
+    "source_question": "常州欧成精密工具有限公司的7-8mm铰刀H7报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控直柄铰刀 直槽/螺旋",
+      "rawSpec": "7.1-8.0*50*100L*6T H7",
+      "toolKind": "REAMER",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "7.1-8.0*50*100L*6T H7",
+        "tolerance": "H7",
+        "fluteCount": 6,
+        "totalLengthMm": 100,
+        "rawDiameterRange": [
+          7.1,
+          8
+        ],
+        "diameterMm": 7.55,
+        "fluteLengthMm": 50,
+        "category": "数控直柄铰刀 直槽/螺旋"
+      }
+    },
+    "target": {
+      "price": 106,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 10
+  },
+  {
+    "id": "q_011",
+    "source_question": "常州市京锋工具有限公司的D6 2刃键槽铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "2刃键槽铣刀",
+      "rawSpec": "Φ6*15*6*50L",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ6*15*6*50L",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "fluteLengthMm": 15,
+        "shankDiameterMm": 6,
+        "category": "2刃键槽铣刀"
+      }
+    },
+    "target": {
+      "price": 39,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 11
+  },
+  {
+    "id": "q_012",
+    "source_question": "常州市京锋工具有限公司的R1*D6 内R铣刀(钢用)报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "4刃内R铣刀",
+      "rawSpec": "R1*D6*50L*4T 钢用",
+      "toolKind": "CORNER_RADIUS_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "R1*D6*50L*4T 钢用",
+        "fluteCount": 4,
+        "radiusMm": 1,
+        "cornerRadiusMm": 1,
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "4刃内R铣刀"
+      }
+    },
+    "target": {
+      "price": 55,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 12
+  },
+  {
+    "id": "q_013",
+    "source_question": "常州市京锋工具有限公司的D6 3刃铝用铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "rawSpec": "Φ6*18*6*50L*3T",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ6*18*6*50L*3T",
+        "fluteCount": 3,
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "fluteLengthMm": 18,
+        "shankDiameterMm": 6,
+        "category": "3刃铝用铣刀"
+      }
+    },
+    "target": {
+      "price": 35,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 13
+  },
+  {
+    "id": "q_014",
+    "source_question": "常州唐北工具有限公司的D6 AK铝用高光刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "rawSpec": "6*50",
+      "toolKind": "END_MILL",
+      "coating": "UNCOATED",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*50",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）"
+      }
+    },
+    "target": {
+      "price": 66.6,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 14
+  },
+  {
+    "id": "q_015",
+    "source_question": "常州唐北工具有限公司的D4四刃球刀H7报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "四刃球刀 螺旋铰刀公差H7",
+      "rawSpec": "D4*25L*50L*4F",
+      "toolKind": "BALL_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D4*25L*50L*4F",
+        "tolerance": "H7",
+        "fluteCount": 4,
+        "diameterMm": 4,
+        "totalLengthMm": 50,
+        "fluteLengthMm": 25,
+        "category": "四刃球刀 螺旋铰刀公差H7"
+      }
+    },
+    "target": {
+      "price": 27.5,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 15
+  },
+  {
+    "id": "q_016",
+    "source_question": "常州欧成精密工具有限公司的1/4英寸4刃铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制4刃铣刀",
+      "rawSpec": "1/4*3/4*1/4*2-1/2*4F",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "1/4*3/4*1/4*2-1/2*4F",
+        "fluteCount": 4,
+        "diameterMm": 6.35,
+        "fluteLengthMm": 19.049999999999997,
+        "shankDiameterMm": 6.35,
+        "totalLengthMm": 63.5,
+        "category": "数控英制4刃铣刀"
+      }
+    },
+    "target": {
+      "price": 56,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 16
+  },
+  {
+    "id": "q_017",
+    "source_question": "常州市岚钨合金有限公司的D10 G系列黑铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "G系列黑",
+      "rawSpec": "D10*75L",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D10*75L",
+        "diameterMm": 10,
+        "totalLengthMm": 75,
+        "category": "G系列黑"
+      }
+    },
+    "target": {
+      "price": 118.9,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 17
+  },
+  {
+    "id": "q_018",
+    "source_question": "镇江新区大港宏峰工具厂的D6 55°定点钻报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度定点钻",
+      "rawSpec": "6*50",
+      "toolKind": "DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*50",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "55度定点钻"
+      }
+    },
+    "target": {
+      "price": 75.06,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 18
+  },
+  {
+    "id": "q_019",
+    "source_question": "镇江新区大港宏峰工具厂的D10 55°粗皮刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度粗皮刀",
+      "rawSpec": "10*100",
+      "toolKind": "ROUGHING_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "10*100",
+        "diameterMm": 10,
+        "totalLengthMm": 100,
+        "category": "55度粗皮刀"
+      }
+    },
+    "target": {
+      "price": 446.06,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 19
+  },
+  {
+    "id": "q_020",
+    "source_question": "镇江新区大港宏峰工具厂的D10 60°黑纳米平刀/球刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "60°钨钢铣刀 黑纳米涂层",
+      "rawSpec": "10*75",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "10*75",
+        "diameterMm": 10,
+        "totalLengthMm": 75,
+        "category": "60°钨钢铣刀 黑纳米涂层"
+      }
+    },
+    "target": {
+      "price": 332.08,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 20
+  },
+  {
+    "id": "q_021",
+    "source_question": "镇江新区大港宏峰工具厂的D6 UA+ DLC七彩铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA+系列（DLC七彩涂层）",
+      "rawSpec": "6*18*6*50*3T",
+      "toolKind": "END_MILL",
+      "coating": "DLC",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*18*6*50*3T",
+        "fluteCount": 3,
+        "diameterMm": 18,
+        "fluteLengthMm": 6,
+        "shankDiameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "UA+系列（DLC七彩涂层）"
+      }
+    },
+    "target": {
+      "price": 84.98,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 21
+  },
+  {
+    "id": "q_022",
+    "source_question": "常州市京锋工具有限公司的MIR Φ4车刀A60报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "微型车刀/镗刀",
+      "rawSpec": "MIR Φ4 A60 L15",
+      "toolKind": "MICRO_TURNING_TOOL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "MIR Φ4 A60 L15",
+        "diameterMm": 4,
+        "fluteLengthMm": 15,
+        "totalLengthMm": 15,
+        "angleDeg": 60,
+        "category": "微型车刀/镗刀"
+      }
+    },
+    "target": {
+      "price": 43,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 22
+  },
+  {
+    "id": "q_023",
+    "source_question": "常州唐北工具有限公司的5mm 3D钻头报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）",
+      "rawSpec": "4.8-6",
+      "toolKind": "DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4.8-6",
+        "rawDiameterRange": [
+          4.8,
+          6
+        ],
+        "diameterMm": 5,
+        "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）"
+      }
+    },
+    "target": {
+      "price": 28,
+      "priceLabel": "array_0",
+      "pricePickMethod": "array_first_low_confidence",
+      "targetConfidence": "low"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "数组价格语义不明确，需要人工复核",
+    "source_index": 23
+  },
+  {
+    "id": "q_024",
+    "source_question": "镇江新区大港宏峰工具厂的D6纯陶瓷铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "纯陶瓷铣刀",
+      "rawSpec": "6*50",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CERAMIC",
+      "parsedSpec": {
+        "rawSpec": "6*50",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "纯陶瓷铣刀"
+      }
+    },
+    "target": {
+      "price": 49.21,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 24
+  },
+  {
+    "id": "q_025",
+    "source_question": "镇江新区大港宏峰工具厂的D8*120 55°加长铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "rawSpec": "D8*120",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D8*120",
+        "diameterMm": 8,
+        "totalLengthMm": 120,
+        "category": "55度加长铣刀"
+      }
+    },
+    "target": {
+      "price": 333.03,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 25
+  },
+  {
+    "id": "q_026",
+    "source_question": "镇江新区大港宏峰工具厂的D8 65°纳米蓝平刀/球刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "65°钨钢铣刀　纳米蓝涂层",
+      "rawSpec": "8*75",
+      "toolKind": "END_MILL",
+      "coating": "BLUE_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*75",
+        "diameterMm": 8,
+        "totalLengthMm": 75,
+        "category": "65°钨钢铣刀　纳米蓝涂层"
+      }
+    },
+    "target": {
+      "price": 266.33,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 26
+  },
+  {
+    "id": "q_027",
+    "source_question": "镇江新区大港宏峰工具厂的D12 68°纳米古铜平刀/球刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "68°钨钢铣刀　纳米古铜涂层",
+      "rawSpec": "12*100",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "12*100",
+        "diameterMm": 12,
+        "totalLengthMm": 100,
+        "category": "68°钨钢铣刀　纳米古铜涂层"
+      }
+    },
+    "target": {
+      "price": 728,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 27
+  },
+  {
+    "id": "q_028",
+    "source_question": "常州欧成精密工具有限公司的1/2英寸英制球刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制球刀",
+      "rawSpec": "1/2*1-1/4*1/2*3*4F",
+      "toolKind": "BALL_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "1/2*1-1/4*1/2*3*4F",
+        "fluteCount": 4,
+        "diameterMm": 12.7,
+        "fluteLengthMm": 31.75,
+        "shankDiameterMm": 12.7,
+        "totalLengthMm": 76.19999999999999,
+        "category": "数控英制球刀"
+      }
+    },
+    "target": {
+      "price": 180,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 28
+  },
+  {
+    "id": "q_029",
+    "source_question": "常州市京锋工具有限公司的D8 3刃铝用加长铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀（加长款）",
+      "rawSpec": "Φ8*35*8*100L 加长款",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ8*35*8*100L 加长款",
+        "diameterMm": 8,
+        "totalLengthMm": 100,
+        "fluteLengthMm": 35,
+        "shankDiameterMm": 8,
+        "category": "3刃铝用铣刀（加长款）"
+      }
+    },
+    "target": {
+      "price": 96,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 29
+  },
+  {
+    "id": "q_030",
+    "source_question": "镇江新区大港宏峰工具厂的R6*D12 四刃球刀 55°报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "四刃球刀",
+      "rawSpec": "R6*24*12D*100L*4T",
+      "toolKind": "BALL_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "R6*24*12D*100L*4T",
+        "fluteCount": 4,
+        "radiusMm": 6,
+        "cornerRadiusMm": 6,
+        "totalLengthMm": 100,
+        "diameterMm": 24,
+        "fluteLengthMm": 12,
+        "category": "四刃球刀"
+      }
+    },
+    "target": {
+      "price": 517.99,
+      "priceLabel": "55度单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 30
+  },
+  {
+    "id": "q_031",
+    "source_question": "镇江新区大港宏峰工具厂的D8 UP+黑纳米铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UP+系列（黑纳米涂层）",
+      "rawSpec": "8*20*8*60*4T",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*20*8*60*4T",
+        "fluteCount": 4,
+        "diameterMm": 8,
+        "fluteLengthMm": 20,
+        "shankDiameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "UP+系列（黑纳米涂层）"
+      }
+    },
+    "target": {
+      "price": 172.96,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 31
+  },
+  {
+    "id": "q_032",
+    "source_question": "镇江新区大港宏峰工具厂的D4 SS35香槟金铣刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "SS35 系列（香槟金涂层）",
+      "rawSpec": "4*16*4*50*4T",
+      "toolKind": "END_MILL",
+      "coating": "CHAMPAGNE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4*16*4*50*4T",
+        "fluteCount": 4,
+        "diameterMm": 4,
+        "fluteLengthMm": 16,
+        "shankDiameterMm": 4,
+        "totalLengthMm": 50,
+        "category": "SS35 系列（香槟金涂层）"
+      }
+    },
+    "target": {
+      "price": 78.5,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 32
+  },
+  {
+    "id": "q_033",
+    "source_question": "镇江新区大港宏峰工具厂的D6 UA不涂层光刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA系列（不涂层光刀）",
+      "rawSpec": "6*18*6*50*3T",
+      "toolKind": "END_MILL",
+      "coating": "UNCOATED",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*18*6*50*3T",
+        "fluteCount": 3,
+        "diameterMm": 6,
+        "fluteLengthMm": 18,
+        "shankDiameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "UA系列（不涂层光刀）"
+      }
+    },
+    "target": {
+      "price": 78.16,
+      "priceLabel": "平刀（光刀）",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 33
+  },
+  {
+    "id": "q_034",
+    "source_question": "常州唐北工具有限公司的R0.25 T型刀报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "微小径深沟平刀/球刀 T型刀",
+      "rawSpec": "0.5/R0.25\"(2/3/4/6/8)",
+      "toolKind": "T_SLOT",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "0.5/R0.25\"(2/3/4/6/8)",
+        "radiusMm": 0.25,
+        "cornerRadiusMm": 0.25,
+        "diameterMm": 0.5,
+        "category": "微小径深沟平刀/球刀 T型刀"
+      }
+    },
+    "target": {
+      "price": 24,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 34
+  },
+  {
+    "id": "q_035",
+    "source_question": "镇江新区大港宏峰工具厂的D10 55°钨钢圆棒报价是多少？",
+    "level": 1,
+    "type": "exact_match",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55°圆棒",
+      "rawSpec": "10*100",
+      "toolKind": "ROD",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "10*100",
+        "diameterMm": 10,
+        "totalLengthMm": 100,
+        "category": "55°圆棒"
+      }
+    },
+    "target": {
+      "price": 317.7,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 35
+  },
+  {
+    "id": "q_036",
+    "source_question": "我要加工6系铝合金，做一个高光镜面效果，刀具直径6mm，总长50mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "rawSpec": "6*50",
+      "toolKind": "END_MILL",
+      "coating": "UNCOATED",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "6*50",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）"
+      }
+    },
+    "target": {
+      "price": 66.6,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 36
+  },
+  {
+    "id": "q_037",
+    "source_question": "要铣一个U形槽，材料6系铝，槽宽8mm，总长60mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "七彩U槽铝用刀",
+      "rawSpec": "Φ8*24*8*60L",
+      "toolKind": "END_MILL",
+      "coating": "RAINBOW",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ8*24*8*60L",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "fluteLengthMm": 24,
+        "shankDiameterMm": 8,
+        "category": "七彩U槽铝用刀"
+      }
+    },
+    "target": {
+      "price": 63,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 37
+  },
+  {
+    "id": "q_038",
+    "source_question": "加工钢件，需要一把D4*50L的四刃铣刀，古铜色涂层",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "rawSpec": "D1*D4*50L",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D1*D4*50L",
+        "diameterMm": 1,
+        "totalLengthMm": 50,
+        "fluteLengthMm": 4,
+        "shankDiameterMm": 4,
+        "category": "四刃（古铜）"
+      }
+    },
+    "target": {
+      "price": 12.3,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 38
+  },
+  {
+    "id": "q_039",
+    "source_question": "钻一个M4的台阶孔，180°沉头角度",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "rawSpec": "4.5*18H*8*20H*D8*75L-M4*180°",
+      "toolKind": "STEP_DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4.5*18H*8*20H*D8*75L-M4*180°",
+        "diameterMm": 8,
+        "totalLengthMm": 75,
+        "shankDiameterMm": 8,
+        "fluteLengthMm": 8,
+        "maxDiameterMm": 8,
+        "threadSize": "M4",
+        "stepCount": 2,
+        "helixAngleDeg": 180,
+        "category": "180°台阶钻"
+      }
+    },
+    "target": {
+      "price": 126,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 39
+  },
+  {
+    "id": "q_040",
+    "source_question": "在铝合金上铣键槽，槽宽6mm，深度15mm，总长50mm，2刃",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "2刃键槽铣刀",
+      "rawSpec": "Φ6*15*6*50L",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ6*15*6*50L",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "fluteLengthMm": 15,
+        "shankDiameterMm": 6,
+        "category": "2刃键槽铣刀"
+      }
+    },
+    "target": {
+      "price": 39,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 40
+  },
+  {
+    "id": "q_041",
+    "source_question": "内R角加工，R1*D6，钢件用",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "4刃内R铣刀",
+      "rawSpec": "R1*D6*50L*4T 钢用",
+      "toolKind": "CORNER_RADIUS_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "R1*D6*50L*4T 钢用",
+        "fluteCount": 4,
+        "radiusMm": 1,
+        "cornerRadiusMm": 1,
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "4刃内R铣刀"
+      }
+    },
+    "target": {
+      "price": 55,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 41
+  },
+  {
+    "id": "q_042",
+    "source_question": "需要一支D8*60L的铝用铣刀，七彩涂层",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "七彩铝用",
+      "rawSpec": "D8*60L",
+      "toolKind": "END_MILL",
+      "coating": "RAINBOW",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D8*60L",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "七彩铝用"
+      }
+    },
+    "target": {
+      "price": 56.7,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 42
+  },
+  {
+    "id": "q_043",
+    "source_question": "深孔钻削，钻5mm直径的通孔，深度约25mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）",
+      "rawSpec": "1.5-1.6",
+      "toolKind": "DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "1.5-1.6",
+        "rawDiameterRange": [
+          1.5,
+          1.6
+        ],
+        "diameterMm": 5,
+        "category": "3D钻头（金鹭材料） 5D钻头（金鹭材料）"
+      }
+    },
+    "target": {
+      "price": 6,
+      "priceLabel": "array_0",
+      "pricePickMethod": "array_first_low_confidence",
+      "targetConfidence": "low"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "数组价格语义不明确，需要人工复核",
+    "source_index": 43
+  },
+  {
+    "id": "q_044",
+    "source_question": "6系铝合金高光加工，用D10铣刀，75mm总长",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "rawSpec": "4*100",
+      "toolKind": "END_MILL",
+      "coating": "UNCOATED",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4*100",
+        "diameterMm": 4,
+        "totalLengthMm": 100,
+        "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）"
+      }
+    },
+    "target": {
+      "price": 38.2,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 44
+  },
+  {
+    "id": "q_045",
+    "source_question": "不锈钢加工，需要65°螺旋角纳米蓝涂层的D8平刀，75mm总长",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "65°钨钢铣刀　纳米蓝涂层",
+      "rawSpec": "8*60",
+      "toolKind": "END_MILL",
+      "coating": "BLUE_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*60",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "65°钨钢铣刀　纳米蓝涂层"
+      }
+    },
+    "target": {
+      "price": 219.8,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_keyword_match",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 45
+  },
+  {
+    "id": "q_046",
+    "source_question": "D4微型车刀，60°刀尖角，刃长15mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "微型车刀/镗刀",
+      "rawSpec": "MIR Φ4 A60 L15",
+      "toolKind": "MICRO_TURNING_TOOL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "MIR Φ4 A60 L15",
+        "diameterMm": 4,
+        "fluteLengthMm": 15,
+        "totalLengthMm": 15,
+        "angleDeg": 60,
+        "category": "微型车刀/镗刀"
+      }
+    },
+    "target": {
+      "price": 43,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 46
+  },
+  {
+    "id": "q_047",
+    "source_question": "铣削模具钢，需要1/4英寸的4刃铣刀",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "数控英制4刃铣刀",
+      "rawSpec": "1/16*1/4*1/8*1-1/2*4F",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "1/16*1/4*1/8*1-1/2*4F",
+        "fluteCount": 4,
+        "diameterMm": 1.5875,
+        "fluteLengthMm": 6.35,
+        "shankDiameterMm": 3.175,
+        "totalLengthMm": 38.099999999999994,
+        "category": "数控英制4刃铣刀"
+      }
+    },
+    "target": {
+      "price": 15,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 47
+  },
+  {
+    "id": "q_048",
+    "source_question": "DLC涂层的单刃螺旋铣刀，柄径3.175mm，刃径1.2mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江天顺精密工具有限公司",
+      "category": "DLC涂层单刃螺旋铣刀",
+      "rawSpec": "3.175*1.2*3*38",
+      "toolKind": "SINGLE_FLUTE_END_MILL",
+      "coating": "DLC",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "3.175*1.2*3*38",
+        "diameterMm": 1.2,
+        "fluteLengthMm": 3,
+        "shankDiameterMm": 3.175,
+        "totalLengthMm": 38,
+        "category": "DLC涂层单刃螺旋铣刀"
+      }
+    },
+    "target": {
+      "price": 13,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 48
+  },
+  {
+    "id": "q_049",
+    "source_question": "加工铝合金需要一把单刃铣刀，4mm柄，刃长12mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "南京驰恒机械刀具有限公司",
+      "category": "铝用单刃铣刀",
+      "rawSpec": "4*12*45",
+      "toolKind": "SINGLE_FLUTE_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4*12*45",
+        "diameterMm": 4,
+        "fluteLengthMm": 12,
+        "totalLengthMm": 45,
+        "category": "铝用单刃铣刀"
+      }
+    },
+    "target": {
+      "price": 20.5,
+      "priceLabel": "不含税价格",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 49
+  },
+  {
+    "id": "q_050",
+    "source_question": "高效率粗加工钢件，需要D12动态铣刀，总长75mm",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "黑灰动态铣",
+      "rawSpec": "D12*75L",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D12*75L",
+        "diameterMm": 12,
+        "totalLengthMm": 75,
+        "category": "黑灰动态铣"
+      }
+    },
+    "target": {
+      "price": 188.9,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 50
+  },
+  {
+    "id": "q_051",
+    "source_question": "纯陶瓷铣刀加工，D6*50，用于高温合金",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "rawSpec": "6*50",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CERAMIC",
+      "parsedSpec": {
+        "rawSpec": "6*50",
+        "diameterMm": 6,
+        "totalLengthMm": 50,
+        "category": "55º钨钢铣刀  古铜色涂层"
+      }
+    },
+    "target": {
+      "price": 59.3,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 51
+  },
+  {
+    "id": "q_052",
+    "source_question": "55度粗皮刀，D8*75，钢件开粗",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55º钨钢铣刀  古铜色涂层",
+      "rawSpec": "8*60",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*60",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "55º钨钢铣刀  古铜色涂层"
+      }
+    },
+    "target": {
+      "price": 114.04,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 52
+  },
+  {
+    "id": "q_053",
+    "source_question": "D6*120 55度加长铣刀，深腔加工",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "rawSpec": "D6*120",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D6*120",
+        "diameterMm": 6,
+        "totalLengthMm": 120,
+        "category": "55度加长铣刀"
+      }
+    },
+    "target": {
+      "price": 210.58,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 53
+  },
+  {
+    "id": "q_054",
+    "source_question": "三刃铝用铣刀，D10*30*10*75L",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市京锋工具有限公司",
+      "category": "3刃铝用铣刀",
+      "rawSpec": "Φ10*30*10*75L*3T",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "Φ10*30*10*75L*3T",
+        "fluteCount": 3,
+        "diameterMm": 10,
+        "totalLengthMm": 75,
+        "fluteLengthMm": 30,
+        "shankDiameterMm": 10,
+        "category": "3刃铝用铣刀"
+      }
+    },
+    "target": {
+      "price": 130,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 54
+  },
+  {
+    "id": "q_055",
+    "source_question": "D8钨钢圆棒，100mm长",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55°圆棒",
+      "rawSpec": "8*100",
+      "toolKind": "ROD",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*100",
+        "diameterMm": 8,
+        "totalLengthMm": 100,
+        "category": "55°圆棒"
+      }
+    },
+    "target": {
+      "price": 207.5,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 55
+  },
+  {
+    "id": "q_056",
+    "source_question": "铝件高光加工，6系铝合金，D12*75，要求镜面效果",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州唐北工具有限公司",
+      "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）",
+      "rawSpec": "11-12*75",
+      "toolKind": "END_MILL",
+      "coating": "UNCOATED",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "11-12*75",
+        "rawDiameterRange": [
+          11,
+          12
+        ],
+        "diameterMm": 11.5,
+        "totalLengthMm": 75,
+        "category": "AK铝用高光刀（适用材料：铝合金高光镜面，6系7系铝）"
+      }
+    },
+    "target": {
+      "price": 213,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 56
+  },
+  {
+    "id": "q_057",
+    "source_question": "需要一把55°螺旋角的钨钢圆鼻刀，8mm直径，100mm总长，古铜色涂层",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "四刃（古铜）",
+      "rawSpec": "D8*60L",
+      "toolKind": "END_MILL",
+      "coating": "BRONZE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D8*60L",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "四刃（古铜）"
+      }
+    },
+    "target": {
+      "price": 55.6,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 57
+  },
+  {
+    "id": "q_058",
+    "source_question": "做深腔加工，需要一把D10*150mm的加长铣刀，55°",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度加长铣刀",
+      "rawSpec": "D10*120",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D10*120",
+        "diameterMm": 10,
+        "totalLengthMm": 120,
+        "category": "55度加长铣刀"
+      }
+    },
+    "target": {
+      "price": 481.71,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 58
+  },
+  {
+    "id": "q_059",
+    "source_question": "粗加工钢件表面，D20*100，55°粗皮刀",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "55度粗皮刀",
+      "rawSpec": "20*100",
+      "toolKind": "ROUGHING_END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "20*100",
+        "diameterMm": 20,
+        "totalLengthMm": 100,
+        "category": "55度粗皮刀"
+      }
+    },
+    "target": {
+      "price": 1415.24,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 59
+  },
+  {
+    "id": "q_060",
+    "source_question": "钻一个M8×1.25的螺纹底孔，用台阶钻一次成型，90°沉头",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州欧成精密工具有限公司",
+      "category": "180°台阶钻",
+      "rawSpec": "9*28H*14*28H*D12*100L-M8*180°",
+      "toolKind": "STEP_DRILL",
+      "coating": "UNKNOWN",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "9*28H*14*28H*D12*100L-M8*180°",
+        "diameterMm": 14,
+        "totalLengthMm": 100,
+        "fluteLengthMm": 14,
+        "shankDiameterMm": 12,
+        "maxDiameterMm": 14,
+        "threadSize": "M8",
+        "stepCount": 2,
+        "helixAngleDeg": 180,
+        "category": "180°台阶钻"
+      }
+    },
+    "target": {
+      "price": 368,
+      "priceLabel": "单价",
+      "pricePickMethod": "array_single",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 60
+  },
+  {
+    "id": "q_061",
+    "source_question": "需要一支D8*60的直柄立铣刀，60°黑纳米涂层，加工模具钢",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "60°钨钢铣刀 黑纳米涂层",
+      "rawSpec": "8*60",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "8*60",
+        "diameterMm": 8,
+        "totalLengthMm": 60,
+        "category": "60°钨钢铣刀 黑纳米涂层"
+      }
+    },
+    "target": {
+      "price": 195.93,
+      "priceLabel": "平刀，球刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 61
+  },
+  {
+    "id": "q_062",
+    "source_question": "香槟金涂层的D10*75 4刃铣刀，一般钢件加工",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "SS40 系列（香槟金涂层）",
+      "rawSpec": "4*10*4*50*4T",
+      "toolKind": "END_MILL",
+      "coating": "CHAMPAGNE",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "4*10*4*50*4T",
+        "fluteCount": 4,
+        "diameterMm": 4,
+        "fluteLengthMm": 10,
+        "shankDiameterMm": 4,
+        "totalLengthMm": 50,
+        "category": "SS40 系列（香槟金涂层）"
+      }
+    },
+    "target": {
+      "price": 60,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 62
+  },
+  {
+    "id": "q_063",
+    "source_question": "D6*150 DLC七彩涂层铣刀，UA+系列，加工铝合金",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "UA+系列（DLC七彩涂层）",
+      "rawSpec": "5*15*6*50*3T",
+      "toolKind": "END_MILL",
+      "coating": "DLC",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "5*15*6*50*3T",
+        "fluteCount": 3,
+        "diameterMm": 15,
+        "fluteLengthMm": 6,
+        "shankDiameterMm": 5,
+        "totalLengthMm": 50,
+        "category": "UA+系列（DLC七彩涂层）"
+      }
+    },
+    "target": {
+      "price": 84.98,
+      "priceLabel": "平刀",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 63
+  },
+  {
+    "id": "q_064",
+    "source_question": "D12*75的G系列黑铣刀，岚钨合金，价格多少",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "常州市岚钨合金有限公司",
+      "category": "G系列黑",
+      "rawSpec": "D12*75L",
+      "toolKind": "END_MILL",
+      "coating": "BLACK_NANO",
+      "material": "CARBIDE",
+      "parsedSpec": {
+        "rawSpec": "D12*75L",
+        "diameterMm": 12,
+        "totalLengthMm": 75,
+        "category": "G系列黑"
+      }
+    },
+    "target": {
+      "price": 171.2,
+      "priceLabel": "单价",
+      "pricePickMethod": "number_direct",
+      "targetConfidence": "high"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "",
+    "source_index": 64
+  },
+  {
+    "id": "q_065",
+    "source_question": "需要一支D4*50的纯陶瓷铣刀，用于高温合金",
+    "level": 2,
+    "type": "scenario",
+    "eval_mode": "price_formula",
+    "oracle_input": {
+      "supplier": "镇江新区大港宏峰工具厂",
+      "category": "纯陶瓷铣刀",
+      "rawSpec": "4*50",
+      "toolKind": "END_MILL",
+      "coating": "UNKNOWN",
+      "material": "CERAMIC",
+      "parsedSpec": {
+        "rawSpec": "4*50",
+        "diameterMm": 4,
+        "totalLengthMm": 50,
+        "category": "纯陶瓷铣刀"
+      }
+    },
+    "target": {
+      "price": 32.5,
+      "priceLabel": "单价",
+      "pricePickMethod": "object_min_fallback",
+      "targetConfidence": "medium"
+    },
+    "includeInMape": true,
+    "includeInIntervalHit": true,
+    "notes": "多价格字段未明确，取最低价",
+    "source_index": 65
+  }
+]

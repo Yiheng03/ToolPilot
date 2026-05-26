@@ -519,9 +519,9 @@ export function ToolConfigurator() {
     setError("")
 
     try {
-      const response = await fetch("/api/market/production-forecasts", { cache: "no-store" })
+      const response = await fetch("/api/market/forecasts", { cache: "no-store" })
       if (!response.ok) {
-        throw new Error(`production-forecasts ${response.status}`)
+        throw new Error(`market forecasts ${response.status}`)
       }
 
       const rows = (await response.json()) as MarketForecastRow[]
@@ -868,7 +868,7 @@ export function ToolConfigurator() {
                       当前组合：{industryLabel} / {scenarioLabel} / {materialLabel}。
                     </p>
                     <p>
-                      行情 API：/api/market/production-forecasts，基准日 {activeForecast.forecastDate || "--"}，当前展示 {selectedHorizon} 天预测。
+                      行情 API：/api/market/forecasts，基准日 {activeForecast.forecastDate || "--"}，当前展示 {selectedHorizon} 天预测。
                     </p>
                   </div>
 

@@ -102,14 +102,10 @@ def load_env() -> None:
 
 def connect(row_factory=dict_row):
     load_env()
-    return psycopg.connect(
-        host=os.getenv("PGHOST", "localhost"),
-        port=os.getenv("PGPORT", "5432"),
-        dbname=os.getenv("PGDATABASE", "postgres"),
-        user=os.getenv("PGUSER", "postgres"),
-        password=os.getenv("PGPASSWORD", "sinomach"),
-        row_factory=row_factory,
-    )
+    database_url = os.getenv("DATABASE_URL")
+    if not database_url:
+        raise RuntimeError("DATABASE_URL is required")
+    return psycopg.connect(database_url, row_factory=row_factory)
 
 
 def ensure_dirs() -> None:
@@ -198,4 +194,3 @@ def markdown_table(rows: list[dict], columns: list[str]) -> str:
     for row in rows:
         lines.append("| " + " | ".join(str(row.get(c, "")) for c in columns) + " |")
     return "\n".join(lines)
-

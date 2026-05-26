@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.production.example
+
+__pycache__/
+*.py[cod]
+*.log
+
+node_modules/
+dist/
+.vite/
+.next/
+
+frontend/node_modules/
+frontend/dist/

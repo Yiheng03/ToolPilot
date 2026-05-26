@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+!.env.production.example
+
+**/__pycache__/
+**/*.py[cod]
+**/*.log
+
+**/node_modules/
+**/dist/
+**/.next/
+**/.vite/
+
+results/
+benchmark/generated/
